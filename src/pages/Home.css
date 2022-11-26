@@ -1,4 +1,5 @@
 body {
+    background-image: url('./assets/homepage/background-home-desktop.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -ms-background-size: cover;

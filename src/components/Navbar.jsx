@@ -12,20 +12,26 @@ function Navbar() {
 			</div>
 			<div className="line"></div>
 			<nav>
-				<ul className="nav_list">
-					<li>
-						<Link to="/" className="nav_link">00 HOME</Link>
-					</li>
-					<li>
-						<Link to="/destination" className="nav_link">01 DESTINATION</Link>
-					</li>
-					<li>
-						<Link to="/crew" className="nav_link">02 CREW</Link>
-					</li>
-					<li>
-						<Link to="/technology" className="nav_link">03 TECHNOLOGY</Link>
-					</li>
-				</ul>
+				<div className="list_container">
+					<ul className="nav_list">
+						<li>
+							<p>00</p>
+							<Link to="/" className="nav_link">HOME</Link>
+						</li>
+						<li>
+							<p>01</p>
+							<Link to="/destination" className="nav_link">DESTINATION</Link>
+						</li>
+						<li>
+							<p>02</p>
+							<Link to="/crew" className="nav_link">CREW</Link>
+						</li>
+						<li>
+							<p>03</p>
+							<Link to="/technology" className="nav_link">TECHNOLOGY</Link>
+						</li>
+					</ul>
+				</div>
 			</nav>
 		</div>
     </>

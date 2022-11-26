@@ -5,16 +5,23 @@
 }
 
 .container {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    width: 100%;
     align-items: center;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.logo > img {
+    width: 45px;
 }
 
 .line {
     border: .5px solid rgba(128, 128, 128, 0.548);
-    width: 25%;
+    width: 35%;
     height: 0%;
+    transform: translateX(3rem);
 }
 
 nav {
@@ -22,14 +29,31 @@ nav {
     background-color: rgba(128, 128, 128, 0.1);
 }
 
+.list_container {
+    display: flex;
+    justify-content: center;
+}
+
 .nav_list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
+    width: 60%;
 }
 
-.nav_link {
+li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+li > p {
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.nav_link, li > p {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 16px;
     letter-spacing: 2.7;
