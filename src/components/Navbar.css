@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+* {
+    color: #FFFFFF;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.line {
+    border: .5px solid rgba(128, 128, 128, 0.548);
+    width: 25%;
+    height: 0%;
+}
+
+nav {
+    width: 60%;
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+.nav_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav_link {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    letter-spacing: 2.7;
+    text-decoration: none;
+}
