@@ -10,7 +10,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
-    margin-left: 2rem;
+    margin-left: 3rem;
 }
 
 .logo > img {
@@ -31,7 +31,7 @@ nav {
 
 .list_container {
     display: flex;
-    justify-content: center;
+    margin-left: 10%;
 }
 
 .nav_list {
@@ -42,8 +42,9 @@ nav {
     width: 60%;
 }
 
-li {
+.nav_link {
     display: flex;
+    justify-content: space-evenly;
     flex-direction: row;
     align-items: center;
 }
