@@ -1,6 +1,8 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components'
 import bkgrnd from './components/assets/destination/background-destination-desktop.jpg';
+import Location from './components/Destination_locations';
 
 const Content = createGlobalStyle`
     body {
@@ -14,15 +16,21 @@ const Content = createGlobalStyle`
     }
 `
 
+const Desc = styled.div`
+`
+
 function Destination() {
     return (
         <>
             <Content></Content>
-            <div className="destination_container">
-                <main>
-                    <h1>this is the destination page</h1>
-                </main>
-            </div>
+            <main>
+                <Desc>
+                    <p>01</p>
+                    <h1>PICK YOUR DESTINATION</h1>
+                </Desc>
+                <Location />
+                
+            </main>
         </>
     );
 }

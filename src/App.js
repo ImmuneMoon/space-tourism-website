@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Destination from './pages/Destination';
 import Crew from './pages/Crew';
 import Technology from './pages/Technology';
+import Attribution from './pages/components/Attribution';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
     		<Route path='/crew' element={<Crew/>} />
     		<Route path='/technology' element={<Technology/>} />
     	</Routes>
+		<Attribution/>
     	</Router>
     );
 }

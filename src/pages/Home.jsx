@@ -1,12 +1,9 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import bkgrnd from './components/assets/homepage/background-home-desktop.jpg';
 
-const Global = createGlobalStyle`
-    * {
-    }
-`
 
 const Content = createGlobalStyle`
     body {
@@ -17,11 +14,34 @@ const Content = createGlobalStyle`
         -o-background-size: cover;
         background-size: cover;
         background-color: black;
+        background-repeat: no-repeat;
+
     } 
 `
 
 const Home_container = styled.div`
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0;
+`
+
+const Left_container = styled.div`
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    margin-top: 16.5rem;
+    margin-left: 10.5rem;
     
+`
+
+const Right_container = styled.div`
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
 `
 
 const Main_p1 = styled.p`
@@ -30,7 +50,10 @@ const Main_p1 = styled.p`
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 400;
     font-size: 28px;
+    letter-spacing: 4.75;
     color: #D0D6F9;
+    width: fit-content;
+    margin: 0;
 `
 
 const Main_h1 = styled.h1`
@@ -40,39 +63,91 @@ const Main_h1 = styled.h1`
     font-weight: 400;
     font-size: 150px;
     color: #FFFFFF;
+    width: fit-content;
+    margin: 0;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
     
 `
 
-const Main_p2 = styled.p`
+const Main_h5 = styled.p`
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.75;
     color: #D0D6F9;
+    width: 29rem;
+    margin: 0;
 `
 
-const Main_bttn = styled.button`
-    
+const Bttn_container = styled.div`
+    margin: 0;
+    margin-top: 22.5rem;
+    margin-right: 9.5em;
+
 `
+
+let Main_bttn = styled.div`
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 32px;
+    letter-spacing: 4.75;
+    background-color: #FFFFFF;
+    color: #0B0D17;
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+let Bttn_hover = styled.div`
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 28rem;
+    height: 28rem;
+    border-radius: 50%;
+    transform: translateX(-5.5rem) translateY(-22.5rem);
+
+    ${Main_bttn}:hover & {
+        display: block;
+    }
+`
+
 
 function Home() {
     return (
         <>
             <Content></Content>
-            <Home_container>
-                <main>
-                    <Main_p1>
-                        SO, YOU WANT TO TRAVEL TO
-                    </Main_p1>
-                    <Main_h1>
-                        SPACE
-                    </Main_h1>
-                    <Main_p2>
-                        Let’s face it; if you want to go to space, you might as well genuinely go to 
-                        outer space and not hover kind of on the edge of it. Well sit back, and relax 
-                        because we’ll give you a truly out of this world experience!
-                    </Main_p2>
-                    <Main_bttn>
-                        Explore
-                    </Main_bttn>
-                </main>
-            </Home_container>
+            <main>
+                <Home_container>
+                    <Left_container>
+                        <Main_p1>
+                            SO, YOU WANT TO TRAVEL TO
+                        </Main_p1>
+                        <Main_h1>
+                            SPACE
+                        </Main_h1>
+                        <Main_h5>
+                            Let’s face it; if you want to go to space, you might as well genuinely go to 
+                            outer space and not hover kind of on the edge of it. Well sit back, and relax 
+                            because we’ll give you a truly out of this world experience!
+                        </Main_h5>
+                    </Left_container>
+                    <Right_container>
+                        <Bttn_container>
+                            <Link to="/destination">
+                                <Main_bttn>
+                                    EXPLORE
+                                </Main_bttn>
+                            </Link>
+                            <Bttn_hover></Bttn_hover>
+                        </Bttn_container>
+                    </Right_container>
+                </Home_container>
+            </main>
         </>
     );
 }
