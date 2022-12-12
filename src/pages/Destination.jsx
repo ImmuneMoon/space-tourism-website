@@ -2,6 +2,7 @@ import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components'
 import bkgrnd from './components/assets/destination/background-destination-desktop.jpg';
+import Dest_nav from './components/Destination_nav'
 import Location from './components/Destination_locations';
 
 const Content = createGlobalStyle`
@@ -16,7 +17,36 @@ const Content = createGlobalStyle`
     }
 `
 
-const Desc = styled.div`
+const H_container = styled.div`
+    
+`
+
+const Heading = styled.div`
+    margin-top: 3rem;
+    margin-left: 10.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 23rem;
+
+`
+
+const One = styled.p`
+    font-size: 28px;
+    font-weight: bold;
+    color: #4b5560;
+    letter-spacing: 4.75;
+`
+const Pick = styled.h1`
+    font-size: 28px;
+    font-weight: 400;
+    color: #FFFFFF;
+    letter-spacing: 4.75;
+`
+
+let Location_container = styled.div`
+
 `
 
 function Destination() {
@@ -24,12 +54,16 @@ function Destination() {
         <>
             <Content></Content>
             <main>
-                <Desc>
-                    <p>01</p>
-                    <h1>PICK YOUR DESTINATION</h1>
-                </Desc>
-                <Location />
-                
+                <H_container>
+                    <Heading>
+                        <One>01</One>
+                        <Pick>PICK YOUR DESTINATION</Pick>
+                    </Heading>
+                </H_container>
+                <Dest_nav />
+                <Location_container>
+                    <Location />
+                </Location_container>
             </main>
         </>
     );

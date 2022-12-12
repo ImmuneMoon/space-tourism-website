@@ -86,7 +86,7 @@ const Bttn_container = styled.div`
 
 `
 
-let Main_bttn = styled.div`
+const Main_bttn = styled.div`
     @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
 
     font-family: 'Barlow Condensed', sans-serif;
@@ -102,17 +102,17 @@ let Main_bttn = styled.div`
     align-items: center;
 `
 
-let Bttn_hover = styled.div`
-    display: none;
+const Bttn_hover = styled.div`
     position: absolute;
     background-color: rgba(255, 255, 255, 0.1);
-    width: 28rem;
-    height: 28rem;
+    width: 17rem;
+    height: 17rem;
     border-radius: 50%;
-    transform: translateX(-5.5rem) translateY(-22.5rem);
+    top: 57%;
+    transition: transform 200ms linear;
 
-    ${Main_bttn}:hover & {
-        display: block;
+    ${Bttn_container}:hover & {
+        transform: scale(1.65);
     }
 `
 
@@ -137,14 +137,14 @@ function Home() {
                         </Main_h5>
                     </Left_container>
                     <Right_container>
-                        <Bttn_container>
-                            <Link to="/destination">
-                                <Main_bttn>
-                                    EXPLORE
-                                </Main_bttn>
-                            </Link>
-                            <Bttn_hover></Bttn_hover>
-                        </Bttn_container>
+                        <Link to="/destination">
+                            <Bttn_container>
+                                    <Main_bttn>
+                                        EXPLORE
+                                    </Main_bttn>
+                                <Bttn_hover></Bttn_hover>
+                            </Bttn_container>
+                        </Link>
                     </Right_container>
                 </Home_container>
             </main>

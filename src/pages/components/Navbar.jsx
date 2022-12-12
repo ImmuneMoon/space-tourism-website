@@ -51,7 +51,7 @@ const Nav_list = styled.ul`
     list-style: none;
     width: 70%;
 `
-let Item = styled.li`
+const Item = styled.li`
 	height: 100%;
 `
 
