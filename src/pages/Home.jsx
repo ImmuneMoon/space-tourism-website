@@ -19,6 +19,10 @@ const Content = createGlobalStyle`
     } 
 `
 
+const Main_container = styled.main`
+    margin: 0 0 5rem 0;
+`
+
 const Home_container = styled.div`
     width: 100%;
     height: 95vh;
@@ -70,7 +74,7 @@ const Main_h1 = styled.h1`
     
 `
 
-const Main_h5 = styled.p`
+const Main_p2 = styled.p`
     font-weight: 500;
     font-size: 16px;
     line-height: 1.75;
@@ -83,7 +87,7 @@ const Bttn_container = styled.div`
     margin: 0;
     margin-top: 22.5rem;
     margin-right: 9.5em;
-
+    border-radius: 50%;
 `
 
 const Main_bttn = styled.div`
@@ -121,7 +125,7 @@ function Home() {
     return (
         <>
             <Content></Content>
-            <main>
+            <Main_container>
                 <Home_container>
                     <Left_container>
                         <Main_p1>
@@ -130,11 +134,11 @@ function Home() {
                         <Main_h1>
                             SPACE
                         </Main_h1>
-                        <Main_h5>
+                        <Main_p2>
                             Let’s face it; if you want to go to space, you might as well genuinely go to 
                             outer space and not hover kind of on the edge of it. Well sit back, and relax 
                             because we’ll give you a truly out of this world experience!
-                        </Main_h5>
+                        </Main_p2>
                     </Left_container>
                     <Right_container>
                         <Link to="/destination">
@@ -147,7 +151,7 @@ function Home() {
                         </Link>
                     </Right_container>
                 </Home_container>
-            </main>
+            </Main_container>
         </>
     );
 }

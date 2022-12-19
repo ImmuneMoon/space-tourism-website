@@ -3,7 +3,14 @@ import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components'
 import bkgrnd from './components/assets/destination/background-destination-desktop.jpg';
 import Dest_nav from './components/Destination_nav'
-import Location from './components/Destination_locations';
+import moon from './components/Destination_moon';
+import mars from './components/Destination_mars';
+import europa from './components/Destination_europa';
+import titan from './components/Destination_titan';
+
+
+let Location = mars;
+
 
 const Content = createGlobalStyle`
     body {
@@ -33,14 +40,21 @@ const Heading = styled.div`
 `
 
 const One = styled.p`
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 28px;
     font-weight: bold;
     color: #4b5560;
     letter-spacing: 4.75;
 `
+
 const Pick = styled.h1`
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 28px;
-    font-weight: 400;
+    font-weight: 500;
     color: #FFFFFF;
     letter-spacing: 4.75;
 `

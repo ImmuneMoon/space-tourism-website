@@ -7,7 +7,7 @@ const Pg_nav = styled.nav`
 `
 
 const Nav_list = styled.ul`
-    margin-left: 28rem;
+    margin-left: 26.5rem;
     width: 18rem;
     height: max-content;
     list-style: none;
@@ -17,11 +17,22 @@ const Nav_list = styled.ul`
 const Item = styled.li`
     height: 1rem;
 `
+const Bttn = styled.button`
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+`
 
 const Location = styled.p`
+    font-weight: 500;
     margin-bottom: .5rem;
     font-size: 16px;
     letter-spacing: 2.7;
+    color: #D0D6F9;
+	${Item}:hover & {
+		color: #FFFFFF;
+	}
 `
 
 const Underline = styled.div`
@@ -39,28 +50,36 @@ function destNav() {
             <Pg_nav>
                 <Nav_list>
                     <Item>
-                        <Location>
-                            MOON
-                        </Location>
-                        <Underline></Underline>
+                        <Bttn id="moon">
+                            <Location>
+                                MOON
+                            </Location>
+                            <Underline></Underline>
+                        </Bttn>
                     </Item>
                     <Item>
-                        <Location>
-                            MARS
-                        </Location>
-                        <Underline></Underline>
+                        <Bttn id="mars">
+                            <Location>
+                                MARS
+                            </Location>
+                            <Underline></Underline>
+                        </Bttn>
                     </Item>
                     <Item>
-                        <Location>
-                            EUROPA
-                        </Location>
-                        <Underline></Underline>
+                        <Bttn id="europa">
+                            <Location>
+                                EUROPA
+                            </Location>
+                            <Underline></Underline>
+                        </Bttn>
                     </Item>
                     <Item>
-                        <Location>
-                            TITAN
-                        </Location>
-                        <Underline></Underline>
+                        <Bttn id="titan">
+                            <Location>
+                                TITAN
+                            </Location>
+                            <Underline></Underline>
+                        </Bttn>
                     </Item>
                 </Nav_list>
             </Pg_nav>
