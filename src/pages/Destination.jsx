@@ -9,7 +9,7 @@ import europa from './components/Destination_europa';
 import titan from './components/Destination_titan';
 
 
-let Location = mars;
+let Location = moon;
 
 
 const Content = createGlobalStyle`
@@ -35,7 +35,7 @@ const Heading = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 23rem;
+    width: 25rem;
 
 `
 

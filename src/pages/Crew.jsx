@@ -4,8 +4,11 @@ import styled from 'styled-components';
 import bkgrnd from './components/assets/crew/background-crew-desktop.jpg';
 import Crew_nav from './components/Crew_nav';
 import doug from './components/Crew_douglas';
+import mark from './components/Crew_mark';
+import victor from './components/Crew_victor';
+import anoushe from './components/Crew_anoushe';
 
-let Crewmate = doug;
+let Crewmate = anoushe;
 
 const Content = createGlobalStyle`
     body {
@@ -15,8 +18,13 @@ const Content = createGlobalStyle`
         -ms-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        background-repeat: no-repeat;
         background-color: black;
     }
+`
+
+const Main = styled.main`
+    height: 100%;
 `
 
 const Heading = styled.div`
@@ -26,7 +34,7 @@ const Heading = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 23rem;
+    width: 19.5rem;
 
 `
 
@@ -51,10 +59,11 @@ const Meet = styled.h1`
 `
 
 const Crew_container = styled.div`
-    
+    margin-left: 10rem;
 `
 
 const Nav_container = styled.div`
+    margin-left: 7rem;
     
 `
 
@@ -62,18 +71,18 @@ function Crew() {
     return (
         <>
             <Content></Content>
-            <main>
+            <Main>
                 <Heading>
                     <Two>02</Two>
                     <Meet>MEET YOUR CREW</Meet>
                 </Heading>
                 <Crew_container>
-                    <Crewmate />
+                    <Crewmate/>
                 </Crew_container>
                 <Nav_container>
                     <Crew_nav />
                 </Nav_container>
-            </main>
+            </Main>
         </>
     );
 }

@@ -3,8 +3,9 @@ import styled from 'styled-components';
 
 
 const Footer = styled.footer`
-    position: sticky;
-    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
 `
 
 const Credits = styled.div`

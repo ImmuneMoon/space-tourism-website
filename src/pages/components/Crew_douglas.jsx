@@ -8,11 +8,14 @@ const Doug_container = styled.section`
 `
 
 const L_container = styled.div`
-    
+    margin: 5rem 0 5rem 0;
 `
 
 const R_container = styled.div`
-    position: relative;
+    position: absolute;
+    right: 15%;
+    bottom: 0;
+    z-index: -10;
 `
 
 const Crew_title = styled.h2`
@@ -23,6 +26,7 @@ const Crew_title = styled.h2`
     font-size: 28px;
     letter-spacing: 4.75;
     color: rgba(255, 255, 255, 0.5);
+    margin: 0 0 1.5rem 0;
     
 `
 
@@ -30,6 +34,9 @@ const Crew_name = styled.h3`
     @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
 
     font-family: 'Barlow Condensed', sans-serif;
+    font-size: 56px;
+    font-weight: 500;
+    margin: 0 0 1.5rem 0;
     
 `
 
@@ -39,12 +46,13 @@ const Crew_info = styled.p`
     font-weight: 500;
     line-height: 1.75;
     width: 27rem;
+    margin: 0;
     
 `
 
 const Crew_img = styled.img`
-    position: absolute;
-    bottom: 0;
+    height: 600px;
+    bottom: 0%;
 `
 
 function doug() {
