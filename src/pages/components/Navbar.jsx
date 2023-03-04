@@ -40,7 +40,8 @@ const Nav = styled.nav`
 
 const List_container = styled.div`
 	display: flex;
-    margin-left: 10%;
+    margin-top: 1.75rem;
+	margin-left: 17%;
 `
 
 const Nav_list = styled.ul`
@@ -49,7 +50,7 @@ const Nav_list = styled.ul`
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
-    width: 70%;
+    width: 75%;
 `
 const Item = styled.li`
 	height: 100%;

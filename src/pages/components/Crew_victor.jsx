@@ -12,7 +12,7 @@ const L_container = styled.div`
 `
 
 const R_container = styled.div`
-    position: absolute;
+    position: sticky;
     right: 15%;
     bottom: 0;
     z-index: -10;
@@ -52,7 +52,6 @@ const Crew_info = styled.p`
 
 const Crew_img = styled.img`
     height: 535px;
-    bottom: 0;
 `
 
 function victor() {

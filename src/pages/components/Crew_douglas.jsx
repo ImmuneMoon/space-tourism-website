@@ -52,7 +52,6 @@ const Crew_info = styled.p`
 
 const Crew_img = styled.img`
     height: 600px;
-    bottom: 0%;
 `
 
 function doug() {
@@ -67,11 +66,12 @@ function doug() {
                         DOUGLAS HURLEY
                     </Crew_name>
                     <Crew_info>
-                        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.
+                        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA 
+                        astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.
                     </Crew_info>
                 </L_container>
                 <R_container>
-                    <Crew_img src={portrait} alt="Douglas Hurley"/>
+                    <Crew_img id="crew_img" src={portrait} alt="Douglas Hurley"/>
                 </R_container>
             </Doug_container>
         </>

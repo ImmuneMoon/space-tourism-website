@@ -9,7 +9,7 @@ import europa from './components/Destination_europa';
 import titan from './components/Destination_titan';
 
 
-let Location = moon;
+let Location = mars;
 
 
 const Content = createGlobalStyle`
@@ -22,10 +22,6 @@ const Content = createGlobalStyle`
         background-size: cover;
         background-color: black;
     }
-`
-
-const H_container = styled.div`
-    
 `
 
 const Heading = styled.div`
@@ -60,7 +56,8 @@ const Pick = styled.h1`
 `
 
 let Location_container = styled.div`
-
+    margin-top: 3.5rem;
+    margin-left: 1rem;
 `
 
 function Destination() {
@@ -68,14 +65,14 @@ function Destination() {
         <>
             <Content></Content>
             <main>
-                <H_container>
+                <div>
                     <Heading>
                         <One>01</One>
                         <Pick>PICK YOUR DESTINATION</Pick>
                     </Heading>
-                </H_container>
-                <Dest_nav />
+                </div>
                 <Location_container>
+                    <Dest_nav />
                     <Location />
                 </Location_container>
             </main>

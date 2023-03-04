@@ -8,7 +8,7 @@ import mark from './components/Crew_mark';
 import victor from './components/Crew_victor';
 import anoushe from './components/Crew_anoushe';
 
-let Crewmate = anoushe;
+let Crewmate = doug;
 
 const Content = createGlobalStyle`
     body {
@@ -20,6 +20,7 @@ const Content = createGlobalStyle`
         background-size: cover;
         background-repeat: no-repeat;
         background-color: black;
+        position: relative;
     }
 `
 
@@ -64,7 +65,7 @@ const Crew_container = styled.div`
 
 const Nav_container = styled.div`
     margin-left: 7rem;
-    
+    width: fit-content;
 `
 
 function Crew() {
@@ -80,7 +81,7 @@ function Crew() {
                     <Crewmate/>
                 </Crew_container>
                 <Nav_container>
-                    <Crew_nav />
+                    <Crew_nav/>
                 </Nav_container>
             </Main>
         </>

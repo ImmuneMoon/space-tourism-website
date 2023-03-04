@@ -52,7 +52,6 @@ const Crew_info = styled.p`
 
 const Crew_img = styled.img`
     height: 490px;
-    bottom: 0;
 `
 
 function anoushe() {
@@ -71,7 +70,7 @@ function anoushe() {
                     </Crew_info>
                 </L_container>
                 <R_container>
-                    <Crew_img src={portrait} alt="Mark Shuttleworth"/>
+                    <Crew_img class="crew_img" src={portrait} alt="Mark Shuttleworth"/>
                 </R_container>
             </Doug_container>
         </>

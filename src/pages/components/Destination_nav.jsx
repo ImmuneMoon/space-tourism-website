@@ -1,13 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Pg_nav = styled.nav`
-    display: flex;
-    justify-content: center;
-`
-
 const Nav_list = styled.ul`
-    margin-left: 26.5rem;
+    margin-left: 50rem;
     width: 18rem;
     height: max-content;
     list-style: none;
@@ -47,42 +42,40 @@ const Underline = styled.div`
 function destNav() {
     return (
         <>
-            <Pg_nav>
-                <Nav_list>
-                    <Item>
-                        <Bttn id="moon">
-                            <Location>
-                                MOON
-                            </Location>
-                            <Underline></Underline>
-                        </Bttn>
-                    </Item>
-                    <Item>
-                        <Bttn id="mars">
-                            <Location>
-                                MARS
-                            </Location>
-                            <Underline></Underline>
-                        </Bttn>
-                    </Item>
-                    <Item>
-                        <Bttn id="europa">
-                            <Location>
-                                EUROPA
-                            </Location>
-                            <Underline></Underline>
-                        </Bttn>
-                    </Item>
-                    <Item>
-                        <Bttn id="titan">
-                            <Location>
-                                TITAN
-                            </Location>
-                            <Underline></Underline>
-                        </Bttn>
-                    </Item>
-                </Nav_list>
-            </Pg_nav>
+            <Nav_list>
+                <Item>
+                    <Bttn id="moon">
+                        <Location>
+                            MOON
+                        </Location>
+                        <Underline></Underline>
+                    </Bttn>
+                </Item>
+                <Item>
+                    <Bttn id="mars">
+                        <Location>
+                            MARS
+                        </Location>
+                        <Underline></Underline>
+                    </Bttn>
+                </Item>
+                <Item>
+                    <Bttn id="europa">
+                        <Location>
+                            EUROPA
+                        </Location>
+                        <Underline></Underline>
+                    </Bttn>
+                </Item>
+                <Item>
+                    <Bttn id="titan">
+                        <Location>
+                            TITAN
+                        </Location>
+                        <Underline></Underline>
+                    </Bttn>
+                </Item>
+            </Nav_list>
         </>
     );
 }

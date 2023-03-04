@@ -71,7 +71,7 @@ function mark() {
                     </Crew_info>
                 </L_container>
                 <R_container>
-                    <Crew_img src={portrait} alt="Mark Shuttleworth"/>
+                    <Crew_img class="crew_img" src={portrait} alt="Mark Shuttleworth"/>
                 </R_container>
             </Doug_container>
         </>

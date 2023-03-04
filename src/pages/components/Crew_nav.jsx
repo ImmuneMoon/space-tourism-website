@@ -1,18 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Nav_container = styled.section`
-    
-`
-
-const Nav_module = styled.nav`
-    
-`
-
 const Nav_list = styled.ul`
     display: flex;
     flex-direction: row;
     list-style: none;
+    width: fit-content;
 `
 
 const Nav_item = styled.li`
@@ -32,24 +25,20 @@ const Nav_dot = styled.div`
 function crewNav() {
     return(
         <>
-            <Nav_container>
-                <Nav_module>
-                    <Nav_list>
-                        <Nav_item>
-                            <Nav_dot></Nav_dot>
-                        </Nav_item>
-                        <Nav_item>
-                            <Nav_dot></Nav_dot>
-                        </Nav_item>
-                        <Nav_item>
-                            <Nav_dot></Nav_dot>
-                        </Nav_item>
-                        <Nav_item>
-                            <Nav_dot></Nav_dot>
-                        </Nav_item>
-                    </Nav_list>
-                </Nav_module>
-            </Nav_container>
+            <Nav_list>
+                <Nav_item>
+                    <Nav_dot></Nav_dot>
+                </Nav_item>
+                <Nav_item>
+                    <Nav_dot></Nav_dot>
+                </Nav_item>
+                <Nav_item>
+                    <Nav_dot></Nav_dot>
+                </Nav_item>
+                <Nav_item>
+                    <Nav_dot></Nav_dot>
+                </Nav_item>
+            </Nav_list>
         </>
     );
 }
