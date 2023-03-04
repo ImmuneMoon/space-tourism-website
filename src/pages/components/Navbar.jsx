@@ -62,7 +62,7 @@ const Nav_link = styled.div`
 	flex-direction: row;
 	align-items: center;
 	padding-top: .9rem;
-	padding-bottom: .9rem;
+	padding-bottom: 2.1rem;
 `
 
 const Page_num = styled.p`
