@@ -9,7 +9,8 @@ import europa from './components/Destination_europa';
 import titan from './components/Destination_titan';
 
 
-let Location = mars;
+let Location = moon;
+
 
 
 const Content = createGlobalStyle`

@@ -66,9 +66,7 @@ const Nav_link = styled.div`
 `
 
 const Page_num = styled.p`
-	@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
-
-	font-family: 'Barlow Condensed', sans-serif;
+	font-family: sans-serif;
 	margin-right: .5rem;
 	font-weight: bold;
     font-size: 16px;
@@ -76,9 +74,7 @@ const Page_num = styled.p`
 `
 
 const Page_name = styled.p`
-	@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
-
-	font-family: 'Barlow Condensed', sans-serif;
+	font-family: sans-serif;
     font-size: 16px;
     letter-spacing: 2.7;
 `

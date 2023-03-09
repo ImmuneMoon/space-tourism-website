@@ -49,9 +49,6 @@ const Right_container = styled.div`
 `
 
 const Main_p1 = styled.p`
-    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
-
-    font-family: 'Barlow Condensed', sans-serif;
     font-weight: 400;
     font-size: 28px;
     letter-spacing: 4.75;
@@ -61,9 +58,6 @@ const Main_p1 = styled.p`
 `
 
 const Main_h1 = styled.h1`
-    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
-
-    font-family: 'Barlow Condensed', sans-serif;
     font-weight: 400;
     font-size: 150px;
     color: #FFFFFF;
@@ -91,9 +85,6 @@ const Bttn_container = styled.div`
 `
 
 const Main_bttn = styled.div`
-    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
-
-    font-family: 'Barlow Condensed', sans-serif;
     font-size: 32px;
     letter-spacing: 4.75;
     background-color: #FFFFFF;

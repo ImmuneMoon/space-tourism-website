@@ -1,11 +1,25 @@
+/* 
+This CSS file is for multi component spanning stylings 
+Chack individual components for additional stylings relevant only to that component
+*/
+
+
+/* Global styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    height: 100%;
+    width: 100%;
+}
+
 main {
     margin-top: 5rem;
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -14,6 +28,7 @@ Destination page CSS
 */
 
 
+/* Constainer for destination section */
 section[name="dest-container"] {
     display: flex;
     flex-direction: row;
@@ -49,17 +64,21 @@ div[name="shadow"] {
     transform: translateX(.6rem) translateY(-22.75rem);
 }
 
+/* Planet information container */
 div[name="info"] {
     width: 27rem;
     margin: 3rem 0 8rem 0;
 }
 
+
+/* Planet name */
 h2[name="title"] {
     font-size: 100px;
     font-weight: 500;
     margin-left: 1rem;
 }
 
+/* Planet subtext/ description */
 #dest-subtext {
     color: #D0D6F9;
     font-size: 16px;
@@ -68,42 +87,50 @@ h2[name="title"] {
     margin: .15rem 0 3.5rem 1.25rem;
 }
 
+/* Container for travel time and distance container/ decorative underscore */
+div[name="travel-container"] {
+    margin-left: 1.25rem;
+}
+
+/* Decorative underscore to time and distance area */
+div[name="dest-line"] {
+    border: .5px solid rgba(128, 128, 128, 0.548);
+}
+
+/* Travel time and distance container */
 div[name="travel"] {
     display: flex;
     justify-content: space-between;
     margin: 1.5rem 0 0 0;
 }
 
-div[name="travel-container"] {
-    margin-left: 1.25rem;
-}
-
-div[name="dest-line"] {
-    border: .5px solid rgba(128, 128, 128, 0.548);
-}
-
+/* Heading/ title for distance */
 h3[name="dist-title"] {
     font-weight: 400;
     font-size: 14px;
     color: #D0D6F9;
 }
 
+/* Value for distance */
 p[name="avg-dist"] {
     font-size: 28px;
     margin: .75rem 0 0 0;
     font-weight: 500;
 }
 
+/* Container for travel time */
+div[name="travel-time"] {
+    margin: 0 5rem 0 0;
+}
+
+/* Heading/ title for travel time */
 h3[name="time-title"] {
     font-weight: 400;
     font-size: 14px;
     color: #D0D6F9;
 }
 
-div[name="travel-time"] {
-    margin: 0 5rem 0 0;
-}
-
+/* Value for travel time */
 p[name="est-time"] {
     font-size: 28px;
     margin: .75rem 0 0 0;
@@ -115,10 +142,52 @@ p[name="est-time"] {
 Crew page CSS
 */
 
+/* Container for crew components crewmember sections */
+section[name="crew-container"] {
+    display: flex;
+    flex-direction: row;
+}
 
-#crew_img {
+/* Left half of crewmwmber component */
+div[name="l-container"] {
+    margin: 5rem 0 5rem 0;
+}
+
+/* Right half of crewmwmber component */
+div[name="r-container"] {
     position: absolute;
+    right: 9rem;
     bottom: 0;
+    z-index: -10;
+}
+
+/* Crew member title */
+h2[name="crew-title"]{
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: 4.75;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 0 1.5rem 0;
+}
+
+/* Crew Member's name */
+h3[name="crew-name"]{
+    font-size: 56px;
+    font-weight: 500;
+    margin: 0 0 1.5rem 0;
+}
+
+/* Crew member's information*/
+p[name="crew-info"] {
+    color: #D0D6F9;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.75;
+    margin: 0;
+}
+
+/* Crew image styles */
+#crew_img {
 }
 
 

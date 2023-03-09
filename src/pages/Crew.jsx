@@ -8,7 +8,7 @@ import mark from './components/Crew_mark';
 import victor from './components/Crew_victor';
 import anoushe from './components/Crew_anoushe';
 
-let Crewmate = doug;
+let Crewmate = anoushe;
 
 const Content = createGlobalStyle`
     body {
@@ -59,12 +59,13 @@ const Meet = styled.h1`
     letter-spacing: 4.75;
 `
 
-const Crew_container = styled.div`
+const Crewmate_container = styled.div`
+    margin-top: 5rem;
     margin-left: 10rem;
 `
 
 const Nav_container = styled.div`
-    margin-left: 7rem;
+    margin: 3rem 0 7rem 9.3rem;
     width: fit-content;
 `
 
@@ -77,9 +78,9 @@ function Crew() {
                     <Two>02</Two>
                     <Meet>MEET YOUR CREW</Meet>
                 </Heading>
-                <Crew_container>
+                <Crewmate_container>
                     <Crewmate/>
-                </Crew_container>
+                </Crewmate_container>
                 <Nav_container>
                     <Crew_nav/>
                 </Nav_container>
