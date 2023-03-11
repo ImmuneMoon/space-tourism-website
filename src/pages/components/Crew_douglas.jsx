@@ -6,8 +6,12 @@ const Crew_info = styled.p`
     width: 27rem;
 `
 
+const R_container = styled.div`
+    right: 11rem;
+`
+
 const Crew_img = styled.img`
-    height: 675px;
+    height: 650px;
 `
 
 function doug() {
@@ -26,9 +30,9 @@ function doug() {
                         astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.
                     </Crew_info>
                 </div>
-                <div name="r-container">
+                <R_container name="r-container">
                     <Crew_img id="crew_img" src={portrait} alt="Douglas Hurley"/>
-                </div>
+                </R_container>
             </section>
         </>
     );

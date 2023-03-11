@@ -5,6 +5,7 @@ const Nav_container = styled.section`
     display: flex;
     flex-direction: column;
 `
+
 // should probably add a style sheet for similar buttons to reduce redundant styles here.
 // should do the same for other repeating components too
 const Button_1 = styled.button`

@@ -6,8 +6,13 @@ import portrait from './assets/crew/image-anousheh-ansari.png'
 const Crew_info = styled.p`
     width: 27.45rem;
 `
+
+const R_container = styled.div`
+    right: 11rem;
+`
+
 const Crew_img = styled.img`
-    height: 490px;
+    height: 530px;
 `
 
 function anoushe() {
@@ -27,9 +32,9 @@ function anoushe() {
                         Iranian in space.
                     </Crew_info>
                 </div>
-                <div name="r-container">
+                <R_container name="r-container">
                     <Crew_img class="crew_img" src={portrait} alt="Anousheh Ansari"/>
-                </div>
+                </R_container>
             </section>
         </>
     );

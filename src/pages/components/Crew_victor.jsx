@@ -6,8 +6,12 @@ const Crew_info = styled.p`
     width: 27rem;
 `
 
+const R_container = styled.div`
+    right: 9rem;
+`
+
 const Crew_img = styled.img`
-    height: 535px;
+    height: 650px;
 `
 
 function victor() {
@@ -27,9 +31,9 @@ function victor() {
                         and served as a station systems flight engineer.
                     </Crew_info>
                 </div>
-                <div name="r-container">
-                    <Crew_img src={portrait} alt="Mark Shuttleworth"/>
-                </div>
+                <R_container name="r-container">
+                    <Crew_img src={portrait} alt="Victor Glover"/>
+                </R_container>
             </section>
         </>
     );

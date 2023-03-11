@@ -7,8 +7,12 @@ const Crew_info = styled.p`
     width: 27.5rem;
 `
 
+const R_container = styled.div`
+    right: 13rem;
+`
+
 const Crew_img = styled.img`
-    height: 535px;
+    height: 590px;
     bottom: 0;
 `
 
@@ -29,9 +33,9 @@ function mark() {
                         tourist.
                     </Crew_info>
                 </div>
-                <div name="r-container">
+                <R_container name="r-container">
                     <Crew_img class="crew_img" src={portrait} alt="Mark Shuttleworth"/>
-                </div>
+                </R_container>
             </section>
         </>
     );

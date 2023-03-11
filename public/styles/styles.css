@@ -156,7 +156,6 @@ div[name="l-container"] {
 /* Right half of crewmwmber component */
 div[name="r-container"] {
     position: absolute;
-    right: 9rem;
     bottom: 0;
     z-index: -10;
 }
