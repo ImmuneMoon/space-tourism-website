@@ -27,16 +27,16 @@ function crewNav() {
         <>
             <Nav_list>
                 <Nav_item>
-                    <Nav_dot></Nav_dot>
+                    <Nav_dot id="doug"></Nav_dot>
                 </Nav_item>
                 <Nav_item>
-                    <Nav_dot></Nav_dot>
+                    <Nav_dot id="mark"></Nav_dot>
                 </Nav_item>
                 <Nav_item>
-                    <Nav_dot></Nav_dot>
+                    <Nav_dot id="victor"></Nav_dot>
                 </Nav_item>
                 <Nav_item>
-                    <Nav_dot></Nav_dot>
+                    <Nav_dot id="anousheh"></Nav_dot>
                 </Nav_item>
             </Nav_list>
         </>

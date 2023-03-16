@@ -5,16 +5,202 @@ lavender: #D0D6F9
 Warm White: #FFFFFF
 */
 
-body {
+/* 
+This CSS file is for multi component spanning stylings 
+Chack individual components for additional stylings relevant only to that component
+*/
+
+
+/* Global styles */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  width: 100%;
+  height: 100%;
 }
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  margin-top: 5rem;
+}
+
+
+/* 
+Destination page CSS 
+*/
+
+
+/* Constainer for destination section */
+section[name="dest-container"] {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 12.3rem;
+  margin-left: 14rem;
+}
+
+/* Planet image container */
+div[name="planet"] {
+  margin: 0;
+  width: 425px;
+  height: 425px;
+  position: relative;
+  border-radius: 50%;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Planet image */
+img[name="dest-img"] {
+  width: 425px;
+  height: 425px;
+}
+
+/* Overlayed planet image shadow */
+div[name="shadow"] {
+  width: 850px;
+  height: 850px;
+  position: absolute;
+  background-color: black;
+  border-radius: 50%;
+  transform: translateX(.6rem) translateY(-22.75rem);
+}
+
+/* Planet information container */
+div[name="info"] {
+  width: 27rem;
+  margin: 3rem 0 8rem 0;
+}
+
+
+/* Planet name */
+h2[name="title"] {
+  font-size: 100px;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+/* Planet subtext/ description */
+#dest-subtext {
+  color: #D0D6F9;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.75;
+  margin: .15rem 0 3.5rem 1.25rem;
+}
+
+/* Container for travel time and distance container/ decorative underscore */
+div[name="travel-container"] {
+  margin-left: 1.25rem;
+}
+
+/* Decorative underscore to time and distance area */
+div[name="dest-line"] {
+  border: .5px solid rgba(128, 128, 128, 0.548);
+}
+
+/* Travel time and distance container */
+div[name="travel"] {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0 0 0;
+}
+
+/* Heading/ title for distance */
+h3[name="dist-title"] {
+  font-weight: 400;
+  font-size: 14px;
+  color: #D0D6F9;
+}
+
+/* Value for distance */
+p[name="avg-dist"] {
+  font-size: 28px;
+  margin: .75rem 0 0 0;
+  font-weight: 500;
+}
+
+/* Container for travel time */
+div[name="travel-time"] {
+  margin: 0 5rem 0 0;
+}
+
+/* Heading/ title for travel time */
+h3[name="time-title"] {
+  font-weight: 400;
+  font-size: 14px;
+  color: #D0D6F9;
+}
+
+/* Value for travel time */
+p[name="est-time"] {
+  font-size: 28px;
+  margin: .75rem 0 0 0;
+  font-weight: 500;
+}
+
+
+/* 
+Crew page CSS
+*/
+
+
+/* Container for crew components crewmember sections */
+section[name="crew-container"] {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Left half of crewmwmber component */
+div[name="l-container"] {
+  margin: 5rem 0 5rem 0;
+}
+
+/* Right half of crewmwmber component */
+div[name="r-container"] {
+  position: absolute;
+  bottom: 0;
+  z-index: -10;
+}
+
+/* Crew member title */
+h2[name="crew-title"]{
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: 4.75;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 1.5rem 0;
+}
+
+/* Crew Member's name */
+h3[name="crew-name"]{
+  font-size: 56px;
+  font-weight: 500;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Crew member's information*/
+p[name="crew-info"] {
+  color: #D0D6F9;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Crew image styles */
+#crew_img {
+}
+
+
+
+/*Tech page CSS*/

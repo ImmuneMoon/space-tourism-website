@@ -43,7 +43,7 @@ const Left_container = styled.div`
 
 const Right_container = styled.div`
     position: relative;
-    width: fit-content;
+    min-width: 35%;
     height: fit-content;
     margin: 0;
 `

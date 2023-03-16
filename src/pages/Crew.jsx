@@ -10,6 +10,29 @@ import anoushe from './components/Crew_anoushe';
 
 let Crewmate = doug;
 
+window.addEventListener('click', () => {
+    let element = event.target;
+    console.log('element',element);
+    const d_Dot = document.getElementById('doug');
+    console.log('ddot',d_Dot);
+    const m_Dot = document.getElementById('mark');
+    const v_Dot = document.getElementById('victor');
+    const a_Dot = document.getElementById('anousheh');
+
+    if (element == d_Dot) {
+        Crewmate = doug;
+    }
+    else if (element == m_Dot) {
+        Crewmate = mark;
+    }
+    else if (element == v_Dot) {
+        Crewmate = victor;
+    }
+    else if (element == a_Dot) {
+        Crewmate = anoushe;
+    }
+});
+
 const Content = createGlobalStyle`
     body {
         background-image: url(${bkgrnd});
@@ -40,9 +63,6 @@ const Heading = styled.div`
 `
 
 const Two = styled.p`
-    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
-
-    font-family: 'Barlow Condensed', sans-serif;
     font-size: 28px;
     font-weight: bold;
     color: #4b5560;
@@ -50,9 +70,6 @@ const Two = styled.p`
 `
 
 const Meet = styled.h1`
-    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
-
-    font-family: 'Barlow Condensed', sans-serif;
     font-size: 28px;
     font-weight: 500;
     color: #FFFFFF;
