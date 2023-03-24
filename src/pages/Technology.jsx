@@ -1,6 +1,7 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components';
+import Navbar from './components/Navbar';
 import bkgrnd from './components/assets/technology/background-technology-desktop.jpg';
 import Tech_nav from './components/Tech_nav';
 import launch_vehicle from './components/Launch_vehicle';
@@ -76,6 +77,7 @@ function Technology() {
     return (
         <>
             <Content></Content>
+            <Navbar activePage="tech-page"/>
             <Main>
                 <Heading>
                     <Three>

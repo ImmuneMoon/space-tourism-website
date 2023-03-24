@@ -35,6 +35,54 @@ main {
 
 
 /* 
+NavBar CSS
+*/
+
+div[name="active-nav-item"] {
+  display: block;
+  color: #FFFFFF;
+}
+
+/* Change the color of the adjacent element on click and hover, but only if it's not red */
+#home:hover:not([style*="color: #FFFFFF"]) + #homeUL {
+  display: block;
+  color: #ffffff86; /* initial color */
+}
+
+#home:active:not([style*="color: #FFFFFF"]) + #homeUL {
+  display: block;
+  color: #FFFFFF; /* new color on hover and click */
+}
+#dest:hover:not([style*="color: #FFFFFF"]) + #destUL {
+  display: block;
+  color: #ffffff86; /* initial color */
+}
+
+#dest:active:not([style*="color: #FFFFFF"]) + #destUL {
+  display: block;
+  color: #FFFFFF; /* new color on hover and click */
+}
+#crew:hover:not([style*="color: #FFFFFF"]) + #crewUL {
+  display: block;
+  color: #ffffff86; /* initial color */
+}
+
+#crew:active:not([style*="color: #FFFFFF"]) + #crew {
+  display: block;
+  color: #FFFFFF; /* new color on hover and click */
+}
+#tech:hover:not([style*="color: #FFFFFF"]) + #techUL {
+  display: block;
+  color: #ffffff86; /* initial color */
+}
+
+#tech:active:not([style*="color: #FFFFFF"]) + #techUL {
+  display: block;
+  color: #FFFFFF; /* new color on hover and click */
+}
+
+
+/* 
 Destination page CSS 
 */
 

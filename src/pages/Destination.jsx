@@ -1,6 +1,7 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components'
+import Navbar from './components/Navbar';
 import bkgrnd from './components/assets/destination/background-destination-desktop.jpg';
 import Dest_nav from './components/Destination_nav'
 import moon from './components/Destination_moon';
@@ -57,14 +58,14 @@ const Pick = styled.h1`
 `
 
 let Location_container = styled.div`
-    margin-top: 3.5rem;
-    margin-left: 1rem;
+    margin: 3.5rem auto 0 1rem;
 `
 
 function Destination() {
     return (
         <>
             <Content></Content>
+            <Navbar activePage="dest-page"/>
             <main>
                 <div>
                     <Heading>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
+import Navbar from './components/Navbar';
 import bkgrnd from './components/assets/homepage/background-home-desktop.jpg';
 
 
@@ -116,6 +117,7 @@ function Home() {
     return (
         <>
             <Content></Content>
+            <Navbar activePage="home-page"/>
             <Main_container>
                 <Home_container>
                     <Left_container>

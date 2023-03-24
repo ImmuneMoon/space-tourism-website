@@ -1,6 +1,7 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components';
+import Navbar from './components/Navbar';
 import bkgrnd from './components/assets/crew/background-crew-desktop.jpg';
 import Crew_nav from './components/Crew_nav';
 import doug from './components/Crew_douglas';
@@ -90,6 +91,7 @@ function Crew() {
     return (
         <>
             <Content></Content>
+            <Navbar activePage="crew-page"/>
             <Main>
                 <Heading>
                     <Two>02</Two>

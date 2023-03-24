@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, {useEffect} from "react";
+import { Link, useRoutes, useMatch } from "react-router-dom";
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import Logo from './assets/logo.svg'
@@ -80,95 +80,230 @@ const Page_name = styled.p`
 
 const Underline = styled.div`
 	width: 95%;
-	border-bottom: 3px solid #ffffff86;
+	color: #FFFFFF86;
 	display: none;
-	${Item}:hover & {
-		display: block;
-	}
 `
-document.addEventListener("DOMContentLoaded", (event) => {
-	const home = document.getElementById('home');
-	console.log('home',home);
-	const dest = document.getElementById('dest');
-	const crew = document.getElementById('crew');
-	const tech = document.getElementById('tech');
-	let path = window.location.pathname;
 
+
+/*
 	window.addEventListener('click', () => {
 		path = window.location.pathname;
+		console.log('working');
+		console.log('path',path);
+
+		if (path === '/') {
+			homeUL.style.display = 'block';
+			homeUL.style.borderBottom = '3px solid #FFFFFF';
+
+			destUL.style.display = 'none';
+			destUL.style.borderBottom = '3px solid #ffffff86';
+
+			crewUL.style.display = 'none';
+			crewUL.style.borderBottom = '3px solid #ffffff86';
+
+			techUL.style.display = 'none';
+			techUL.style.borderBottom = '3px solid #ffffff86';
+		}
+
+		else if (path.includes('/destination')) {
+			destUL.style.display = 'block';
+			destUL.style.borderBottom = '3px solid #FFFFFF';
+
+			homeUL.style.display = 'none';
+			homeUL.style.borderBottom = '3px solid #ffffff86';
+
+			crewUL.style.display = 'none';
+			crewUL.style.borderBottom = '3px solid #ffffff86';
+
+			techUL.style.display = 'none';
+			techUL.style.borderBottom = '3px solid #ffffff86';
+		}
+
+		else if (path.includes('/crew')) {
+			crewUL.style.display = 'block';
+			crewUL.style.borderBottom = '3px solid #FFFFFF';
+
+			homeUL.style.display = 'none';
+			homeUL.style.borderBottom = '3px solid #ffffff86';
+
+			destUL.style.display = 'none';
+			destUL.style.borderBottom = '3px solid #ffffff86';
+
+			techUL.style.display = 'none';
+			techUL.style.borderBottom = '3px solid #ffffff86';
+		}
+
+		else if (path.includes('/technology')) {
+			techUL.style.display = 'block';
+			techUL.style.borderBottom = '3px solid #FFFFFF';
+
+			homeUL.style.display = 'none';
+			homeUL.style.borderBottom = '3px solid #ffffff86';
+
+			destUL.style.display = 'none';
+			destUL.style.borderBottom = '3px solid #ffffff86';
+
+			crewUL.style.display = 'none';
+			crewUL.style.borderBottom = '3px solid #ffffff86';
+		}
 	});
-	console.log('working');
-	console.log('path',path);
-	if (path == '/') {
-		home.style.display = 'block';
-		home.style.borderBottom = '3px solid #FFFFFF';
-	}
-	else if (path == '/destination') {
-		dest.style.display = 'block';
-		dest.style.borderBottom = '3px solid #FFFFFF';
-	}
-	else if (path == '/crew') {
-		crew.style.display = 'block';
-		crew.style.borderBottom = '3px solid #FFFFFF';
-	}
-	else if (path == '/technology') {
-		tech.style.display = 'block';
-		tech.style.borderBottom = '3px solid #FFFFFF';
-	}
-});
+
+	document.addEventListener('mouseover', (event) => {
+		// Gets the element that is being hovered over
+		let element = event.target;
+		console.log('element',element);
+		if (element == home) {
+			if (!homeUL.style.includes('3px solid rgb(255, 255, 255)')) {
+				homeUL.style.display = 'block';
+			}
+		}
+		else if (element == dest) {
+			if (!destUL.style.includes('3px solid rgb(255, 255, 255)')) {
+				destUL.style.display = 'block';
+			}
+		}
+		else if (element == crew) {
+			if (!destUL.style.includes('3px solid rgb(255, 255, 255)')) {
+				crewUL.style.display = 'block';
+			}
+		}
+		else if(element == tech) {
+			if (!destUL.style.includes('3px solid rgb(255, 255, 255)')) {
+				techUL.style.display = 'block';
+			}
+		}
+	  });
+	  
+	document.addEventListener('mouseout', (event) => {
+		// Gets the element that is being hovered out of
+		let element = event.target;
+		if (element == home) {
+			if (!homeUL.style.includes('3px solid rgb(255, 255, 255)')) {
+				homeUL.style.display = 'none';
+			}
+		}
+		else if (element == dest) {
+			if (!destUL.style.includes('3px solid rgb(255, 255, 255)')) {
+				destUL.style.display = 'none';
+			}
+		}
+		else if (element == crew) {
+			if (!destUL.style.includes('3px solid rgb(255, 255, 255)')) {
+				crewUL.style.display = 'none';
+			}
+		}
+		else if(element == tech) {
+			if (!destUL.style.includes('3px solid rgb(255, 255, 255)')) {
+				techUL.style.display = 'none';
+			}
+		}
+	});
+*/
+
+let activeHome = '';
+let activeDest = '';
+let activeCrew = '';
+let activeTech = '';
+	
 
 function Navbar() {
-  return (
-    <>
-		<Global></Global>
-		<Container>
-			<Logo_img src={Logo} alt="logo" />
-			<Line></Line>
-			<Nav>
-				<List_container>
-					<Nav_list>
-						<Item>
-							<Link to="/">
-								<Nav_link>
-									<Page_num>00</Page_num>
-									<Page_name>HOME</Page_name>
-								</Nav_link>
-								<Underline id="home"></Underline>
-							</Link>
-						</Item>
-						<Item>
-							<Link to="/destination">
-								<Nav_link>
-									<Page_num>01</Page_num>
-									<Page_name>DESTINATION</Page_name>
-								</Nav_link>
-								<Underline id="dest"></Underline>
-							</Link>
-						</Item>
-						<Item>
-							<Link to="/crew">
-								<Nav_link>
-									<Page_num>02</Page_num>
-									<Page_name>CREW</Page_name>
-								</Nav_link>
-								<Underline id="crew"></Underline>
-							</Link>
-						</Item>
-						<Item>
-							<Link to="/technology">
-								<Nav_link>
-									<Page_num>03</Page_num>
-									<Page_name>TECHNOLOGY</Page_name>
-								</Nav_link>
-								<Underline id="tech"></Underline>
-							</Link>
-						</Item>
-					</Nav_list>
-				</List_container>
-			</Nav>
-		</Container>
-    </>
-  );
+	useEffect(() => {
+		// This code will run when the component mounts
+		console.log("Component mounted");
+
+		// This code will run when the component unmounts
+		return () => {
+			console.log("Component unmounted");
+		};
+		}, []);
+
+		useEffect(() => {
+			let path = window.location.pathname;
+			console.log(path);
+			
+			if (path.includes('/') && !path.includes('dest') && !path.includes('crew') && !path.includes('tech')) {
+				console.log('home working');
+				activeHome = "active-nav-item";
+				activeDest = '';
+				activeCrew = '';
+				activeTech = '';
+			}
+			else if (path == '/destination') {
+				console.log('dest working');
+				activeHome = '';
+				activeDest = "active-nav-item";
+				activeCrew = '';
+				activeTech = '';
+			}
+			else if (path.includes('/crew')) {
+				console.log('crew working');
+				activeHome = '';
+				activeDest = '';
+				activeCrew = "active-nav-item";
+				activeTech = '';
+			}
+			else if (path.includes('/technology')) {
+				console.log('tech working');
+				activeHome = '';
+				activeDest = '';
+				activeCrew = '';
+				activeTech = "active-nav-item";
+			}
+			// This code will run whenever the page loads
+			console.log("Page loaded");
+		}, []);
+
+	return (
+		<>
+			<Global></Global>
+			<Container>
+				<Logo_img src={Logo} alt="logo" />
+				<Line></Line>
+				<Nav>
+					<List_container>
+						<Nav_list>
+							<Item>
+								<Link to="/">
+									<Nav_link id="home">
+										<Page_num>00</Page_num>
+										<Page_name>HOME</Page_name>
+									</Nav_link>
+									<Underline id="homeUL" name={activeHome}></Underline>
+								</Link>
+							</Item>
+							<Item>
+								<Link to="/destination">
+									<Nav_link id="dest">
+										<Page_num>01</Page_num>
+										<Page_name>DESTINATION</Page_name>
+									</Nav_link>
+									<Underline id="destUL" name={activeDest}></Underline>
+								</Link>
+							</Item>
+							<Item>
+								<Link to="/crew">
+									<Nav_link id="crew">
+										<Page_num>02</Page_num>
+										<Page_name>CREW</Page_name>
+									</Nav_link>
+									<Underline id="crewUL" name={activeCrew}></Underline>
+								</Link>
+							</Item>
+							<Item>
+								<Link to="/technology">
+									<Nav_link id="tech">
+										<Page_num>03</Page_num>
+										<Page_name>TECHNOLOGY</Page_name>
+									</Nav_link>
+									<Underline id="techUL" name={activeTech}></Underline>
+								</Link>
+							</Item>
+						</Nav_list>
+					</List_container>
+				</Nav>
+			</Container>
+		</>
+	);
 }
 
 export default Navbar;
