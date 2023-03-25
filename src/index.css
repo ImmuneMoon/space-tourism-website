@@ -21,16 +21,22 @@ Chack individual components for additional stylings relevant only to that compon
 
 #root {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 body {
   height: 100%;
   width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: black;
+  background-repeat: no-repeat;
 }
 
 main {
-  margin-top: 5rem;
 }
 
 
@@ -38,49 +44,14 @@ main {
 NavBar CSS
 */
 
+.link {
+  height: 100%;
+}
+
 div[name="active-nav-item"] {
   display: block;
-  color: #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
 }
-
-/* Change the color of the adjacent element on click and hover, but only if it's not red */
-#home:hover:not([style*="color: #FFFFFF"]) + #homeUL {
-  display: block;
-  color: #ffffff86; /* initial color */
-}
-
-#home:active:not([style*="color: #FFFFFF"]) + #homeUL {
-  display: block;
-  color: #FFFFFF; /* new color on hover and click */
-}
-#dest:hover:not([style*="color: #FFFFFF"]) + #destUL {
-  display: block;
-  color: #ffffff86; /* initial color */
-}
-
-#dest:active:not([style*="color: #FFFFFF"]) + #destUL {
-  display: block;
-  color: #FFFFFF; /* new color on hover and click */
-}
-#crew:hover:not([style*="color: #FFFFFF"]) + #crewUL {
-  display: block;
-  color: #ffffff86; /* initial color */
-}
-
-#crew:active:not([style*="color: #FFFFFF"]) + #crew {
-  display: block;
-  color: #FFFFFF; /* new color on hover and click */
-}
-#tech:hover:not([style*="color: #FFFFFF"]) + #techUL {
-  display: block;
-  color: #ffffff86; /* initial color */
-}
-
-#tech:active:not([style*="color: #FFFFFF"]) + #techUL {
-  display: block;
-  color: #FFFFFF; /* new color on hover and click */
-}
-
 
 /* 
 Destination page CSS 

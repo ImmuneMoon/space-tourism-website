@@ -1,22 +1,15 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components';
-import Navbar from './components/Navbar';
-import bkgrnd from './components/assets/technology/background-technology-desktop.jpg';
-import Tech_nav from './components/Tech_nav';
-import launch_vehicle from './components/Launch_vehicle';
+import bkgrnd from './assets/technology/background-technology-desktop.jpg';
+import Tech_nav from './Tech_nav';
+import launch_vehicle from './Launch_vehicle';
 
 let Vehicle = launch_vehicle;
 
 const Content = createGlobalStyle`
     body {
         background-image: url(${bkgrnd});
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -ms-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        background-color: black;
     }
 `
 
@@ -77,7 +70,6 @@ function Technology() {
     return (
         <>
             <Content></Content>
-            <Navbar activePage="tech-page"/>
             <Main>
                 <Heading>
                     <Three>

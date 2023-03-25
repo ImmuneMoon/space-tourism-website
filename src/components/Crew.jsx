@@ -1,13 +1,12 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components';
-import Navbar from './components/Navbar';
-import bkgrnd from './components/assets/crew/background-crew-desktop.jpg';
-import Crew_nav from './components/Crew_nav';
-import doug from './components/Crew_douglas';
-import mark from './components/Crew_mark';
-import victor from './components/Crew_victor';
-import anoushe from './components/Crew_anoushe';
+import bkgrnd from './assets/crew/background-crew-desktop.jpg';
+import Crew_nav from './Crew_nav';
+import doug from './Crew_douglas';
+import mark from './Crew_mark';
+import victor from './Crew_victor';
+import anoushe from './Crew_anoushe';
 
 let Crewmate = doug;
 
@@ -37,13 +36,6 @@ window.addEventListener('click', () => {
 const Content = createGlobalStyle`
     body {
         background-image: url(${bkgrnd});
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -ms-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-color: black;
         position: relative;
     }
 `
@@ -91,7 +83,6 @@ function Crew() {
     return (
         <>
             <Content></Content>
-            <Navbar activePage="crew-page"/>
             <Main>
                 <Heading>
                     <Two>02</Two>

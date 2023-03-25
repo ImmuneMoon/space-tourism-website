@@ -1,15 +1,17 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route}
 	from 'react-router-dom';
-import Home from './pages/Home';
-import Destination from './pages/Destination';
-import Crew from './pages/Crew';
-import Technology from './pages/Technology';
-import Attribution from './pages/components/Attribution';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Destination from './components/Destination';
+import Crew from './components/Crew';
+import Technology from './components/Technology';
+import Attribution from './components/Attribution';
 
 function App() {
   return (
     	<Router>
+    	<Navbar/>
     	<Routes>
     		<Route exact path='/' extact element={<Home/>} />
     		<Route path='/destination' element={<Destination/>} />

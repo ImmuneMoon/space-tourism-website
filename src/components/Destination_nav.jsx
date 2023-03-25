@@ -15,11 +15,6 @@ const Item = styled.li`
 const Bttn = styled.button`
     border: none;
     background: none;
-    margin: 0;
-    padding: 0;
-`
-
-const Location = styled.p`
     font-weight: 500;
     margin-bottom: .5rem;
     font-size: 16px;
@@ -44,36 +39,28 @@ function destNav() {
         <>
             <Nav_list>
                 <Item>
-                    <Bttn id="moon">
-                        <Location>
-                            MOON
-                        </Location>
-                        <Underline></Underline>
+                    <Bttn id="moon" onClick={moonBttn}>
+                        MOON
                     </Bttn>
+                    <Underline></Underline>
                 </Item>
                 <Item>
-                    <Bttn id="mars">
-                        <Location>
-                            MARS
-                        </Location>
-                        <Underline></Underline>
+                    <Bttn id="mars" onClick={marsBttn}>
+                        MARS
                     </Bttn>
+                    <Underline></Underline>
                 </Item>
                 <Item>
-                    <Bttn id="europa">
-                        <Location>
-                            EUROPA
-                        </Location>
-                        <Underline></Underline>
+                    <Bttn id="europa" onClick={europaBttn}>
+                        EUROPA
                     </Bttn>
+                    <Underline></Underline>
                 </Item>
                 <Item>
-                    <Bttn id="titan">
-                        <Location>
-                            TITAN
-                        </Location>
-                        <Underline></Underline>
+                    <Bttn id="titan" onClick={titanBttn}>
+                        TITAN
                     </Bttn>
+                    <Underline></Underline>
                 </Item>
             </Nav_list>
         </>

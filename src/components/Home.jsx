@@ -2,51 +2,40 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
-import Navbar from './components/Navbar';
-import bkgrnd from './components/assets/homepage/background-home-desktop.jpg';
+import bkgrnd from './assets/homepage/background-home-desktop.jpg';
 
 
 const Content = createGlobalStyle`
     body {
         background-image: url(${bkgrnd});
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -ms-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        background-color: black;
-        background-repeat: no-repeat;
-
     } 
 `
 
 const Main_container = styled.main`
-    margin: 0 0 5rem 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 
 const Home_container = styled.div`
-    width: 100%;
-    height: 95vh;
+    width: 80%;
+    height: fit-content;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin: 0;
 `
 
 const Left_container = styled.div`
     width: fit-content;
     height: fit-content;
-    margin: 0;
-    margin-top: 16.5rem;
-    margin-left: 10.5rem;
-    
 `
 
 const Right_container = styled.div`
     position: relative;
-    min-width: 35%;
+    min-width: min-content;
     height: fit-content;
-    margin: 0;
 `
 
 const Main_p1 = styled.p`
@@ -55,7 +44,6 @@ const Main_p1 = styled.p`
     letter-spacing: 4.75;
     color: #D0D6F9;
     width: fit-content;
-    margin: 0;
 `
 
 const Main_h1 = styled.h1`
@@ -63,10 +51,8 @@ const Main_h1 = styled.h1`
     font-size: 150px;
     color: #FFFFFF;
     width: fit-content;
-    margin: 0;
     margin-top: 2rem;
     margin-bottom: .5rem;
-    
 `
 
 const Main_p2 = styled.p`
@@ -75,13 +61,9 @@ const Main_p2 = styled.p`
     line-height: 1.75;
     color: #D0D6F9;
     width: 29rem;
-    margin: 0;
 `
 
 const Bttn_container = styled.div`
-    margin: 0;
-    margin-top: 22.5rem;
-    margin-right: 9.5em;
     border-radius: 50%;
 `
 
@@ -104,7 +86,6 @@ const Bttn_hover = styled.div`
     width: 17rem;
     height: 17rem;
     border-radius: 50%;
-    top: 57%;
     transition: transform 200ms linear;
 
     ${Bttn_container}:hover & {
@@ -117,7 +98,6 @@ function Home() {
     return (
         <>
             <Content></Content>
-            <Navbar activePage="home-page"/>
             <Main_container>
                 <Home_container>
                     <Left_container>

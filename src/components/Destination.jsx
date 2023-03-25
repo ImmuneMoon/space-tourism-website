@@ -1,28 +1,16 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components'
-import Navbar from './components/Navbar';
-import bkgrnd from './components/assets/destination/background-destination-desktop.jpg';
-import Dest_nav from './components/Destination_nav'
-import moon from './components/Destination_moon';
-import mars from './components/Destination_mars';
-import europa from './components/Destination_europa';
-import titan from './components/Destination_titan';
-
-
-let Location = moon;
-
-
+import bkgrnd from './assets/destination/background-destination-desktop.jpg';
+import Dest_nav from './Destination_nav'
+import moon from './Destination_moon';
+import mars from './Destination_mars';
+import europa from './Destination_europa';
+import titan from './Destination_titan';
 
 const Content = createGlobalStyle`
     body {
         background-image: url(${bkgrnd});
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -ms-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        background-color: black;
     }
 `
 
@@ -62,10 +50,37 @@ let Location_container = styled.div`
 `
 
 function Destination() {
+    let Location = moon;
+    let moonBttn = document.getElementById('moon');
+    let marsBttn = document.getElementById('mars');
+    let europaBttn = document.getElementById('europa');
+    let titanBttn = document.getElementById('titan');
+    /*
+    document.addEventListener('click', (event) => {
+        let element = event.target;
+        console.log('elementlog',element);
+        if (element == moonBttn) {
+            console.log('moon');
+            Location = moon;
+        }
+        else if (element == marsBttn) {
+            console.log('mars');
+            Location = mars;
+        }
+        else if (element == europaBttn) {
+            console.log('europa');
+            Location = europa;
+            console.log(Location);
+        }
+        else if (element == titanBttn) {
+            console.log('titan');
+            Location = titan;
+        }
+    });
+    */
     return (
         <>
             <Content></Content>
-            <Navbar activePage="dest-page"/>
             <main>
                 <div>
                     <Heading>
