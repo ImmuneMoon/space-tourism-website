@@ -21,6 +21,7 @@ const Main_container = styled.main`
 
 const Home_container = styled.div`
     width: 80%;
+    margin-top: 5rem;
     height: fit-content;
     display: flex;
     justify-content: space-between;
@@ -33,6 +34,7 @@ const Left_container = styled.div`
 `
 
 const Right_container = styled.div`
+    margin-top: 7rem;
     position: relative;
     min-width: min-content;
     height: fit-content;
@@ -86,6 +88,7 @@ const Bttn_hover = styled.div`
     width: 17rem;
     height: 17rem;
     border-radius: 50%;
+    top: 0;
     transition: transform 200ms linear;
 
     ${Bttn_container}:hover & {

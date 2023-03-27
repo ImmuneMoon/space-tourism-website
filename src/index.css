@@ -21,11 +21,11 @@ Chack individual components for additional stylings relevant only to that compon
 
 #root {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 body {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -223,3 +223,10 @@ p[name="crew-info"] {
 
 
 /*Tech page CSS*/
+
+
+#footer {
+  position: sticky;
+  bottom: 0;
+
+}

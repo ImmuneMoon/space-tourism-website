@@ -10,7 +10,8 @@ const Footer = styled.footer`
 
 const Credits = styled.div`
     width: 100%;
-    font-size: 12px; text-align: center;
+    font-size: 12px; 
+    text-align: center;
 `
 
 const Anchor = styled.a`
@@ -20,7 +21,7 @@ const Anchor = styled.a`
 function Attribution() {
     return (
         <>
-            <Footer>
+            <Footer id="footer">
                 <Credits>
                     Challenge by <Anchor href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor </Anchor> 
                     Coded by <Anchor href="https://www.frontendmentor.io/profile/ImmuneMoon">ImmuneMoon</Anchor>

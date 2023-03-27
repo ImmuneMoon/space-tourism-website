@@ -39,25 +39,25 @@ function destNav() {
         <>
             <Nav_list>
                 <Item>
-                    <Bttn id="moon" onClick={moonBttn}>
+                    <Bttn id="moon">
                         MOON
                     </Bttn>
                     <Underline></Underline>
                 </Item>
                 <Item>
-                    <Bttn id="mars" onClick={marsBttn}>
+                    <Bttn id="mars">
                         MARS
                     </Bttn>
                     <Underline></Underline>
                 </Item>
                 <Item>
-                    <Bttn id="europa" onClick={europaBttn}>
+                    <Bttn id="europa">
                         EUROPA
                     </Bttn>
                     <Underline></Underline>
                 </Item>
                 <Item>
-                    <Bttn id="titan" onClick={titanBttn}>
+                    <Bttn id="titan">
                         TITAN
                     </Bttn>
                     <Underline></Underline>
