@@ -6,6 +6,8 @@ const Footer = styled.footer`
     width: 100%;
     justify-content: center;
     margin: auto;
+    position: absolute;
+    bottom: 0;
 `
 
 const Credits = styled.div`

@@ -47,79 +47,29 @@ const Pick = styled.h1`
 
 let Location_container = styled.div`
     margin: 3.5rem auto 0 1rem;
-    position: relative;
 `
 
 let Moon_container = styled.div`
-    visibility: visible;
-    position: absolute;
+	display: block;
 `
 const Moon = moon;
 
 let Mars_container = styled.div`
-    visibility: hidden;
-    position: absolute;
+	display: none;
 `
 const Mars = mars;
 
 let Europa_container = styled.div`
-    visibility: hidden;
-    position: absolute;
+	display: none;
 `
 const Europa = europa;
 
 let Titan_container = styled.div`
-    visibility: hidden;
-    position: absolute;
+	display: none;
 `
 const Titan = titan;
 
 function Destination() {
-    const moonBttn = document.getElementById('moon');
-    const moonCtnr = document.getElementById('moon-ctnr');
-    const marsBttn = document.getElementById('mars');
-    const marsCtnr = document.getElementById('mars-ctnr');
-    const europaBttn = document.getElementById('europa');
-    const europaCtnr = document.getElementById('europa-ctnr');
-    const titanBttn = document.getElementById('titan');
-    const titanCtnr = document.getElementById('titan-ctnr');
-
-    document.addEventListener('click', (event) => {
-        let element = event.target;
-        console.log('elementlog',element);
-        if (element == moonBttn) {
-            console.log('moon');
-            moonCtnr.style.visibility = visible;
-            marsCtnr.style.visibility = hidden;
-            europaCtnr.style.visibility = hidden;
-            titanCtnr.style.visibility = hidden;
-
-        }
-        else if (element == marsBttn) {
-            console.log('mars');
-            moonCtnr.style.visibility = hidden;
-            marsCtnr.style.visibility = visible;
-            europaCtnr.style.visibility = hidden;
-            titanCtnr.style.visibility = hidden;
-            
-        }
-        else if (element == europaBttn) {
-            console.log('europa');
-            moonCtnr.style.visibility = hidden;
-            marsCtnr.style.visibility = hidden;
-            europaCtnr.style.visibility = visible;
-            titanCtnr.style.visibility = hidden;
-            
-        }
-        else if (element == titanBttn) {
-            console.log('titan');
-            moonCtnr.style.visibility = hidden;
-            marsCtnr.style.visibility = hidden;
-            europaCtnr.style.visibility = hidden;
-            titanCtnr.style.visibility = visible;
-            
-        }
-    });
 
     return (
         <>

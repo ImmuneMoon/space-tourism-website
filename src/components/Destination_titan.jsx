@@ -7,7 +7,7 @@ let Subtext = styled.p`
     width: 27.25rem;
 `
 
-function location() {
+function titanDest() {
     return(
         <>
             <section name="dest-container">
@@ -47,4 +47,4 @@ function location() {
     );
 }
 
-export default location;
+export default titanDest;

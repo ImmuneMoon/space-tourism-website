@@ -27,14 +27,13 @@ const Bttn = styled.button`
 
 const Underline = styled.div`
 	width: 85%;
-	border-bottom: 3px solid #ffffff86;
+	border-bottom: 3px solid #FFFFFF;
 	display: none;
-	${Item}:hover & {
-		display: block;
-	}
 `
+    
 
 function destNav() {
+
     return (
         <>
             <Nav_list>
@@ -42,25 +41,25 @@ function destNav() {
                     <Bttn id="moon">
                         MOON
                     </Bttn>
-                    <Underline></Underline>
+                    <Underline id="moon-ul"></Underline>
                 </Item>
                 <Item>
                     <Bttn id="mars">
                         MARS
                     </Bttn>
-                    <Underline></Underline>
+                    <Underline id="mars-ul"></Underline>
                 </Item>
                 <Item>
                     <Bttn id="europa">
                         EUROPA
                     </Bttn>
-                    <Underline></Underline>
+                    <Underline id="europa-ul"></Underline>
                 </Item>
                 <Item>
                     <Bttn id="titan">
                         TITAN
                     </Bttn>
-                    <Underline></Underline>
+                    <Underline id="titan-ul"></Underline>
                 </Item>
             </Nav_list>
         </>

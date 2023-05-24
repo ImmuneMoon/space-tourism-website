@@ -48,7 +48,7 @@ NavBar CSS
   height: 100%;
 }
 
-div[name="active-nav-item"] {
+#active-nav-item {
   display: block;
   border-bottom: 3px solid #FFFFFF;
 }
@@ -56,6 +56,12 @@ div[name="active-nav-item"] {
 /* 
 Destination page CSS 
 */
+
+
+/* Destination nav */
+
+
+
 
 
 /* Constainer for destination section */
@@ -167,6 +173,21 @@ p[name="est-time"] {
   font-weight: 500;
 }
 
+
+/* Destination planet components */
+
+
+#mars-ctnr,
+#europa-ctnr,
+#titan-ctnr {
+  position: absolute;
+}
+
+#mars-ctnr,
+#europa-ctnr,
+#titan-ctnr {
+  display: none;
+}
 
 /* 
 Crew page CSS

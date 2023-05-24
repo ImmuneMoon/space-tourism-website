@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, useRoutes, useMatch } from "react-router-dom";
+import React, { useState} from "react";
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import Logo from './assets/logo.svg'
@@ -89,14 +89,11 @@ const Underline = styled.div`
 `
 
 function Navbar() {
-	const [path, setPath] = useState(window.location.pathname);
+	let [path, setPath] = useState(window.location.pathname);
 	let activeHome = '';
 	let activeDest = '';
 	let activeCrew = '';
 	let activeTech = '';
-	useEffect(() => {
-		setPath(window.location.pathname);
-	}, []);
 	window.addEventListener('click', () => {
 		setPath(window.location.pathname);
 	});
@@ -144,7 +141,7 @@ function Navbar() {
 										<Page_num>00</Page_num>
 										<Page_name>HOME</Page_name>
 									</Nav_link>
-									<Underline id="homeUL" name={activeHome}></Underline>
+									<Underline id={activeHome}></Underline>
 								</Link>
 							</Item>
 							<Item>
@@ -153,7 +150,7 @@ function Navbar() {
 										<Page_num>01</Page_num>
 										<Page_name>DESTINATION</Page_name>
 									</Nav_link>
-									<Underline id="destUL" name={activeDest}></Underline>
+									<Underline id={activeDest}></Underline>
 								</Link>
 							</Item>
 							<Item>
@@ -162,7 +159,7 @@ function Navbar() {
 										<Page_num>02</Page_num>
 										<Page_name>CREW</Page_name>
 									</Nav_link>
-									<Underline id="crewUL" name={activeCrew}></Underline>
+									<Underline id={activeCrew}></Underline>
 								</Link>
 							</Item>
 							<Item>
@@ -171,7 +168,7 @@ function Navbar() {
 										<Page_num>03</Page_num>
 										<Page_name>TECHNOLOGY</Page_name>
 									</Nav_link>
-									<Underline id="techUL" name={activeTech}></Underline>
+									<Underline id={activeTech}></Underline>
 								</Link>
 							</Item>
 						</Nav_list>
