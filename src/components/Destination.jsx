@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components'
 import bkgrnd from './assets/destination/background-destination-desktop.jpg';
@@ -49,27 +49,13 @@ let Location_container = styled.div`
     margin: 3.5rem auto 0 1rem;
 `
 
-let Moon_container = styled.div`
-	display: block;
-`
 const Moon = moon;
-
-let Mars_container = styled.div`
-	display: none;
-`
 const Mars = mars;
-
-let Europa_container = styled.div`
-	display: none;
-`
 const Europa = europa;
-
-let Titan_container = styled.div`
-	display: none;
-`
 const Titan = titan;
 
 function Destination() {
+    const [displayedDestination, setDisplayedDestination] = useState('moon');
 
     return (
         <>
@@ -82,19 +68,19 @@ function Destination() {
                     </Heading>
                 </div>
                 <Location_container>
-                    <Dest_nav />
-                    <Moon_container id="moon-ctnr">
-                        <Moon id="moon-cpnt"/>
-                    </Moon_container>
-                    <Mars_container id="mars-ctnr">
-                        <Mars id="mars-cpnt"/>
-                    </Mars_container>
-                    <Europa_container id="europa-ctnr">
-                        <Europa id="europa-cpnt"/>
-                    </Europa_container>
-                    <Titan_container id="titan-ctnr">
-                        <Titan id="titan-cpnt"/>
-                    </Titan_container>
+                    <Dest_nav onDestinationChange={setDisplayedDestination}/>
+					{displayedDestination === 'moon' && 
+						<Moon id="moon-cpnt"/>
+					}
+					{displayedDestination === 'mars' && 
+						<Mars id="mars-cpnt"/>
+					}
+					{displayedDestination === 'europa' && 
+						<Europa id="europa-cpnt"/>
+					}
+					{displayedDestination === 'titan' && 
+						<Titan id="titan-cpnt"/>
+					}
                 </Location_container>
             </main>
         </>

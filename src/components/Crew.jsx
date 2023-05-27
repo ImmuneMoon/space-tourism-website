@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components';
 import bkgrnd from './assets/crew/background-crew-desktop.jpg';
@@ -8,30 +8,6 @@ import mark from './Crew_mark';
 import victor from './Crew_victor';
 import anoushe from './Crew_anoushe';
 
-let Crewmate = doug;
-
-window.addEventListener('click', () => {
-    let element = event.target;
-    console.log('element',element);
-    const d_Dot = document.getElementById('doug');
-    console.log('ddot',d_Dot);
-    const m_Dot = document.getElementById('mark');
-    const v_Dot = document.getElementById('victor');
-    const a_Dot = document.getElementById('anousheh');
-
-    if (element == d_Dot) {
-        Crewmate = doug;
-    }
-    else if (element == m_Dot) {
-        Crewmate = mark;
-    }
-    else if (element == v_Dot) {
-        Crewmate = victor;
-    }
-    else if (element == a_Dot) {
-        Crewmate = anoushe;
-    }
-});
 
 const Content = createGlobalStyle`
     body {
@@ -79,7 +55,14 @@ const Nav_container = styled.div`
     width: fit-content;
 `
 
+const Doug = doug;
+const Mark = mark;
+const Victor = victor;
+const Anoushe = anoushe;
+
 function Crew() {
+    const [displayedCrew, setDisplayedCrew] = useState('doug');
+
     return (
         <>
             <Content></Content>
@@ -89,10 +72,21 @@ function Crew() {
                     <Meet>MEET YOUR CREW</Meet>
                 </Heading>
                 <Crewmate_container>
-                    <Crewmate/>
+                    {displayedCrew === 'doug' && 
+						<Doug id="doug-cpnt"/>
+					}
+					{displayedCrew === 'mark' && 
+						<Mark id="mark-cpnt"/>
+					}
+					{displayedCrew === 'victor' && 
+						<Victor id="victor-cpnt"/>
+					}
+					{displayedCrew === 'anoushe' && 
+						<Anoushe id="anoushe-cpnt"/>
+					}
                 </Crewmate_container>
                 <Nav_container>
-                    <Crew_nav/>
+                    <Crew_nav onCrewChange={setDisplayedCrew}/>
                 </Nav_container>
             </Main>
         </>

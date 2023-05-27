@@ -3,7 +3,9 @@ import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components';
 import bkgrnd from './assets/technology/background-technology-desktop.jpg';
 import Tech_nav from './Tech_nav';
-import launch_vehicle from './Launch_vehicle';
+import launch_vehicle from './assets/technology/image-launch-vehicle-portrait.jpg';
+import spaceport from './assets/technology/image-spaceport-portrait.jpg';
+import space_capsule from './assets/technology/image-space-capsule-portrait.jpg';
 
 let Vehicle = launch_vehicle;
 

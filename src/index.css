@@ -177,17 +177,9 @@ p[name="est-time"] {
 /* Destination planet components */
 
 
-#mars-ctnr,
-#europa-ctnr,
-#titan-ctnr {
-  position: absolute;
-}
 
-#mars-ctnr,
-#europa-ctnr,
-#titan-ctnr {
-  display: none;
-}
+
+
 
 /* 
 Crew page CSS
@@ -247,7 +239,7 @@ p[name="crew-info"] {
 
 
 #footer {
-  position: sticky;
+  position: absolute;
   bottom: 0;
 
 }
