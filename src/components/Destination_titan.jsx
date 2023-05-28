@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import titan from './assets/destination/image-titan.png';
 
 
 let Subtext = styled.p`
@@ -11,10 +10,6 @@ function titanDest() {
     return(
         <>
             <section name="dest-container">
-                <div name="planet">
-                    <img name="dest-img" src={titan} alt="Titan" />
-                    <div name="shadow"></div>
-                </div>
                 <div name="info">
                     <h2 name="title">TITAN</h2>
                     <Subtext id="dest-subtext">

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import europa from './assets/destination/image-europa.png';
 
 
 let Subtext = styled.p`
@@ -11,10 +10,6 @@ function EuropaDest() {
     return(
         <>
             <section name="dest-container">
-                <div name="planet">
-                    <img name="dest-img" src={europa} alt="Europa" />
-                    <div name="shadow"></div>
-                </div>
                 <div name="info">
                     <h2 name="title">EUROPA</h2>
                     <Subtext id="dest-subtext">

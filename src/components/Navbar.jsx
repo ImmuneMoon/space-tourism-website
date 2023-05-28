@@ -68,17 +68,21 @@ const Nav_link = styled.div`
 `
 
 const Page_num = styled.p`
-	font-family: sans-serif;
+	font-family: 'Barlow Condensed', sans-serif;
+	margin-top: auto;
 	margin-right: .5rem;
+	margin-bottom: auto;
 	font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 2.7;
 `
 
 const Page_name = styled.p`
-	font-family: sans-serif;
-    font-size: 16px;
+	font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
     letter-spacing: 2.7;
+	margin-top: auto;
+	margin-bottom: auto;
 `
 
 const Underline = styled.div`
@@ -99,28 +103,24 @@ function Navbar() {
 	});
 	console.log(path);
 	if (path === ('/') && !path.includes('dest') && !path.includes('crew') && !path.includes('tech')) {
-		console.log('home working');
 		activeHome = "active-nav-item";
 		activeDest = '';
 		activeCrew = '';
 		activeTech = '';
 	}
 	else if (path === '/destination') {
-		console.log('dest working');
 		activeHome = '';
 		activeDest = "active-nav-item";
 		activeCrew = '';
 		activeTech = '';
 	}
 	else if (path === '/crew') {
-		console.log('crew working');
 		activeHome = '';
 		activeDest = '';
 		activeCrew = "active-nav-item";
 		activeTech = '';
 	}
 	else if (path === '/technology') {
-		console.log('tech working');
 		activeHome = '';
 		activeDest = '';
 		activeCrew = '';

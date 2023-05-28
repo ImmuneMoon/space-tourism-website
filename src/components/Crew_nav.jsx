@@ -9,7 +9,9 @@ const Nav_list = styled.ul`
 `
 
 const Nav_item = styled.li`
-    margin: 0 .5rem 0 .5rem;
+    margin-right: 1rem;
+    width: fit-content;
+    height: fit-content;
 `
 
 const Nav_dot = styled.div`

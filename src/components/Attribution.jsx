@@ -6,7 +6,7 @@ const Footer = styled.footer`
     width: 100%;
     justify-content: center;
     margin: auto;
-    position: absolute;
+    position: sticky;
     bottom: 0;
 `
 

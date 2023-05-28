@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import mars from './assets/destination/image-mars.png';
 
 
 let Subtext = styled.p`
@@ -11,10 +10,6 @@ function MarsDest() {
     return(
         <>
             <section name="dest-container">
-                <div name="planet">
-                    <img name="dest-img" src={mars} alt="Mars" />
-                    <div name="shadow"></div>
-                </div>
                 <div name="info">
                     <h2 name="title">MARS</h2>
                     <Subtext id="dest-subtext">

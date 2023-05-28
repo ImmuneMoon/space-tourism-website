@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import moon from './assets/destination/image-moon.png';
 
 
 let Subtext = styled.p`
@@ -11,10 +10,6 @@ function MoonDest() {
     return(
         <>
             <section name="dest-container">
-                <div name="planet">
-                    <img name="dest-img" src={moon} alt="Moon" />
-                    <div name="shadow"></div>
-                </div>
                 <div name="info">
                     <h2 name="title">MOON</h2>
                     <Subtext id="dest-subtext">

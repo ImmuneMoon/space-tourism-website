@@ -8,11 +8,15 @@ import bkgrnd from './assets/homepage/background-home-desktop.jpg';
 const Content = createGlobalStyle`
     body {
         background-image: url(${bkgrnd});
+        background-repeat: no-repeat;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
     } 
 `
 
 const Main_container = styled.main`
-    height: 100%;
+    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -41,6 +45,7 @@ const Right_container = styled.div`
 `
 
 const Main_p1 = styled.p`
+    font-family: 'Barlow Condensed', sans-serif;
     font-weight: 400;
     font-size: 28px;
     letter-spacing: 4.75;
@@ -49,6 +54,7 @@ const Main_p1 = styled.p`
 `
 
 const Main_h1 = styled.h1`
+    font-family: 'Bellefair', serif;
     font-weight: 400;
     font-size: 150px;
     color: #FFFFFF;
@@ -58,19 +64,20 @@ const Main_h1 = styled.h1`
 `
 
 const Main_p2 = styled.p`
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.75;
     color: #D0D6F9;
-    width: 29rem;
+    width: 26rem;
 `
 
 const Bttn_container = styled.div`
     border-radius: 50%;
 `
 
-const Main_bttn = styled.div`
+const Explore_bttn = styled.div`
     font-size: 32px;
+    font-family: 'Bellefair', serif;
     letter-spacing: 4.75;
     background-color: #FFFFFF;
     color: #0B0D17;
@@ -119,9 +126,9 @@ function Home() {
                     <Right_container>
                         <Link to="/destination">
                             <Bttn_container>
-                                    <Main_bttn>
+                                    <Explore_bttn>
                                         EXPLORE
-                                    </Main_bttn>
+                                    </Explore_bttn>
                                 <Bttn_hover></Bttn_hover>
                             </Bttn_container>
                         </Link>

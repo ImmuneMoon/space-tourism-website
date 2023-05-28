@@ -2,16 +2,17 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Nav_list = styled.ul`
-    margin-left: 50rem;
     width: 18rem;
     height: max-content;
     list-style: none;
     display: flex;
     justify-content: space-between;
 `
+
 const Item = styled.li`
     height: 1rem;
 `
+
 const Bttn = styled.button`
     border: none;
     background: none;
