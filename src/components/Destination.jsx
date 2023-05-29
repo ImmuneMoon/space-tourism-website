@@ -22,33 +22,8 @@ const Content = createGlobalStyle`
     }
 `
 
-const Heading = styled.div`
-    margin-top: 3rem;
-    margin-left: 10.5rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 25rem;
-
-`
-
-const One = styled.p`
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 28px;
-    font-weight: bold;
-    color: #4b5560;
-    letter-spacing: 4.75;
-`
-
-const Pick = styled.h1`
-    font-size: 28px;
-    font-weight: 500;
-    color: #FFFFFF;
-    letter-spacing: 4.75;
-`
-
-let Location_container = styled.div`
+const Location_container = styled.div`
+	width: fit-content;
     margin: 0 auto;
 	display: flex;
 	flex-direction: row;
@@ -56,15 +31,18 @@ let Location_container = styled.div`
 `
 
 const Img_container = styled.div`
-	margin: 0 auto;
+    margin: 0 5rem 0 0;
 `
 
 const R_container = styled.div`
-	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 0 5rem;
+	width: fit-content;
 `
 
 const Info_container = styled.div`
-	
+	width: fit-content;
 `
 
 const Moon = moon_info;
@@ -84,35 +62,31 @@ function Destination() {
             <Content></Content>
             <main>
                 <div>
-                    <Heading>
-                        <One>01</One>
-                        <Pick>PICK YOUR DESTINATION</Pick>
-                    </Heading>
+                    <div id="pg-heading">
+                        <p id="pg-num">01</p>
+                        <h1 id="pg-subject">PICK YOUR DESTINATION</h1>
+                    </div>
                 </div>
                 <Location_container>
 					<Img_container>
 						{displayedDestination === 'moon' && 
 							<div name="planet">
 								<img name="dest-img" src={MoonImg} alt="Moon" />
-								<div name="shadow"></div>
 							</div>
 						}
 						{displayedDestination === 'mars' && 
 							<div name="planet">
 								<img name="dest-img" src={MarsImg} alt="Mars" />
-								<div name="shadow"></div>
 							</div>
 						}
 						{displayedDestination === 'europa' && 
 							<div name="planet">
 								<img name="dest-img" src={EuropaImg} alt="Europa" />
-								<div name="shadow"></div>
 							</div>
 						}
 						{displayedDestination === 'titan' && 
 							<div name="planet">
 								<img name="dest-img" src={TitanImg} alt="Titan" />
-								<div name="shadow"></div>
 							</div>
 						}
 					</Img_container>

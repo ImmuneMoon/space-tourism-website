@@ -1,73 +1,74 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Nav_container = styled.section`
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
 `
 
 // should probably add a style sheet for similar buttons to reduce redundant styles here.
 // should do the same for other repeating components too
-const Button_1 = styled.button`
-    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
-
-    font-family: 'Barlow Condensed', sans-serif;
-    background: none;
-    border: solid 1.5px rgba(255, 255, 255, 0.5);
+const Button = styled.button`
+    background: ${({ isActive }) => (isActive ? '#FFFFFF' : 'none')};
+    border: ${({ isActive, isHovered }) => (isActive || isHovered) ? '1px solid #FFFFFF' : (isActive ? '1.5px solid rgba(128, 128, 128, 0.35)' : '1.5px solid rgba(255, 255, 255, 0.5)')};
+    color: ${({ isActive, isHovered }) => (isActive ? 'black' : '#FFFFFF')};
     border-radius: 50%;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 4.5rem;
+    height: 4.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
-    font-size: 25px;
+    margin-bottom: 2rem;
+    font-size: 32px;
+    font-family: 'Bellefair', serif;
 `
 
-const Button_2 = styled.button`
-    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+function Tech_nav({ onTechChange }) {    
+    const [activeTech, setActiveTech] = useState('launch');
+    const [hoveredTech, setHoveredTech] = useState(null);
 
-    font-family: 'Barlow Condensed', sans-serif;
-    background: none;
-    border: solid 1.5px rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    width: 3.5rem;
-    height: 3.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-    font-size: 25px;
-`
+    const handleButtonClick = (Technology) => {
+        setActiveTech(Technology);
+        onTechChange(Technology);
+    };
 
-const Button_3 = styled.button`
-    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
-
-    font-family: 'Barlow Condensed', sans-serif;
-    background: none;
-    border: solid 1.5px rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    width: 3.5rem;
-    height: 3.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-`
-
-function Tech_nav() {
     return (
         <>
             <Nav_container>
-                <Button_1>
+                <Button
+                    className="navButton"
+                    isActive={activeTech === 'launch'}
+                    isHovered={hoveredTech === 'launch'}
+                    onClick={() => handleButtonClick('launch')}
+                    onMouseEnter={() => setHoveredTech('launch')}
+                    onMouseLeave={() => setHoveredTech(null)}
+                    >
                     1
-                </Button_1>
-                <Button_2>
+                </Button>
+                <Button             
+                    className="navButton"
+                    isActive={activeTech === 'port'}
+                    isHovered={hoveredTech === 'port'}
+                    onClick={() => handleButtonClick('port')}
+                    onMouseEnter={() => setHoveredTech('port')}
+                    onMouseLeave={() => setHoveredTech(null)}
+                >
                     2
-                </Button_2>
-                <Button_3>
+                </Button>
+                <Button
+                    className="navButton"
+                    isActive={activeTech === 'capsule'}
+                    isHovered={hoveredTech === 'capsule'}
+                    onClick={() => handleButtonClick('capsule')}
+                    onMouseEnter={() => setHoveredTech('capsule')}
+                    onMouseLeave={() => setHoveredTech(null)}
+                >
                     3
-                </Button_3>
+                </Button>
             </Nav_container>
         </>
     );

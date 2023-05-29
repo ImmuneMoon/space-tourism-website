@@ -29,18 +29,20 @@ const Line = styled.div`
 	width: 34%;
 	height: 0%;
 	transform: translateX(3rem);
+	z-index: 1;
 `
 
 const Nav = styled.nav`
-	height: 6rem;
+	height: 5.5rem;
     width: 60%;
-    background-color: rgba(128, 128, 128, 0.1);
+    background-color: rgba(208, 214, 249, 0.04);
+	backdrop-filter: blur(50px);
 `
 
 const List_container = styled.div`
 	display: flex;
 	height: 100%;
-	margin-left: 17%;
+	margin-left: 15%;
 	align-items: center;
 `
 
@@ -72,15 +74,16 @@ const Page_num = styled.p`
 	margin-top: auto;
 	margin-right: .5rem;
 	margin-bottom: auto;
-	font-weight: bold;
+	font-weight: bolder;
     font-size: 18px;
-    letter-spacing: 2.7;
+    letter-spacing: 2.7px;
 `
 
 const Page_name = styled.p`
 	font-family: 'Barlow Condensed', sans-serif;
     font-size: 18px;
-    letter-spacing: 2.7;
+    letter-spacing: 2.7px;
+	font-weight: 400px;
 	margin-top: auto;
 	margin-bottom: auto;
 `

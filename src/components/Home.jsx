@@ -44,13 +44,12 @@ const Right_container = styled.div`
     height: fit-content;
 `
 
-const Main_p1 = styled.p`
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 400;
+const Main_p = styled.p`
     font-size: 28px;
-    letter-spacing: 4.75;
+    font-weight: normal;
     color: #D0D6F9;
-    width: fit-content;
+    letter-spacing: 4.75px;
+    font-family: 'Barlow Condensed', sans-serif;
 `
 
 const Main_h1 = styled.h1`
@@ -61,14 +60,6 @@ const Main_h1 = styled.h1`
     width: fit-content;
     margin-top: 2rem;
     margin-bottom: .5rem;
-`
-
-const Main_p2 = styled.p`
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.75;
-    color: #D0D6F9;
-    width: 26rem;
 `
 
 const Bttn_container = styled.div`
@@ -111,17 +102,17 @@ function Home() {
             <Main_container>
                 <Home_container>
                     <Left_container>
-                        <Main_p1>
+                        <Main_p>
                             SO, YOU WANT TO TRAVEL TO
-                        </Main_p1>
+                        </Main_p>
                         <Main_h1>
                             SPACE
                         </Main_h1>
-                        <Main_p2>
+                        <p id="information">
                             Let’s face it; if you want to go to space, you might as well genuinely go to 
                             outer space and not hover kind of on the edge of it. Well sit back, and relax 
                             because we’ll give you a truly out of this world experience!
-                        </Main_p2>
+                        </p>
                     </Left_container>
                     <Right_container>
                         <Link to="/destination">

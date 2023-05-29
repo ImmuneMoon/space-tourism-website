@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Nav_list = styled.ul`
-    width: 18rem;
+    width: fit-content;
     height: max-content;
     list-style: none;
     display: flex;
@@ -11,22 +11,24 @@ const Nav_list = styled.ul`
 
 const Item = styled.li`
     height: 1rem;
+    margin-right: 2rem;
 `
 
 const Bttn = styled.button`
     border: none;
     background: none;
-    font-weight: 500;
+    font-weight: 500px;
     margin-bottom: .5rem;
     font-size: 16px;
-    letter-spacing: 2.7;
+    letter-spacing: 2.7px;
     color: ${({ isActive, isHovered }) => (isActive || isHovered) ? '#FFFFFF' : '#D0D6F9'};
+	font-family: 'Barlow Condensed', sans-serif;
 `
 
 const Underline = styled.div`
 	width: 85%;
 	display: ${({ isActive, isHovered }) => (isActive || isHovered) ? 'block' : 'none'};
-    border-bottom: ${({ isActive }) => isActive ? '3px solid #FFFFFF' : '3px solid #ffffff86'};
+    border-bottom: ${({ isActive }) => isActive ? '2px solid #FFFFFF' : '2px solid #ffffff86'};
 `
     
 
@@ -42,7 +44,7 @@ function DestNav({ onDestinationChange }) {
     return (
         <>
             <Nav_list>
-                <Item>
+                <Item className="navButton">
                     <Bttn
                         id="moonBttn"
                         isActive={activeDest === 'moon'}
@@ -59,7 +61,7 @@ function DestNav({ onDestinationChange }) {
                         isHovered={hoveredDest === 'moon'}
                     ></Underline>
                 </Item>
-                <Item>
+                <Item className="navButton">
                     <Bttn
                         id="marsBttn"
                         isActive={activeDest === 'mars'}
@@ -76,7 +78,7 @@ function DestNav({ onDestinationChange }) {
                         isHovered={hoveredDest === 'mars'}
                     ></Underline>
                 </Item>
-                <Item>
+                <Item className="navButton">
                     <Bttn
                         id="europaBttn"
                         isActive={activeDest === 'europa'}
@@ -93,7 +95,7 @@ function DestNav({ onDestinationChange }) {
                         isHovered={hoveredDest === 'europa'}
                     ></Underline>
                 </Item>
-                <Item>
+                <Item className="navButton">
                     <Bttn
                         id="titanBttn"
                         isActive={activeDest === 'titan'}

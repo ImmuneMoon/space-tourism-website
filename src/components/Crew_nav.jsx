@@ -15,7 +15,7 @@ const Nav_item = styled.li`
 `
 
 const Nav_dot = styled.div`
-    background-color: ${({ isActive }) => isActive ? 'rgba(255, 255, 255, 0.5)' : 'rgba(128, 128, 128, 0.35)'};
+    background-color: ${({ isActive, isHovered }) => (isActive ? '#FFFFFF' : (isHovered ? 'rgba(255, 255, 255, 0.5)' : 'rgba(128, 128, 128, 0.35)'))};
     border-radius: 50%;
     width: 11px;
     height: 11px;
@@ -36,7 +36,7 @@ function crewNav({ onCrewChange }) {
             <Nav_list>
                 <Nav_item>
                     <Nav_dot 
-                        id="dougDot"
+                        className="navButton"
                         isActive={activeCrew === 'doug'}
                         isHovered={hoveredCrew === 'doug'}
                         onClick={() => handleButtonClick('doug')}
@@ -47,7 +47,7 @@ function crewNav({ onCrewChange }) {
                 </Nav_item>
                 <Nav_item>
                     <Nav_dot 
-                        id="markDot"
+                        className="navButton"
                         isActive={activeCrew === 'mark'}
                         isHovered={hoveredCrew === 'mark'}
                         onClick={() => handleButtonClick('mark')}
@@ -58,7 +58,7 @@ function crewNav({ onCrewChange }) {
                 </Nav_item>
                 <Nav_item>
                     <Nav_dot 
-                        id="victorDot"
+                        className="navButton"
                         isActive={activeCrew === 'victor'}
                         isHovered={hoveredCrew === 'victor'}
                         onClick={() => handleButtonClick('victor')}
@@ -69,7 +69,7 @@ function crewNav({ onCrewChange }) {
                 </Nav_item>
                 <Nav_item>
                     <Nav_dot 
-                        id="anousheDot"
+                        className="navButton"
                         isActive={activeCrew === 'anoushe'}
                         isHovered={hoveredCrew === 'anoushe'}
                         onClick={() => handleButtonClick('anoushe')}

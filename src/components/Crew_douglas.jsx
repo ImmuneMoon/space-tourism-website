@@ -1,9 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const Crew_info = styled.p`
-    width: 27rem;
-`
 
 function doug() {
     return(
@@ -13,12 +8,12 @@ function doug() {
                     COMMANDER
                 </h2>
                 <h3 name="crew-name">
-                    DOUGLAS HURLEY
+                    DOUGLAS&nbsp;HURLEY
                 </h3>
-                <Crew_info name="crew-info">
+                <p id="information">
                     Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA 
                     astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.
-                </Crew_info>
+                </p>
             </section>
         </>
     );

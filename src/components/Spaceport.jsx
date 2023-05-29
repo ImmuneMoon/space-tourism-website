@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
 const Vehicle_sction = styled.div`
     width: 30rem;
     display: flex;
@@ -23,24 +22,23 @@ const Info = styled.p`
     font-size: 16px;
     font-weight: 500;
     line-height: 1.75;
-    width: 28rem;
     margin: 0;
 
 `
 
-function Launch_vehicle() {
+function Spaceport() {
     return(
         <>
             <Vehicle_sction>
                 <Info_container>
                     <Name id="title">
-                        LAUNCH&nbsp;VEHICLE
+                        SPACEPORT
                     </Name>
                     <Info id="information">
-                        A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from 
-                        Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most 
-                        powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch 
-                        pad!
+                        A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
+                        by analogy to the seaport for ships or airport for aircraft. 
+                        Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of 
+                        the Earth’s rotation for launch.
                     </Info>
                 </Info_container>
             </Vehicle_sction>
@@ -48,4 +46,4 @@ function Launch_vehicle() {
     );
 }
 
-export default Launch_vehicle;
+export default Spaceport;

@@ -12,26 +12,26 @@ function titanDest() {
             <section name="dest-container">
                 <div name="info">
                     <h2 name="title">TITAN</h2>
-                    <Subtext id="dest-subtext">
+                    <Subtext id="information">
                         The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.
                     </Subtext>
                     <div name="travel-container">
                         <div name="dest-line"></div>
                         <div name="travel">
-                            <div>
+                            <div id="dist-container">
                                 <h3 name="dist-title">
-                                    AVG. DISTANCE
+                                    AVG.&nbsp;DISTANCE
                                 </h3>
                                 <p name="avg-dist">
-                                    1.6 BIL. KM
+                                    1.6&nbsp;IL.&nbsp;KM
                                 </p>
                             </div>
-                            <div name="travel-time">
+                            <div id="time-container">
                                 <h3 name="time-title">
-                                    EST. TRAVEL TIME
+                                    EST.&nbsp;TRAVEL&nbsp;TIME
                                 </h3>
                                 <p name="est-time">
-                                    7 YEARS
+                                    7&nbsp;YEARS
                                 </p>
                             </div>
                         </div>

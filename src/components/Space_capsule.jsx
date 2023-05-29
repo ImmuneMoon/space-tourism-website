@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
 const Vehicle_sction = styled.div`
     width: 30rem;
     display: flex;
@@ -28,19 +27,18 @@ const Info = styled.p`
 
 `
 
-function Launch_vehicle() {
+function SpaceCapsule() {
     return(
         <>
             <Vehicle_sction>
                 <Info_container>
                     <Name id="title">
-                        LAUNCH&nbsp;VEHICLE
+                        SPACE&nbsp;CAPSULE
                     </Name>
                     <Info id="information">
-                        A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from 
-                        Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most 
-                        powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch 
-                        pad!
+                        A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to 
+                        reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time 
+                        during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.
                     </Info>
                 </Info_container>
             </Vehicle_sction>
@@ -48,4 +46,4 @@ function Launch_vehicle() {
     );
 }
 
-export default Launch_vehicle;
+export default SpaceCapsule;

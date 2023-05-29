@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 let Subtext = styled.p`
-    width: 27.6rem;
+    width: 25rem;
 `
 
 function MarsDest() {
@@ -12,26 +12,26 @@ function MarsDest() {
             <section name="dest-container">
                 <div name="info">
                     <h2 name="title">MARS</h2>
-                    <Subtext id="dest-subtext">
+                    <Subtext id="information">
                         Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!
                     </Subtext>
                     <div name="travel-container">
                         <div name="dest-line"></div>
                         <div name="travel">
-                            <div>
+                            <div id="dist-container">
                                 <h3 name="dist-title">
-                                    AVG. DISTANCE
+                                    AVG.&nbsp;DISTANCE
                                 </h3>
                                 <p name="avg-dist">
-                                    225 MIL. KM
+                                    225&nbsp;MIL.&nbsp;KM
                                 </p>
                             </div>
-                            <div name="travel-time">
+                            <div id="time-container">
                                 <h3 name="time-title">
-                                    EST. TRAVEL TIME
+                                    EST.&nbsp;TRAVEL&nbsp;TIME
                                 </h3>
                                 <p name="est-time">
-                                    9 MONTHS
+                                    9&nbsp;MONTHS
                                 </p>
                             </div>
                         </div>

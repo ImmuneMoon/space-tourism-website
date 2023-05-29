@@ -25,30 +25,13 @@ const Content = createGlobalStyle`
 
 const Main = styled.main`
     height: 100%;
-`
-
-const Heading = styled.div`
-    margin: 3rem 0 3rem 10.5rem;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 19.5rem;
-
+    justify-content: center;
+    align-content: center;
 `
 
-const Two = styled.p`
-    font-size: 28px;
-    font-weight: bold;
-    color: #4b5560;
-    letter-spacing: 4.75;
-`
-
-const Meet = styled.h1`
-    font-size: 28px;
-    font-weight: 500;
-    color: #FFFFFF;
-    letter-spacing: 4.75;
+const L_container = styled.div`
+    height: 85vh;
 `
 
 const Crew_container = styled.section`
@@ -67,8 +50,12 @@ const Crewmember = styled.div`
 `
 
 const Crew_img_container = styled.div`
-    padding: 0 5rem;
-    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-top: auto;
 `
 
 const Crew_nav_container = styled.div`
@@ -88,45 +75,47 @@ function Crew() {
         <>
             <Content></Content>
             <Main>
-                <Heading>
-                    <Two>02</Two>
-                    <Meet>MEET YOUR CREW</Meet>
-                </Heading>
-                <Crew_container>
-                    <Crew_info_container>
-                        <Crewmember>
-                            {displayedCrew === 'doug' && 
-                                <Doug id="doug-cpnt"/>
-                            }
-                            {displayedCrew === 'mark' && 
-                                <Mark id="mark-cpnt"/>
-                            }
-                            {displayedCrew === 'victor' && 
-                                <Victor id="victor-cpnt"/>
-                            }
-                            {displayedCrew === 'anoushe' && 
-                                <Anoushe id="anoushe-cpnt"/>
-                            }
-                        </Crewmember>
-                        <Crew_nav_container>
-                            <Crew_nav onCrewChange={setDisplayedCrew}/>
-                        </Crew_nav_container>
-                    </Crew_info_container>
-                    <Crew_img_container>
-                        {displayedCrew === 'doug' && 
-                            <img id="crew_img" src={dougPortrait} alt="Douglas Hurley"/>
-                        }
-                        {displayedCrew === 'mark' && 
-                            <img id="crew_img" src={markPortrait} alt="Mark Shuttleworth"/>
-                        }
-                        {displayedCrew === 'victor' && 
-                            <img id="crew_img" src={vicportrait} alt="Victor Glover"/>
-                        }
-                        {displayedCrew === 'anoushe' && 
-                            <img id="crew_img" src={anPortrait} alt="Anousheh Ansari"/>
-                        }
-                    </Crew_img_container>
-                </Crew_container>
+                <L_container>
+                    <div id="pg-heading">
+                        <p id="pg-num">02</p>
+                        <h1 id="pg-subject">MEET YOUR CREW</h1>
+                    </div>
+                    <Crew_container>
+                        <Crew_info_container>
+                            <Crewmember>
+                                {displayedCrew === 'doug' && 
+                                    <Doug id="doug-cpnt"/>
+                                }
+                                {displayedCrew === 'mark' && 
+                                    <Mark id="mark-cpnt"/>
+                                }
+                                {displayedCrew === 'victor' && 
+                                    <Victor id="victor-cpnt"/>
+                                }
+                                {displayedCrew === 'anoushe' && 
+                                    <Anoushe id="anoushe-cpnt"/>
+                                }
+                            </Crewmember>
+                            <Crew_nav_container>
+                                <Crew_nav onCrewChange={setDisplayedCrew}/>
+                            </Crew_nav_container>
+                        </Crew_info_container>
+                    </Crew_container>
+                </L_container>
+                <Crew_img_container>
+                    {displayedCrew === 'doug' && 
+                        <img id="crew_img" height="600px" src={dougPortrait} alt="Douglas Hurley"/>
+                    }
+                    {displayedCrew === 'mark' && 
+                        <img id="crew_img" height="575px" src={markPortrait} alt="Mark Shuttleworth"/>
+                    }
+                    {displayedCrew === 'victor' && 
+                        <img id="crew_img" height="550px" src={vicportrait} alt="Victor Glover"/>
+                    }
+                    {displayedCrew === 'anoushe' && 
+                        <img id="crew_img" height="575px" src={anPortrait} alt="Anousheh Ansari"/>
+                    }
+                </Crew_img_container>
             </Main>
         </>
     );

@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components';
 import bkgrnd from './assets/technology/background-technology-desktop.jpg';
 import Tech_nav from './Tech_nav';
-import launch_vehicle from './assets/technology/image-launch-vehicle-portrait.jpg';
-import spaceport from './assets/technology/image-spaceport-portrait.jpg';
-import space_capsule from './assets/technology/image-space-capsule-portrait.jpg';
-
-let Vehicle = launch_vehicle;
+import LaunchVehicle from './Launch_vehicle';
+import vehicle_img from './assets/technology/image-launch-vehicle-portrait.jpg';
+import vehicle_mobile_img from './assets/technology/image-launch-vehicle-portrait.jpg';
+import Spaceport from './Spaceport';
+import spaceport_img from './assets/technology/image-spaceport-portrait.jpg';
+import spaceport_mobile_img from './assets/technology/image-spaceport-landscape.jpg';
+import SpaceCapsule from './Space_capsule'
+import capsule_img from './assets/technology/image-space-capsule-portrait.jpg';
+import capsule_mobile_img from './assets/technology/image-space-capsule-landscape.jpg';
 
 const Content = createGlobalStyle`
     body {
@@ -21,80 +25,91 @@ const Content = createGlobalStyle`
 
 const Main = styled.main`
     height: 100%;
-`
-
-const Heading = styled.div`
-    margin-top: 3rem;
-    margin-left: 10.5rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 20rem;
-`
-
-const Three = styled.p`
-    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
-
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 28px;
-    font-weight: bold;
-    color: #4b5560;
-    letter-spacing: 4.75;
-`
-
-const Launch = styled.h1`
-    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
-
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 28px;
-    font-weight: 500;
-    color: #FFFFFF;
-    letter-spacing: 4.75;
+    padding-bottom: 4rem;
 `
 
 const Tech_section = styled.section`
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    margin-left: 10rem;
+    align-items: center;
+    height: 100%;
 `
 
 const L_container = styled.div`
-    
-`
-
-const R_container = styled.div`
     display: flex;
     flex-direction: column;
+    width: fit-content;
 `
 
 const Terms = styled.p`
     width: fit-content;
+    margin-bottom: 1rem;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    font-family: 'Barlow Condensed', sans-serif;
 `
 
+const Vehicle_container = styled.div`
+    width: fit-content;
+    height: 100%;
+`
+
+const Vehicle = LaunchVehicle;
+const VehicleImg = vehicle_img;
+const MobileVehicle = vehicle_mobile_img;
+const Port = Spaceport;
+const SpaceportImg = spaceport_img;
+const MobileSpaceport = spaceport_mobile_img;
+const Capsule = SpaceCapsule;
+const CapsuleImg = capsule_img;
+const MobileCapsule = capsule_mobile_img;
+
 function Technology() {
+    const [displayedTech, setDisplayedTech] = useState('launch');
+
     return (
         <>
             <Content></Content>
             <Main>
-                <Heading>
-                    <Three>
+                <div id="pg-heading">
+                    <p id="pg-num">
                         03
-                    </Three>
-                    <Launch>
+                    </p>
+                    <h1 id="pg-subject">
                         SPACE LAUNCH 101
-                    </Launch>
-                </Heading>
+                    </h1>
+                </div>
                 <Tech_section>
+                    <Tech_nav onTechChange={setDisplayedTech}/>
                     <L_container>
-                        <Tech_nav/>
-                    </L_container>
-                    <R_container>
                         <Terms>
                             THE TERMINOLOGY...
                         </Terms>
-                        <Vehicle/>
-                    </R_container>
+                        <div>
+                            {displayedTech === 'launch' && 
+                                <Vehicle/>
+                            }
+                            {displayedTech === 'port' && 
+                                <Port/>
+                            }
+                            {displayedTech === 'capsule' && 
+                                <Capsule/>
+                            }
+                        </div>
+                    </L_container>
+                    <Vehicle_container>
+                        {displayedTech === 'launch' && 
+                            <img id="tech_img" src={VehicleImg} alt="Launch Vehicle"/>
+                        }
+                        {displayedTech === 'port' && 
+                            <img id="tech_img" src={SpaceportImg} alt="Spaceport"/>
+                        }
+                        {displayedTech === 'capsule' && 
+                            <img id="tech_img" src={CapsuleImg} alt="Space Capsule"/>
+                        }
+                    </Vehicle_container>
                 </Tech_section>
             </Main>
         </>
