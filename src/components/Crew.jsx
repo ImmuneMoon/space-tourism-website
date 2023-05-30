@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components';
-import bkgrnd from './assets/crew/background-crew-desktop.jpg';
+import dsktop_bkgrnd from './assets/crew/background-crew-desktop.jpg';
+import tablet_bkgrnd from './assets/crew/background-crew-tablet.jpg';
+import mobile_bkgrnd from './assets/crew/background-crew-mobile.jpg';
 import Crew_nav from './Crew_nav';
 import doug from './Crew_douglas';
 import dougPortrait from './assets/crew/image-douglas-hurley.png';
@@ -14,54 +16,63 @@ import anPortrait from './assets/crew/image-anousheh-ansari.png';
 
 
 const Content = createGlobalStyle`
-    body {
-        background-image: url(${bkgrnd});
-		background-repeat: no-repeat;
-		height: 100%;
-		background-position: center;
-		background-size: cover;
-    }
-`
+  body {
+    background-image: ${({ bkgrnd }) => {
+      switch (bkgrnd) {
+        case 'mobile':
+          return `url('${mobile_bkgrnd}')`;
+        case 'tablet':
+          return `url('${tablet_bkgrnd}')`;
+        case 'desktop':
+        default:
+          return `url('${dsktop_bkgrnd}')`;
+      }
+    }};
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+`;
 
 const Main = styled.main`
     height: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
-`
+`;
 
 const L_container = styled.div`
     height: 85vh;
-`
+`;
 
 const Crew_container = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 10.5rem;
-`
+`;
 
 const Crew_info_container = styled.div`
     
-`
+`;
 
 const Crewmember = styled.div`
     
-`
+`;
 
 const Crew_img_container = styled.div`
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: end;
     margin-top: auto;
-`
+`;
 
 const Crew_nav_container = styled.div`
     margin: 3rem auto 3rem 0;
     width: fit-content;
-`
+`;
 
 const Doug = doug;
 const Mark = mark;
@@ -70,10 +81,30 @@ const Anoushe = anoushe;
 
 function Crew() {
     const [displayedCrew, setDisplayedCrew] = useState('doug');
+    const [bkgrnd, setBkgrnd] = useState('desktop');
 
+    useEffect(() => {
+      const handleResize = () => {
+        if (window.innerWidth <= 480) {
+          setBkgrnd('mobile');
+        } else if (window.innerWidth > 480 && window.innerWidth <= 1025) {
+          setBkgrnd('tablet');
+        } else {
+          setBkgrnd('desktop');
+        }
+      };
+  
+      handleResize();
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+    
     return (
         <>
-            <Content></Content>
+            <Content bkgrnd={bkgrnd}/>
             <Main>
                 <L_container>
                     <div id="pg-heading">

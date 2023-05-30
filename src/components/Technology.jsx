@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components';
-import bkgrnd from './assets/technology/background-technology-desktop.jpg';
+import dsktop_bkgrnd from './assets/technology/background-technology-desktop.jpg';
+import tablet_bkgrnd from './assets/technology/background-technology-tablet.jpg';
+import mobile_bkgrnd from './assets/technology/background-technology-mobile.jpg';
 import Tech_nav from './Tech_nav';
 import LaunchVehicle from './Launch_vehicle';
 import vehicle_img from './assets/technology/image-launch-vehicle-portrait.jpg';
@@ -14,19 +16,29 @@ import capsule_img from './assets/technology/image-space-capsule-portrait.jpg';
 import capsule_mobile_img from './assets/technology/image-space-capsule-landscape.jpg';
 
 const Content = createGlobalStyle`
-    body {
-        background-image: url(${bkgrnd});
-		background-repeat: no-repeat;
-		height: 100%;
-		background-position: center;
-		background-size: cover;
-    }
-`
+  body {
+    background-image: ${({ bkgrnd }) => {
+      switch (bkgrnd) {
+        case 'mobile':
+          return `url('${mobile_bkgrnd}')`;
+        case 'tablet':
+          return `url('${tablet_bkgrnd}')`;
+        case 'desktop':
+        default:
+          return `url('${dsktop_bkgrnd}')`;
+      }
+    }};
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+`;
 
 const Main = styled.main`
     height: 100%;
     padding-bottom: 4rem;
-`
+`;
 
 const Tech_section = styled.section`
     display: flex;
@@ -35,13 +47,13 @@ const Tech_section = styled.section`
     margin-left: 10rem;
     align-items: center;
     height: 100%;
-`
+`;
 
 const L_container = styled.div`
     display: flex;
     flex-direction: column;
     width: fit-content;
-`
+`;
 
 const Terms = styled.p`
     width: fit-content;
@@ -49,12 +61,12 @@ const Terms = styled.p`
     font-size: 16px;
     letter-spacing: 2.7px;
     font-family: 'Barlow Condensed', sans-serif;
-`
+`;
 
 const Vehicle_container = styled.div`
     width: fit-content;
     height: 100%;
-`
+`;
 
 const Vehicle = LaunchVehicle;
 const VehicleImg = vehicle_img;
@@ -68,10 +80,30 @@ const MobileCapsule = capsule_mobile_img;
 
 function Technology() {
     const [displayedTech, setDisplayedTech] = useState('launch');
+    const [bkgrnd, setBkgrnd] = useState('desktop');
+
+    useEffect(() => {
+      const handleResize = () => {
+        if (window.innerWidth <= 480) {
+          setBkgrnd('mobile');
+        } else if (window.innerWidth > 480 && window.innerWidth <= 1025) {
+          setBkgrnd('tablet');
+        } else {
+          setBkgrnd('desktop');
+        }
+      };
+  
+      handleResize();
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
 
     return (
         <>
-            <Content></Content>
+            <Content bkgrnd={bkgrnd}/>
             <Main>
                 <div id="pg-heading">
                     <p id="pg-num">

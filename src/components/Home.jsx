@@ -1,19 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
-import bkgrnd from './assets/homepage/background-home-desktop.jpg';
+import dsktop_bkgrnd from './assets/homepage/background-home-desktop.jpg';
+import tablet_bkgrnd from './assets/homepage/background-home-tablet.jpg';
+import mobile_bkgrnd from './assets/homepage/background-home-mobile.jpg';
 
 
 const Content = createGlobalStyle`
-    body {
-        background-image: url(${bkgrnd});
-        background-repeat: no-repeat;
-        height: 100%;
-        background-position: center;
-        background-size: cover;
-    } 
-`
+  body {
+    background-image: ${({ bkgrnd }) => {
+      switch (bkgrnd) {
+        case 'mobile':
+          return `url('${mobile_bkgrnd}')`;
+        case 'tablet':
+          return `url('${tablet_bkgrnd}')`;
+        case 'desktop':
+        default:
+          return `url('${dsktop_bkgrnd}')`;
+      }
+    }};
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+`;
 
 const Main_container = styled.main`
     height: 100vh;
@@ -21,7 +33,7 @@ const Main_container = styled.main`
     display: flex;
     justify-content: center;
     align-items: center;
-`
+`;
 
 const Home_container = styled.div`
     width: 80%;
@@ -30,19 +42,19 @@ const Home_container = styled.div`
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-`
+`;
 
 const Left_container = styled.div`
     width: fit-content;
     height: fit-content;
-`
+`;
 
 const Right_container = styled.div`
     margin-top: 7rem;
     position: relative;
     min-width: min-content;
     height: fit-content;
-`
+`;
 
 const Main_p = styled.p`
     font-size: 28px;
@@ -50,7 +62,7 @@ const Main_p = styled.p`
     color: #D0D6F9;
     letter-spacing: 4.75px;
     font-family: 'Barlow Condensed', sans-serif;
-`
+`;
 
 const Main_h1 = styled.h1`
     font-family: 'Bellefair', serif;
@@ -60,11 +72,11 @@ const Main_h1 = styled.h1`
     width: fit-content;
     margin-top: 2rem;
     margin-bottom: .5rem;
-`
+`;
 
 const Bttn_container = styled.div`
     border-radius: 50%;
-`
+`;
 
 const Explore_bttn = styled.div`
     font-size: 32px;
@@ -78,7 +90,7 @@ const Explore_bttn = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-`
+`;
 
 const Bttn_hover = styled.div`
     position: absolute;
@@ -92,13 +104,34 @@ const Bttn_hover = styled.div`
     ${Bttn_container}:hover & {
         transform: scale(1.65);
     }
-`
+`;
 
 
 function Home() {
+    const [bkgrnd, setBkgrnd] = useState('desktop');
+
+    useEffect(() => {
+      const handleResize = () => {
+        if (window.innerWidth <= 480) {
+          setBkgrnd('mobile');
+        } else if (window.innerWidth > 480 && window.innerWidth <= 1025) {
+          setBkgrnd('tablet');
+        } else {
+          setBkgrnd('desktop');
+        }
+      };
+  
+      handleResize();
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+
     return (
         <>
-            <Content></Content>
+            <Content bkgrnd={bkgrnd}/>
             <Main_container>
                 <Home_container>
                     <Left_container>
