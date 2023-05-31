@@ -9,8 +9,8 @@ import mobile_bkgrnd from './assets/homepage/background-home-mobile.jpg';
 
 const Content = createGlobalStyle`
   body {
-    background-image: ${({ bkgrnd }) => {
-      switch (bkgrnd) {
+    background-image: ${({ theme }) => {
+      switch (theme) {
         case 'mobile':
           return `url('${mobile_bkgrnd}')`;
         case 'tablet':
@@ -36,12 +36,42 @@ const Main_container = styled.main`
 `;
 
 const Home_container = styled.div`
-    width: 80%;
-    margin-top: 5rem;
+    width: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return 'fit-content';
+        case 'tablet':
+          return 'fit-content';
+        case 'desktop':
+        default:
+          return '80%';
+      }
+    }};
+    margin-top: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return '3rem';
+        case 'tablet':
+          return '3rem';
+        case 'desktop':
+        default:
+          return '5rem';
+      }
+    }};
     height: fit-content;
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return 'column';
+        case 'tablet':
+          return 'column';
+        case 'desktop':
+        default:
+          return 'row';
+      }
+    }};
 `;
 
 const Left_container = styled.div`
@@ -50,18 +80,49 @@ const Left_container = styled.div`
 `;
 
 const Right_container = styled.div`
-    margin-top: 7rem;
+    margin: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return '9rem auto 0 auto';
+        case 'tablet':
+          return '9rem auto 0 auto';
+        case 'desktop':
+        default:
+          return '7rem 0 0 0';
+      }
+    }};
     position: relative;
-    min-width: min-content;
+    width: fit-content;
     height: fit-content;
 `;
 
 const Main_p = styled.p`
-    font-size: 28px;
+    font-size: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return 'center';
+        case 'tablet':
+          return '18px';
+        case 'desktop':
+        default:
+          return '28px';
+      }
+    }};
     font-weight: normal;
     color: #D0D6F9;
     letter-spacing: 4.75px;
     font-family: 'Barlow Condensed', sans-serif;
+    text-align: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return 'center';
+        case 'tablet':
+          return 'center';
+        case 'desktop':
+        default:
+          return '';
+      }
+    }};;
 `;
 
 const Main_h1 = styled.h1`
@@ -74,18 +135,84 @@ const Main_h1 = styled.h1`
     margin-bottom: .5rem;
 `;
 
+const Main_p2 = styled.p`
+    font-size: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return '18px';
+        case 'tablet':
+          return '18px';
+        case 'desktop':
+        default:
+          return '16px';
+      }
+    }};
+    text-align: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return 'center';
+        case 'tablet':
+          return 'center';
+        case 'desktop':
+        default:
+          return '';
+      }
+    }};
+    width: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return '';
+        case 'tablet':
+          return '29rem';
+        case 'desktop':
+        default:
+          return '25.6rem';
+      }
+    }};
+`;
+
 const Bttn_container = styled.div`
     border-radius: 50%;
 `;
 
 const Explore_bttn = styled.div`
-    font-size: 32px;
+    font-size: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return '28px';
+        case 'tablet':
+          return '28px';
+        case 'desktop':
+        default:
+          return '32px';
+      }
+    }};
     font-family: 'Bellefair', serif;
     letter-spacing: 4.75;
     background-color: #FFFFFF;
     color: #0B0D17;
-    width: 17rem;
-    height: 17rem;
+    width: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return '14rem';
+        case 'tablet':
+          return '14rem';
+        case 'desktop':
+        default:
+          return '17rem';
+      }
+    }};
+    height: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return '14rem';
+        case 'tablet':
+          return '14rem';
+        case 'desktop':
+        default:
+          return '17rem';
+      }
+    }};
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -95,8 +222,28 @@ const Explore_bttn = styled.div`
 const Bttn_hover = styled.div`
     position: absolute;
     background-color: rgba(255, 255, 255, 0.1);
-    width: 17rem;
-    height: 17rem;
+    width: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return '14rem';
+        case 'tablet':
+          return '14rem';
+        case 'desktop':
+        default:
+          return '17rem';
+      }
+    }};
+    height: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return '14rem';
+        case 'tablet':
+          return '14rem';
+        case 'desktop':
+        default:
+          return '17rem';
+      }
+    }};
     border-radius: 50%;
     top: 0;
     transition: transform 200ms linear;
@@ -108,16 +255,16 @@ const Bttn_hover = styled.div`
 
 
 function Home() {
-    const [bkgrnd, setBkgrnd] = useState('desktop');
+    const [theme, setTheme] = useState('desktop');
 
     useEffect(() => {
       const handleResize = () => {
         if (window.innerWidth <= 480) {
-          setBkgrnd('mobile');
+          setTheme('mobile');
         } else if (window.innerWidth > 480 && window.innerWidth <= 1025) {
-          setBkgrnd('tablet');
+          setTheme('tablet');
         } else {
-          setBkgrnd('desktop');
+          setTheme('desktop');
         }
       };
   
@@ -131,29 +278,29 @@ function Home() {
 
     return (
         <>
-            <Content bkgrnd={bkgrnd}/>
+            <Content theme={theme}/>
             <Main_container>
-                <Home_container>
+                <Home_container theme={theme}>
                     <Left_container>
-                        <Main_p>
-                            SO, YOU WANT TO TRAVEL TO
+                        <Main_p theme={theme}>
+                            SO,&nbsp;YOU&nbsp;WANT&nbsp;TO&nbsp;TRAVEL&nbsp;TO
                         </Main_p>
                         <Main_h1>
                             SPACE
                         </Main_h1>
-                        <p id="information">
+                        <Main_p2 id="information" theme={theme}>
                             Let’s face it; if you want to go to space, you might as well genuinely go to 
                             outer space and not hover kind of on the edge of it. Well sit back, and relax 
                             because we’ll give you a truly out of this world experience!
-                        </p>
+                        </Main_p2>
                     </Left_container>
-                    <Right_container>
+                    <Right_container theme={theme}>
                         <Link to="/destination">
                             <Bttn_container>
-                                    <Explore_bttn>
+                                    <Explore_bttn theme={theme}>
                                         EXPLORE
                                     </Explore_bttn>
-                                <Bttn_hover></Bttn_hover>
+                                <Bttn_hover theme={theme}/>
                             </Bttn_container>
                         </Link>
                     </Right_container>
