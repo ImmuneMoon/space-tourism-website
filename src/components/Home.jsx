@@ -55,18 +55,18 @@ const Home_container = styled.div`
           return 'fit-content';
         case 'desktop':
         default:
-          return '80%';
+          return '70rem';
       }
     }};
-    margin-top: ${({ theme }) => {
+    margin: ${({ theme }) => {
       switch (theme) {
         case 'mobile':
-          return '3rem';
+          return '3rem 0';
         case 'tablet':
-          return '3rem';
+          return '3rem 0';
         case 'desktop':
         default:
-          return '5rem';
+          return '10rem 5rem 0 5rem';
       }
     }};
     height: fit-content;

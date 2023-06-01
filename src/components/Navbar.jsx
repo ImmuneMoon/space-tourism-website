@@ -66,7 +66,8 @@ const MenuBttn = styled.button`
 	border: none;
 
 	@media (max-width: 650px) {
-		display: ${({ isOpen }) => (isOpen ? 'none' : 'block')};
+		display: block;
+		visibility: ${({ isOpen }) => (isOpen ? 'hidden' : 'visible')};
 	}
 `;
 
@@ -185,7 +186,7 @@ const Item = styled.li`
         case 'mobile':
           return '0 0 3rem 0';
         case 'tablet':
-          return '0 1rem 0 0';
+          return '0 .5rem';
         case 'desktop':
         default:
           return '0 1rem 0 0';

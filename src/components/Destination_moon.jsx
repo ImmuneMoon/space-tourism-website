@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-
+let Subtext = styled.p`
+    width: 25rem;
+`
 
 function MoonDest() {
     return(
@@ -10,9 +12,9 @@ function MoonDest() {
             <section name="dest-container">
                 <div name="info">
                     <h2 name="title">MOON</h2>
-                    <p id="information">
+                    <Subtext id="information">
                         See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
-                    </p>
+                    </Subtext>
                     <div name="travel-container">
                         <div name="dest-line"></div>
                         <div name="travel">

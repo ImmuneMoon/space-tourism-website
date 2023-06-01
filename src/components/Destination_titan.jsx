@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 let Subtext = styled.p`
-    width: 27.25rem;
+    width: 26rem;
 `
 
 function titanDest() {

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 let Subtext = styled.p`
-    width: 25rem;
+    width: 25.7rem;
 `
 
 function MarsDest() {

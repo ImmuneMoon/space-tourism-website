@@ -5,13 +5,13 @@ import dsktop_bkgrnd from './assets/destination/background-destination-desktop.j
 import tablet_bkgrnd from './assets/destination/background-destination-tablet.jpg';
 import mobile_bkgrnd from './assets/destination/background-destination-mobile.jpg';
 import Dest_nav from './Destination_nav'
-import moon_info from './Destination_moon';
+import Moon from './Destination_moon';
 import moon_img from './assets/destination/image-moon.png';
-import mars_info from './Destination_mars';
+import Mars from './Destination_mars';
 import mars_img from './assets/destination/image-mars.png';
-import europa_info from './Destination_europa';
+import Europa from './Destination_europa';
 import europa_img from './assets/destination/image-europa.png';
-import titan_info from './Destination_titan';
+import Titan from './Destination_titan';
 import titan_img from './assets/destination/image-titan.png';
 
 const Content = createGlobalStyle`
@@ -57,14 +57,6 @@ const Info_container = styled.div`
 	width: fit-content;
 `;
 
-const Moon = moon_info;
-const MoonImg = moon_img;
-const Mars = mars_info;
-const MarsImg = mars_img;
-const Europa = europa_info;
-const EuropaImg = europa_img;
-const Titan = titan_info;
-const TitanImg = titan_img;
 
 function Destination() {
     const [displayedDestination, setDisplayedDestination] = useState('moon');
@@ -103,22 +95,22 @@ function Destination() {
 					<Img_container>
 						{displayedDestination === 'moon' && 
 							<div name="planet">
-								<img name="dest-img" src={MoonImg} alt="Moon" />
+								<img name="dest-img" src={moon_img} alt="Moon" />
 							</div>
 						}
 						{displayedDestination === 'mars' && 
 							<div name="planet">
-								<img name="dest-img" src={MarsImg} alt="Mars" />
+								<img name="dest-img" src={mars_img} alt="Mars" />
 							</div>
 						}
 						{displayedDestination === 'europa' && 
 							<div name="planet">
-								<img name="dest-img" src={EuropaImg} alt="Europa" />
+								<img name="dest-img" src={europa_img} alt="Europa" />
 							</div>
 						}
 						{displayedDestination === 'titan' && 
 							<div name="planet">
-								<img name="dest-img" src={TitanImg} alt="Titan" />
+								<img name="dest-img" src={titan_img} alt="Titan" />
 							</div>
 						}
 					</Img_container>
