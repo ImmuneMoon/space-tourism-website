@@ -16,12 +16,11 @@ const Global = createGlobalStyle`
 const Container = styled.div`
     display: flex;
     justify-content: space-between;
-	gap: 1rem;
     align-items: center;
 	margin: ${({ theme }) => {
       switch (theme) {
         case 'mobile':
-          return '0 0 0 3.7rem';
+          return '0';
         case 'tablet':
           return '0 0 0 3.7rem';
         case 'desktop':
@@ -29,10 +28,14 @@ const Container = styled.div`
           return '2.5rem 0 0 3.7rem';
       }
     }};
+	position: relative;
 `;
 
 const Logo_img = styled.img`
     width: 47px;
+	@media (max-width: 650px) {
+		margin-left: 3.7rem;
+	}
 `;
 
 const Line = styled.div`
@@ -54,14 +57,40 @@ const Line = styled.div`
 	z-index: 1;
 `;
 
+const MenuBttn = styled.button`
+  	display: none;
+	width: fit-content;
+	height: fit-content;
+	margin: 2rem;
+	background: none;
+	border: none;
+
+	@media (max-width: 650px) {
+		display: ${({ isOpen }) => (isOpen ? 'none' : 'block')};
+	}
+`;
+
+const CloseBttn = styled.button`
+	display: none;
+	width: fit-content;
+	height: fit-content;
+	background: none;
+	border: none;
+	justify-self: flex-end;
+
+	@media (max-width: 650px) {
+		display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+	}
+`;
+
 const Nav = styled.nav`
-  	display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+	display: block;
 	height: ${({ theme }) => {
       switch (theme) {
         case 'mobile':
-          return '6.5rem';
+          return '80vh';
         case 'tablet':
-          return '6.5rem';
+          return '6rem';
         case 'desktop':
         default:
           return '5.5rem';
@@ -70,7 +99,7 @@ const Nav = styled.nav`
     width: ${({ theme }) => {
       switch (theme) {
         case 'mobile':
-          return '65%';
+          return 'fit-content';
         case 'tablet':
           return '65%';
         case 'desktop':
@@ -80,31 +109,16 @@ const Nav = styled.nav`
     }};
     background-color: rgba(208, 214, 249, 0.04);
 	backdrop-filter: blur(50px);
-`;
 
-const MenuBttn = styled.button`
-  display: ${({ isOpen }) => (isOpen ? 'none' : 'block')};
-  width: fit-content;
-  height: fit-content;
-  background: none;
-  border: none;
-`;
-
-const Menu_img = styled.img`
-  width: 47px;
-  display: ${({ isOpen }) => (isOpen ? 'none' : 'block')};
-`;
-
-const CloseBttn = styled.button`
-  width: fit-content;
-  height: fit-content;
-  background: none;
-  border: none;
-`;
-
-const Close_img = styled.img`
-  width: 47px;
-  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+	@media (max-width: 650px) {
+		display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+		flex-direction: row-reverse;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 2rem;
+		z-index: 1;
+	}
 `;
 
 const List_container = styled.div`
@@ -126,7 +140,7 @@ const List_container = styled.div`
 		case 'mobile':
 			return '0';
 		case 'tablet':
-			return '15%';
+			return '0';
 		case 'desktop':
 			return '15%';
 		default:
@@ -138,23 +152,27 @@ const List_container = styled.div`
 
 const Nav_list = styled.ul`
 	height: 100%;
-	display: ${({ theme }) => {
-		switch (theme) {
-		case 'mobile':
-			return 'flex';
+	display: flex;
+	flex-direction: ${({ theme }) => {
+    switch (theme) {
+        case 'mobile':
+          	return 'column';
 		case 'tablet':
-			return 'flex';
+			return 'row';
 		case 'desktop':
-			return 'flex';
-		default:
-			return 'none';
-		}
-  	}};
-    flex-direction: row;
+        default:
+          	return 'row';
+      }
+    }};;
     justify-content: space-between;
 	align-items: center;
     list-style: none;
     width: 75%;
+	@media (max-width: 650px) {
+		margin: 20rem 3rem 3rem 3rem;
+		align-items: start;
+		justify-content: start;
+	}
 
 `;
 
@@ -162,6 +180,20 @@ const Item = styled.li`
 	display: flex;
 	align-items: center;
 	height: 100%;
+	margin: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return '0 0 3rem 0';
+        case 'tablet':
+          return '0 1rem 0 0';
+        case 'desktop':
+        default:
+          return '0 1rem 0 0';
+      }
+    }};
+	@media (max-width: 650px) {
+		height: fit-content;
+	}
 `;
 
 const Nav_link = styled.div`
@@ -170,6 +202,9 @@ const Nav_link = styled.div`
 	justify-content: space-between;
 	flex-direction: row;
 	align-items: center;
+	@media (max-width: 650px) {
+		height: fit-content;
+	}
 `;
 
 const Page_num = styled.p`
@@ -190,15 +225,18 @@ const Page_num = styled.p`
     font-size: ${({ theme }) => {
       switch (theme) {
         case 'mobile':
-          return '16px';
+          return '23px';
         case 'tablet':
-          return '16px';
+          return '14px';
         case 'desktop':
         default:
           return '18px';
       }
     }};
     letter-spacing: 2.7px;
+	@media (max-width: 650px) {
+		margin: 0 .5rem 0 0;
+	}
 `;
 
 const Page_name = styled.p`
@@ -206,9 +244,9 @@ const Page_name = styled.p`
     font-size:  ${({ theme }) => {
       switch (theme) {
         case 'mobile':
-          return '16px';
+          return '23px';
         case 'tablet':
-          return '16px';
+          return '14px';
         case 'desktop':
         default:
           return '18px';
@@ -218,12 +256,18 @@ const Page_name = styled.p`
 	font-weight: 400px;
 	margin-top: auto;
 	margin-bottom: auto;
+	@media (max-width: 650px) {
+		margin: 0;
+	}
 `;
 
 const Underline = styled.div`
 	width: 90%;
 	${Item}:not([style*="border-bottom: 3px solid #FFFFFF"]):hover & {
 		border-bottom: 3px solid #FFFFFF86;
+	}	
+	@media (max-width: 650px) {
+		display: none;
 	}
 `;
 
@@ -266,12 +310,16 @@ function Navbar() {
 
     useEffect(() => {
       const handleResize = () => {
-        if (window.innerWidth <= 480) {
-          setTheme('mobile');
-        } else if (window.innerWidth > 480 && window.innerWidth <= 1025) {
-          setTheme('tablet');
-        } else {
-          setTheme('desktop');
+        if (window.innerWidth <= 650) {
+        	setTheme('mobile');
+	  		setIsOpen(false);
+        } 
+		else if (window.innerWidth > 650 && window.innerWidth <= 1025) {
+          	setTheme('tablet');
+			setIsOpen(true);
+        } 
+		else {
+          	setTheme('desktop');
         }
       };
   
@@ -279,19 +327,19 @@ function Navbar() {
       window.addEventListener('resize', handleResize);
   
       return () => {
-        window.removeEventListener('resize', handleResize);
+        	window.removeEventListener('resize', handleResize);
       };
     }, []);
 
 
-	const [menuOpen, setMenuOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 
-	const handleMenuClick = () => {
-	  setMenuOpen(true);
+	const OpenNav = () => {
+	  	setIsOpen(true);
 	};
   
-	const handleCloseClick = () => {
-	  setMenuOpen(false);
+	const CloseNav = () => {
+	  	setIsOpen(false);
 	};
 
 	return (
@@ -300,16 +348,16 @@ function Navbar() {
 			<Container theme={theme}>
 				<Logo_img src={logo} alt="Logo" />
 				<Line theme={theme}/>
-				<MenuBttn isOpen={menuOpen} onClick={handleMenuClick}>
-					<Menu_img isOpen={menuOpen} src={hamburger} alt="Menu" />
+				<MenuBttn isOpen={isOpen} onClick={OpenNav}>
+					<img width="35px" src={hamburger} alt="Menu" />
 				</MenuBttn>
-				<CloseBttn onClick={handleCloseClick}>
-					<Close_img isOpen={menuOpen} src={close} alt="Close" />
-				</CloseBttn>
-				<Nav theme={theme} isOpen={menuOpen}>
+				<Nav theme={theme} isOpen={isOpen}>
+					<CloseBttn theme={theme} isOpen={isOpen} onClick={CloseNav}>
+						<img width="27px" src={close} alt="Close" />
+					</CloseBttn>
 					<List_container theme={theme}>
-						<Nav_list>
-							<Item>
+						<Nav_list theme={theme}>
+							<Item theme={theme}>
 								<Link className="link" to="/">
 									<Nav_link id="home">
 										<Page_num theme={theme}>00</Page_num>
@@ -318,7 +366,7 @@ function Navbar() {
 									<Underline id={activeHome}></Underline>
 								</Link>
 							</Item>
-							<Item>
+							<Item theme={theme}>
 								<Link className="link" to="/destination">
 									<Nav_link id="dest">
 										<Page_num theme={theme}>01</Page_num>
@@ -327,7 +375,7 @@ function Navbar() {
 									<Underline id={activeDest}></Underline>
 								</Link>
 							</Item>
-							<Item>
+							<Item theme={theme}>
 								<Link className="link" to="/crew">
 									<Nav_link id="crew">
 										<Page_num theme={theme}>02</Page_num>
@@ -336,7 +384,7 @@ function Navbar() {
 									<Underline id={activeCrew}></Underline>
 								</Link>
 							</Item>
-							<Item>
+							<Item theme={theme}>
 								<Link className="link" to="/technology">
 									<Nav_link id="tech">
 										<Page_num theme={theme}>03</Page_num>

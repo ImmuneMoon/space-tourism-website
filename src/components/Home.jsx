@@ -33,6 +33,17 @@ const Main_container = styled.main`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return '0 2rem';
+        case 'tablet':
+          return '0 2rem';
+        case 'desktop':
+        default:
+          return '';
+      }
+    }};
 `;
 
 const Home_container = styled.div`
@@ -77,6 +88,19 @@ const Home_container = styled.div`
 const Left_container = styled.div`
     width: fit-content;
     height: fit-content;
+    display: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return 'flex';
+        case 'tablet':
+          return 'flex';
+        case 'desktop':
+        default:
+          return 'block';
+      }
+    }};
+    flex-direction: column;
+    justify-content: center;
 `;
 
 const Right_container = styled.div`
@@ -100,7 +124,7 @@ const Main_p = styled.p`
     font-size: ${({ theme }) => {
       switch (theme) {
         case 'mobile':
-          return 'center';
+          return '23px';
         case 'tablet':
           return '18px';
         case 'desktop':
@@ -128,20 +152,52 @@ const Main_p = styled.p`
 const Main_h1 = styled.h1`
     font-family: 'Bellefair', serif;
     font-weight: 400;
-    font-size: 150px;
+    font-size: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return '125px';
+        case 'tablet':
+          return '125px';
+        case 'desktop':
+        default:
+          return '150px';
+      }
+    }};
     color: #FFFFFF;
     width: fit-content;
     margin-top: 2rem;
     margin-bottom: .5rem;
+    margin: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return '2rem auto .5rem auto';
+        case 'tablet':
+          return '2rem auto .5rem auto';
+        case 'desktop':
+        default:
+          return '2rem 0 .5rem 0';
+      }
+    }};
+    text-align: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return 'center';
+        case 'tablet':
+          return 'center';
+        case 'desktop':
+        default:
+          return '';
+      }
+    }};
 `;
 
 const Main_p2 = styled.p`
     font-size: ${({ theme }) => {
       switch (theme) {
         case 'mobile':
-          return '18px';
+          return '12px';
         case 'tablet':
-          return '18px';
+          return '16px';
         case 'desktop':
         default:
           return '16px';
@@ -161,7 +217,7 @@ const Main_p2 = styled.p`
     width: ${({ theme }) => {
       switch (theme) {
         case 'mobile':
-          return '';
+          return '23rem';
         case 'tablet':
           return '29rem';
         case 'desktop':
@@ -279,13 +335,13 @@ function Home() {
     return (
         <>
             <Content theme={theme}/>
-            <Main_container>
+            <Main_container theme={theme}>
                 <Home_container theme={theme}>
-                    <Left_container>
+                    <Left_container theme={theme}>
                         <Main_p theme={theme}>
                             SO,&nbsp;YOU&nbsp;WANT&nbsp;TO&nbsp;TRAVEL&nbsp;TO
                         </Main_p>
-                        <Main_h1>
+                        <Main_h1 theme={theme}>
                             SPACE
                         </Main_h1>
                         <Main_p2 id="information" theme={theme}>
