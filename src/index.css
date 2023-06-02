@@ -10,79 +10,80 @@ This CSS file is for multi component spanning stylings
 Check individual components for additional stylings relevant only to that component
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500&family=Bellefair&display=swap');
 
 /* Global styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
 }
 
 #root {
-  height: fit-content;
-  width: 100%;
+	height: fit-content;
+	width: 100%;
 }
 
 body {
-  height: 100%;
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-color: black;
-  background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: black;
+	background-repeat: no-repeat;
 }
 
 main {
-  height: 100%;
+	height: 100%;
 }
 
 .navButton:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 #pg-heading {
-  margin: 3rem 0 5rem 10rem;
-  margin-left: 10.5rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
+	margin: 3rem 0 5rem 10.5rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
 }
 
+
+
 #pg-num {
-  font-size: 28px;
-  font-weight: bolder;
-  color: #4b5560;
-  letter-spacing: 4.75px;
-  margin-right: 1.25rem;
+	font-size: 28px;
+	font-weight: 600;
+	color: #4b5560;
+	letter-spacing: 4.75px;
+	margin-right: 1.25rem;
 	font-family: 'Barlow Condensed', sans-serif;
 }
 
 #pg-subject {
-  font-size: 28px;
-  font-weight: normal;
-  color: #FFFFFF;
-  letter-spacing: 4.75px;
-  font-family: 'Barlow Condensed', sans-serif;
+	font-size: 28px;
+	font-weight: 400;
+	color: #FFFFFF;
+	letter-spacing: 4.75px;
+	font-family: 'Barlow Condensed', sans-serif;
 }
 
 #title {
-  font-family: 'Bellefair', serif;
+	font-family: 'Bellefair', serif;
 }
 
 #information {
-  font-weight: 400px;
-  height: 7rem;
-  color: #D0D6F9;
-  font-size: 16px;
-  line-height: 1.75;
-  margin: .15rem 0 3.5rem 0;
+	font-weight: 400px;
+	height: 7rem;
+	color: #D0D6F9;
+	font-size: 16px;
+	line-height: 1.75;
+	margin: .15rem 0 3.5rem 0;
 }
 
 /* 
@@ -90,12 +91,12 @@ NavBar CSS
 */
 
 .link {
-  height: 100%;
+	height: 100%;
 }
 
 #active-nav-item {
-  display: block;
-  border-bottom: 3px solid #FFFFFF;
+	display: block;
+	border-bottom: 3px solid #FFFFFF;
 }
 
 /* 
@@ -103,114 +104,88 @@ Destination page CSS
 */
 
 
-/* Destination nav */
-
-
-
-
-
 /* Constainer for destination section */
-section[name="dest-container"] {
-  display: flex;
-  flex-direction: row;
+#dest-container {
+	display: flex;
+	flex-direction: row;
 }
 
-/* Planet image container */
-div[name="planet"] {
-  margin-top: 2rem;
-  width: 425px;
-  height: 425px;
-  position: relative;
-  border-radius: 50%;
-}
-
-/* Planet image */
-img[name="dest-img"] {
-  width: 425px;
-  height: 425px;
-}
 
 /* Planet information container */
-div[name="info"] {
-  width: 27rem;
-  margin: 3rem 0 8rem 0;
+#info {
+	width: 27rem;
+	margin: 3rem 0 8rem 0;
 }
 
 
 /* Planet name */
-h2[name="title"] {
-  font-size: 100px;
-  font-weight: 500;
-  font-family: 'Bellefair', serif;
+#title {
+	font-size: 100px;
+	font-weight: 500;
+	font-family: 'Bellefair', serif;
 }
 
 /* Container for travel time and distance container/ decorative underscore */
-div[name="travel-container"] {
-  width: 25rem;
+#travel-container {
+	width: 25rem;
 }
 
 /* Decorative underscore to time and distance area */
-div[name="dest-line"] {
-  border: .5px solid rgba(128, 128, 128, 0.548);
+#dest-line {
+	border: .5px solid rgba(128, 128, 128, 0.548);
 }
 
 /* Travel time and distance container */
-div[name="travel"] {
-  display: flex;
-  justify-content: space-between;
-  margin: 1.5rem 0 0 0;
+#travel {
+	display: flex;
+	justify-content: space-between;
+	margin: 1.5rem 0 0 0;
 }
 
 #dist-container {
-  margin-right: 4rem;
-  width: fit-content;
+	margin-right: 4rem;
+	width: fit-content;
 }
 
 /* Heading/ title for distance */
-h3[name="dist-title"] {
-  letter-spacing: 2.35px;
-  font-weight: 400;
-  font-size: 14px;
-  color: #D0D6F9;
+#dist-title {
+	letter-spacing: 2.35px;
+	font-weight: 400;
+	font-size: 14px;
+	color: #D0D6F9;
 	font-family: 'Barlow Condensed', sans-serif;
 }
 
 /* Value for distance */
-p[name="avg-dist"] {
-  font-size: 28px;
-  margin: .75rem 0 0 0;
-  font-weight: 500;
-  font-family: 'Bellefair', serif;
+#avg-dist {
+	font-size: 28px;
+	margin: .75rem 0 0 0;
+	font-weight: 500;
+	font-family: 'Bellefair', serif;
 }
 
 /* Container for travel time */
 #time-container {
-  margin: 0 5rem 0 0;
-  width: fit-content;
+	margin: 0 5rem 0 0;
+	width: fit-content;
 }
 
 /* Heading/ title for travel time */
-h3[name="time-title"] {
-  letter-spacing: 2.35px;
-  font-weight: 400px;
-  font-size: 14px;
-  color: #D0D6F9;
+#time-title {
+	letter-spacing: 2.35px;
+	font-weight: 400px;
+	font-size: 14px;
+	color: #D0D6F9;
 	font-family: 'Barlow Condensed', sans-serif;
 }
 
 /* Value for travel time */
-p[name="est-time"] {
-  font-size: 28px;
-  margin: .75rem 0 0 0;
-  font-weight: 400px;
-  font-family: 'Bellefair', serif;
+#est-time {
+	font-size: 28px;
+	margin: .75rem 0 0 0;
+	font-weight: 400px;
+	font-family: 'Bellefair', serif;
 }
-
-
-/* Destination planet components */
-
-
-
 
 
 
@@ -221,51 +196,51 @@ Crew page CSS
 
 /* Container for crew components crewmember sections */
 section[name="crew-container"] {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  margin-top: 3rem;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	margin-top: 3rem;
 }
 
 /* Left half of crewmwmber component */
 div[name="l-container"] {
-  margin: 5rem 0 5rem 0;
+	margin: 5rem 0 5rem 0;
 }
 
 /* Right half of crewmwmber component */
 div[name="r-container"] {
-  position: absolute;
-  bottom: 0;
-  z-index: -10;
+	position: absolute;
+	bottom: 0;
+	z-index: -10;
 }
 
 /* Crew member title */
 h2[name="crew-title"]{
-  font-weight: 500;
-  font-size: 28px;
-  letter-spacing: 4.75px;
-  color: rgba(255, 255, 255, 0.5);
-  margin: 0 0 1.5rem 0;
-  font-family: 'Bellefair', serif;
+	font-weight: 500;
+	font-size: 28px;
+	letter-spacing: 4.75px;
+	color: rgba(255, 255, 255, 0.5);
+	margin: 0 0 1.5rem 0;
+	font-family: 'Bellefair', serif;
 }
 
 /* Crew Member's name */
 h3[name="crew-name"]{
-  font-size: 50px;
-  font-weight: 500;
-  margin: 0 0 1.5rem 0;
-  width: fit-content;
-  font-family: 'Bellefair', serif;
+	font-size: 50px;
+	font-weight: 500;
+	margin: 0 0 1.5rem 0;
+	width: fit-content;
+	font-family: 'Bellefair', serif;
 }
 
 /* Crew member's information*/
 p[name="crew-info"] {
-  color: #D0D6F9;
-  font-size: 16px;
-  line-height: 1.75;
-  margin: 0;
-  height: 10rem;
-  width: 25rem;
+	color: #D0D6F9;
+	font-size: 16px;
+	line-height: 1.75;
+	margin: 0;
+	height: 10rem;
+	width: 25rem;
 }
 
 /* Crew image styles */
@@ -277,15 +252,97 @@ p[name="crew-info"] {
 /*Tech page CSS*/
 
 #tech_img {
-  height: 500px;
-  margin-bottom: auto;
+	height: 500px;
+	margin-bottom: auto;
 }
 
 /* Footer */
 
 #footer {
-  height: fit-content;
-  position: sticky;
-  bottom: -10;
+	height: fit-content;
+	position: sticky;
+	bottom: -10;
 
+}
+
+/* Media resizing */
+
+
+/* Tablet Screens */
+@media (max-width: 1025px) {
+
+	/* Global Styles */
+
+	/* Page heading/ title */
+	#pg-heading {
+		margin: 3rem 0 5rem 3.7rem;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+	}
+
+	/* Page number */
+	#pg-num {
+		font-size: 18px;
+		}
+
+	/* Page title */
+	#pg-subject {
+		font-size: 18px;
+	}
+
+	/* Planet information container */
+	#info {
+		width: 100%;
+		margin: 3rem 0 0 0;
+	}
+
+	/* Container for travel time */
+	#time-container {
+		margin: 0;
+		width: fit-content;
+	}
+	
+	/* Container for travel time and distance container/ decorative underscore */
+	#travel-container {
+		width: 75vw;
+	}
+
+	/* Travel time and distance container */
+	#travel {
+		display: flex;
+		justify-content: space-between;
+		margin: 1.5rem 1.5rem 0 1.5rem;
+	}
+}
+
+/* Phone screens */
+@media (max-width: 650px) {
+
+	/* Global Styles */
+
+	/* Page heading/ title */
+	#pg-heading {
+		margin: 3rem 0 5rem 3.7rem;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+	}
+
+	/* Page number */
+	#pg-num {
+		font-size: 18px;
+		color: #4b5560;
+		letter-spacing: 4.75px;
+		margin-right: 1.25rem;
+	}
+
+	/* Page title */
+	#pg-subject {
+		font-size: 18px;
+	}
 }

@@ -84,12 +84,14 @@ function Technology() {
 
     useEffect(() => {
       const handleResize = () => {
-        if (window.innerWidth <= 480) {
-          setBkgrnd('mobile');
-        } else if (window.innerWidth > 480 && window.innerWidth <= 1025) {
-          setBkgrnd('tablet');
-        } else {
-          setBkgrnd('desktop');
+        if (window.innerWidth <= 650) {
+        	setTheme('mobile');
+        } 
+		else if (window.innerWidth > 650 && window.innerWidth <= 1025) {
+          	setTheme('tablet');
+        } 
+        else {
+          setTheme('desktop');
         }
       };
   

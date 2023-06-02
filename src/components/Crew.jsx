@@ -85,12 +85,14 @@ function Crew() {
 
     useEffect(() => {
       const handleResize = () => {
-        if (window.innerWidth <= 480) {
-          setBkgrnd('mobile');
-        } else if (window.innerWidth > 480 && window.innerWidth <= 1025) {
-          setBkgrnd('tablet');
-        } else {
-          setBkgrnd('desktop');
+        if (window.innerWidth <= 650) {
+        	setTheme('mobile');
+        } 
+		else if (window.innerWidth > 650 && window.innerWidth <= 1025) {
+          	setTheme('tablet');
+        } 
+        else {
+          setTheme('desktop');
         }
       };
   
@@ -101,7 +103,7 @@ function Crew() {
         window.removeEventListener('resize', handleResize);
       };
     }, []);
-    
+
     return (
         <>
             <Content bkgrnd={bkgrnd}/>
@@ -109,7 +111,7 @@ function Crew() {
                 <L_container>
                     <div id="pg-heading">
                         <p id="pg-num">02</p>
-                        <h1 id="pg-subject">MEET YOUR CREW</h1>
+                        <h1 id="pg-subject">MEET&nbsp;YOUR&nbsp;CREW</h1>
                     </div>
                     <Crew_container>
                         <Crew_info_container>

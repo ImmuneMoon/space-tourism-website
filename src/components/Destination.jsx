@@ -16,8 +16,8 @@ import titan_img from './assets/destination/image-titan.png';
 
 const Content = createGlobalStyle`
   body {
-    background-image: ${({ bkgrnd }) => {
-      switch (bkgrnd) {
+    background-image: ${({ theme }) => {
+      switch (theme) {
         case 'mobile':
           return `url('${mobile_bkgrnd}')`;
         case 'tablet':
@@ -38,12 +38,95 @@ const Location_container = styled.div`
 	width: fit-content;
     margin: 0 auto;
 	display: flex;
-	flex-direction: row;
+	flex-direction: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return 'column';
+        case 'tablet':
+          return 'column';
+        case 'desktop':
+        default:
+          return 'row';
+      }
+    }};
 	justify-content: center;
+
+
+	@media (max-width: 1025px) {
+		width: 100%;
+	}
 `;
 
 const Img_container = styled.div`
-    margin: 0 5rem 0 0;
+	width: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return '100%';
+        case 'tablet':
+          return '100%';
+        case 'desktop':
+        default:
+          return 'fit-content';
+      }
+    }}; 
+	height: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return '60%';
+        case 'tablet':
+          return '60%';
+        case 'desktop':
+        default:
+          return '';
+      }
+    }};  
+    margin: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return '0';
+        case 'tablet':
+          return '0';
+        case 'desktop':
+        default:
+          return '0 5rem 0 0';
+      }
+    }};  
+	display: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return 'flex';
+        case 'tablet':
+          return 'flex';
+        case 'desktop':
+        default:
+          return 'block';
+      }
+    }};  
+`;
+
+const DestImg = styled.img`
+	width: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return '225px';
+        case 'tablet':
+          return '325px';
+        case 'desktop':
+        default:
+          return '425px';
+      }
+    }};  
+	margin: ${({ theme }) => {
+      switch (theme) {
+        case 'mobile':
+          return 'auto auto';
+        case 'tablet':
+          return 'auto auto';
+        case 'desktop':
+        default:
+          return '2rem 0 0 0';
+      }
+    }};
 `;
 
 const R_container = styled.div`
@@ -51,6 +134,12 @@ const R_container = styled.div`
 	flex-direction: column;
 	margin: 0 0 0 5rem;
 	width: fit-content;
+
+
+	@media (max-width: 1025px) {
+		margin: 0 auto;
+		justify-content: center;
+	}
 `;
 
 const Info_container = styled.div`
@@ -60,16 +149,18 @@ const Info_container = styled.div`
 
 function Destination() {
     const [displayedDestination, setDisplayedDestination] = useState('moon');
-    const [bkgrnd, setBkgrnd] = useState('desktop');
+    const [theme, setTheme] = useState('desktop');
 
     useEffect(() => {
       const handleResize = () => {
-        if (window.innerWidth <= 480) {
-          setBkgrnd('mobile');
-        } else if (window.innerWidth > 480 && window.innerWidth <= 1025) {
-          setBkgrnd('tablet');
-        } else {
-          setBkgrnd('desktop');
+        if (window.innerWidth <= 650) {
+        	setTheme('mobile');
+        } 
+		else if (window.innerWidth > 650 && window.innerWidth <= 1025) {
+          	setTheme('tablet');
+        } 
+        else {
+          setTheme('desktop');
         }
       };
   
@@ -83,35 +174,27 @@ function Destination() {
 
     return (
         <>
-            <Content bkgrnd={bkgrnd}/>
+            <Content theme={theme}/>
             <main>
                 <div>
                     <div id="pg-heading">
                         <p id="pg-num">01</p>
-                        <h1 id="pg-subject">PICK YOUR DESTINATION</h1>
+                        <h1 id="pg-subject">PICK&nbsp;YOUR&nbsp;DESTINATION</h1>
                     </div>
                 </div>
-                <Location_container>
-					<Img_container>
+                <Location_container theme={theme}>
+					<Img_container theme={theme}>
 						{displayedDestination === 'moon' && 
-							<div name="planet">
-								<img name="dest-img" src={moon_img} alt="Moon" />
-							</div>
+							<DestImg theme={theme} src={moon_img} alt="Moon" />
 						}
 						{displayedDestination === 'mars' && 
-							<div name="planet">
-								<img name="dest-img" src={mars_img} alt="Mars" />
-							</div>
+							<DestImg theme={theme} src={mars_img} alt="Mars" />
 						}
 						{displayedDestination === 'europa' && 
-							<div name="planet">
-								<img name="dest-img" src={europa_img} alt="Europa" />
-							</div>
+							<DestImg theme={theme} src={europa_img} alt="Europa" />
 						}
 						{displayedDestination === 'titan' && 
-							<div name="planet">
-								<img name="dest-img" src={titan_img} alt="Titan" />
-							</div>
+							<DestImg theme={theme} src={titan_img} alt="Titan" />
 						}
 					</Img_container>
 					<R_container>
