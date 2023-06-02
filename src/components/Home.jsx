@@ -44,6 +44,11 @@ const Main_container = styled.main`
           return '';
       }
     }};
+
+    @media (max-width: 1025px) {
+		width: 100%;
+		margin: auto;
+	}
 `;
 
 const Home_container = styled.div`

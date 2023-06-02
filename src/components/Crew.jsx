@@ -81,7 +81,7 @@ const Anoushe = anoushe;
 
 function Crew() {
     const [displayedCrew, setDisplayedCrew] = useState('doug');
-    const [bkgrnd, setBkgrnd] = useState('desktop');
+    const [theme, setTheme] = useState('desktop');
 
     useEffect(() => {
       const handleResize = () => {
@@ -106,7 +106,7 @@ function Crew() {
 
     return (
         <>
-            <Content bkgrnd={bkgrnd}/>
+            <Content theme={theme}/>
             <Main>
                 <L_container>
                     <div id="pg-heading">

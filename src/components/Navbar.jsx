@@ -89,7 +89,7 @@ const Nav = styled.nav`
 	height: ${({ theme }) => {
       switch (theme) {
         case 'mobile':
-          return '80vh';
+          return '100vh';
         case 'tablet':
           return '6rem';
         case 'desktop':
@@ -169,6 +169,12 @@ const Nav_list = styled.ul`
 	align-items: center;
     list-style: none;
     width: 75%;
+
+	@media (max-width: 1025px) {
+		margin: 0 auto;
+		width: fit-content;
+	}
+
 	@media (max-width: 650px) {
 		margin: 20rem 3rem 3rem 3rem;
 		align-items: start;
@@ -223,17 +229,7 @@ const Page_num = styled.p`
 	font-family: 'Barlow Condensed', sans-serif;
 	margin: auto .5rem auto 0;
 	font-weight: bolder;
-    font-size: ${({ theme }) => {
-      switch (theme) {
-        case 'mobile':
-          return '23px';
-        case 'tablet':
-          return '14px';
-        case 'desktop':
-        default:
-          return '18px';
-      }
-    }};
+    font-size: 18px;
     letter-spacing: 2.7px;
 	@media (max-width: 650px) {
 		margin: 0 .5rem 0 0;
@@ -242,17 +238,7 @@ const Page_num = styled.p`
 
 const Page_name = styled.p`
 	font-family: 'Barlow Condensed', sans-serif;
-    font-size:  ${({ theme }) => {
-      switch (theme) {
-        case 'mobile':
-          return '23px';
-        case 'tablet':
-          return '14px';
-        case 'desktop':
-        default:
-          return '18px';
-      }
-    }};
+    font-size: 18px;
     letter-spacing: 2.7px;
 	font-weight: 400px;
 	margin-top: auto;

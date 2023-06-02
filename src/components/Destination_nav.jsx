@@ -7,11 +7,19 @@ const Nav_list = styled.ul`
     list-style: none;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1025px) {
+		margin: 0 auto;
+    }
 `
 
 const Item = styled.li`
     height: 1rem;
     margin-right: 2rem;
+
+    @media (max-width: 1025px) {
+        margin: 0 1rem;
+    }
 `
 
 const Bttn = styled.button`
@@ -43,7 +51,7 @@ function DestNav({ onDestinationChange }) {
 
     return (
         <>
-            <Nav_list>
+            <Nav_list id="dest-nav">
                 <Item className="navButton">
                     <Bttn
                         id="moonBttn"

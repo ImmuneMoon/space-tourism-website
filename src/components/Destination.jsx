@@ -35,8 +35,7 @@ const Content = createGlobalStyle`
 `;
 
 const Location_container = styled.div`
-	width: fit-content;
-    margin: 0 auto;
+	width: 100%;
 	display: flex;
 	flex-direction: ${({ theme }) => {
       switch (theme) {
@@ -54,6 +53,7 @@ const Location_container = styled.div`
 
 	@media (max-width: 1025px) {
 		width: 100%;
+		margin: auto auto 3rem auto;
 	}
 `;
 
@@ -72,9 +72,9 @@ const Img_container = styled.div`
 	height: ${({ theme }) => {
       switch (theme) {
         case 'mobile':
-          return '60%';
+          return '100%';
         case 'tablet':
-          return '60%';
+          return '100%';
         case 'desktop':
         default:
           return '';
@@ -101,14 +101,18 @@ const Img_container = styled.div`
         default:
           return 'block';
       }
-    }};  
+    }};
+
+	@media (max-width: 1025px) {
+			justify-content: center;
+		}
 `;
 
 const DestImg = styled.img`
 	width: ${({ theme }) => {
       switch (theme) {
         case 'mobile':
-          return '225px';
+          return '250px';
         case 'tablet':
           return '325px';
         case 'desktop':
@@ -119,12 +123,12 @@ const DestImg = styled.img`
 	margin: ${({ theme }) => {
       switch (theme) {
         case 'mobile':
-          return 'auto auto';
+          return '5rem';
         case 'tablet':
-          return 'auto auto';
+          return '5rem';
         case 'desktop':
         default:
-          return '2rem 0 0 0';
+          return '0';
       }
     }};
 `;
@@ -137,6 +141,7 @@ const R_container = styled.div`
 
 
 	@media (max-width: 1025px) {
+		width: 100%;
 		margin: 0 auto;
 		justify-content: center;
 	}
@@ -144,6 +149,9 @@ const R_container = styled.div`
 
 const Info_container = styled.div`
 	width: fit-content;
+	@media (max-width: 1025px) {
+		margin: 0 auto;
+	}
 `;
 
 
