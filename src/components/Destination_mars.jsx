@@ -11,7 +11,7 @@ function MarsDest() {
         <>
             <section id="dest-container">
                 <div id="info">
-                    <h2 id="title">MARS</h2>
+                    <h2 id="planet-title">MARS</h2>
                     <Subtext id="information">
                         Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!
                     </Subtext>

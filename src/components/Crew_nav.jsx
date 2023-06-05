@@ -12,6 +12,11 @@ const Nav_item = styled.li`
     margin-right: 1rem;
     width: fit-content;
     height: fit-content;
+
+
+    @media (max-width: 1025px) {
+        margin: 0 .5rem;
+    }
 `
 
 const Nav_dot = styled.div`

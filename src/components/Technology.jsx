@@ -80,7 +80,7 @@ const MobileCapsule = capsule_mobile_img;
 
 function Technology() {
     const [displayedTech, setDisplayedTech] = useState('launch');
-    const [bkgrnd, setBkgrnd] = useState('desktop');
+    const [theme, setTheme] = useState('desktop');
 
     useEffect(() => {
       const handleResize = () => {
@@ -105,9 +105,9 @@ function Technology() {
 
     return (
         <>
-            <Content bkgrnd={bkgrnd}/>
+            <Content theme={theme}/>
             <Main>
-                <div id="pg-heading">
+                <div className="pg-heading">
                     <p id="pg-num">
                         03
                     </p>

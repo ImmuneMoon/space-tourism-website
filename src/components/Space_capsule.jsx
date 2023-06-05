@@ -11,12 +11,6 @@ const Info_container = styled.div`
     flex-direction: column;
 `
 
-const Name = styled.h2`
-    font-size: 56px;
-    font-weight: 500;
-    margin: 0 0 1.5rem 0;
-`
-
 const Info = styled.p`
     color: #D0D6F9;
     font-size: 16px;
@@ -32,9 +26,9 @@ function SpaceCapsule() {
         <>
             <Vehicle_sction>
                 <Info_container>
-                    <Name id="title">
+                    <p id="vehicle-title">
                         SPACE&nbsp;CAPSULE
-                    </Name>
+                    </p>
                     <Info id="information">
                         A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to 
                         reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time 

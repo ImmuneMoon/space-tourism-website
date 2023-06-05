@@ -185,9 +185,13 @@ function Destination() {
             <Content theme={theme}/>
             <main>
                 <div>
-                    <div id="pg-heading">
-                        <p id="pg-num">01</p>
-                        <h1 id="pg-subject">PICK&nbsp;YOUR&nbsp;DESTINATION</h1>
+                    <div className="pg-heading">
+                        <p id="pg-num">
+							01
+						</p>
+                        <h1 id="pg-subject">
+							PICK&nbsp;YOUR&nbsp;DESTINATION
+						</h1>
                     </div>
                 </div>
                 <Location_container theme={theme}>

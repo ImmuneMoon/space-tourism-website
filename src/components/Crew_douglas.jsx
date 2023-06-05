@@ -3,11 +3,11 @@ import React from 'react';
 function doug() {
     return(
         <>
-            <section name="crew-container">
-                <h2 name="crew-title">
+            <section id="crew-container">
+                <h2 id="crew-title">
                     COMMANDER
                 </h2>
-                <h3 name="crew-name">
+                <h3 id="crew-name">
                     DOUGLAS&nbsp;HURLEY
                 </h3>
                 <p id="information">

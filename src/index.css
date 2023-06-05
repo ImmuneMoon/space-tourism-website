@@ -21,7 +21,7 @@ Check individual components for additional stylings relevant only to that compon
 }
 
 #root {
-	height: fit-content;
+	height: 100%;
 	width: 100%;
 }
 
@@ -45,7 +45,7 @@ main {
 	cursor: pointer;
 }
 
-#pg-heading {
+.pg-heading {
 	margin: 3rem 0 5rem 10.5rem;
 	display: flex;
 	flex-direction: row;
@@ -120,7 +120,7 @@ Destination page CSS
 
 
 /* Planet name */
-#title {
+#planet-title {
 	font-size: 100px;
 	font-weight: 500;
 	font-family: 'Bellefair', serif;
@@ -196,7 +196,7 @@ Crew page CSS
 
 
 /* Container for crew components crewmember sections */
-section[name="crew-container"] {
+#crew-container {
 	display: flex;
 	height: 100%;
 	flex-direction: column;
@@ -216,9 +216,9 @@ div[name="r-container"] {
 }
 
 /* Crew member title */
-h2[name="crew-title"]{
-	font-weight: 500;
+#crew-title {
 	font-size: 28px;
+	font-weight: 500;
 	letter-spacing: 4.75px;
 	color: rgba(255, 255, 255, 0.5);
 	margin: 0 0 1.5rem 0;
@@ -226,8 +226,8 @@ h2[name="crew-title"]{
 }
 
 /* Crew Member's name */
-h3[name="crew-name"]{
-	font-size: 50px;
+#crew-name {
+	font-size: 56px;
 	font-weight: 500;
 	margin: 0 0 1.5rem 0;
 	width: fit-content;
@@ -251,6 +251,15 @@ p[name="crew-info"] {
 
 
 /*Tech page CSS*/
+
+
+#vehicle-title {
+    font-size: 56px;
+    font-weight: 500;
+    margin: 0 0 1.5rem 0;
+	font-family: 'Bellefair', serif;
+}
+
 
 #tech_img {
 	height: 500px;
@@ -277,7 +286,7 @@ p[name="crew-info"] {
 
 
 	/* Page heading/ title */
-	#pg-heading {
+	.pg-heading {
 		margin: 3rem 0 5rem 3.7rem;
 		display: flex;
 		flex-direction: row;
@@ -309,7 +318,7 @@ p[name="crew-info"] {
 	}
 	
 	/* Planet name */
-	#title {
+	#planet-title {
 		font-size: 100px;
 		margin: 0 auto
 	}
@@ -341,15 +350,54 @@ p[name="crew-info"] {
 		margin: 0 auto;
 		width: fit-content;
 	}
+
+
+	/* CREW STYLES */
+
+	/* Container for crew components crewmember sections */
+	#crew-container {
+		margin: 3rem auto;
+	}
+
+	/* Crew member title */
+	#crew-title {
+		margin: .75rem auto;
+	}
+
+	/* Crew Member's name */
+	#crew-name {
+		margin: .75rem auto;
+	}
 }
 
 /* Phone screens */
 @media (max-width: 650px) {
 
+
 	/* GLOBAL STYLES */
 
+
 	/* Page heading/ title */
-	#pg-heading {
+	.pg-heading {
 		margin: 3rem auto 3.7rem auto;
+	}
+
+
+	/* CREW STYLES */
+
+
+	/* Container for crew components crewmember sections */
+	#crew-container {
+		margin: 0 auto 3rem auto;
+	}
+
+	/* Crew member title */
+	#crew-title {
+		font-size: 18px;
+	}
+
+	/* Crew Member's name */
+	#crew-name {
+		font-size: 32px;
 	}
 }

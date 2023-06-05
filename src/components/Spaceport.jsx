@@ -11,12 +11,6 @@ const Info_container = styled.div`
     flex-direction: column;
 `
 
-const Name = styled.h2`
-    font-size: 56px;
-    font-weight: 500;
-    margin: 0 0 1.5rem 0;
-`
-
 const Info = styled.p`
     color: #D0D6F9;
     font-size: 16px;
@@ -31,9 +25,9 @@ function Spaceport() {
         <>
             <Vehicle_sction>
                 <Info_container>
-                    <Name id="title">
+                    <p id="vehicle-title">
                         SPACEPORT
-                    </Name>
+                    </p>
                     <Info id="information">
                         A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
                         by analogy to the seaport for ships or airport for aircraft. 

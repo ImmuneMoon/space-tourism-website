@@ -12,12 +12,6 @@ const Info_container = styled.div`
     flex-direction: column;
 `
 
-const Name = styled.h2`
-    font-size: 56px;
-    font-weight: 500;
-    margin: 0 0 1.5rem 0;
-`
-
 const Info = styled.p`
     color: #D0D6F9;
     font-size: 16px;
@@ -33,9 +27,9 @@ function Launch_vehicle() {
         <>
             <Vehicle_sction>
                 <Info_container>
-                    <Name id="title">
+                    <p id="vehicle-title">
                         LAUNCH&nbsp;VEHICLE
-                    </Name>
+                    </p>
                     <Info id="information">
                         A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from 
                         Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most 

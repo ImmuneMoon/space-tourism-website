@@ -11,7 +11,7 @@ function MoonDest() {
         <>
             <section id="dest-container">
                 <div id="info">
-                    <h2 id="title">MOON</h2>
+                    <h2 id="planet-title">MOON</h2>
                     <Subtext id="information">
                         See our planet as you’ve never seen it before. 
                         A perfect relaxing trip away to help regain perspective and come back refreshed. 
