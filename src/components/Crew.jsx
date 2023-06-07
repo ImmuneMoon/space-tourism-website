@@ -29,14 +29,14 @@ const Content = createGlobalStyle`
       }
     }};
     background-repeat: no-repeat;
-    height: 100%;
+    height: fit-content;
     background-position: center;
     background-size: cover;
   }
 `;
 
 const Main = styled.main`
-    height: 100%;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -50,7 +50,11 @@ const Main = styled.main`
 `;
 
 const L_container = styled.div`
-    height: 85vh;
+    height: fit-content;
+
+    @media (max-width: 650px) {
+        margin-bottom: 9rem;
+    }
 `;
 
 const Heading = styled.div`
@@ -59,24 +63,27 @@ const Heading = styled.div`
     }
 `;
 
-
 const R_container = styled.div`
     height: 83vh;
     width: 100%;
     margin-top: 5rem;    
     @media (max-width: 1025px) {
         height: fit-content;
+        margin: 0;
 	}
+    @media (max-width: 650px) {
+    }
+
 `;
 
 const PhoneHeading = styled.div`
     display: none;
     @media (max-width: 650px) {
-        display: block;
+        display: flex;
     }
 `;
 
-const Crew_container = styled.section`
+const Crew_container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,11 +140,11 @@ const DougImg = styled.img`
 const MarkImg = styled.img`
     height: ${({ theme }) => {
         switch (theme) {
-                case 'mobile':
-            return '150px';
-                case 'tablet':
-            return '400px';
-                case 'desktop':
+            case 'mobile':
+                return '400px';
+            case 'tablet':
+                return '500px';
+            case 'desktop':
             default:
                 return '550px';
         }
@@ -147,11 +154,11 @@ const MarkImg = styled.img`
 const VictorImg = styled.img`
     height: ${({ theme }) => {
         switch (theme) {
-                case 'mobile':
-            return '200px';
-                case 'tablet':
-            return '400px';
-                case 'desktop':
+            case 'mobile':
+                return '425px';
+            case 'tablet':
+                return '500px';
+            case 'desktop':
             default:
                 return '550px';
         }
@@ -161,11 +168,11 @@ const VictorImg = styled.img`
 const AnouImg = styled.img`
     height: ${({ theme }) => {
         switch (theme) {
-                case 'mobile':
-            return '200px';
-                case 'tablet':
-            return '400px';
-                case 'desktop':
+            case 'mobile':
+                return '425px';
+            case 'tablet':
+                return '500px';
+            case 'desktop':
             default:
                 return '550px';
         }

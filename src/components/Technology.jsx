@@ -29,7 +29,7 @@ const Content = createGlobalStyle`
       }
     }};
     background-repeat: no-repeat;
-    height: 100%;
+    height: fit-content;
     background-position: center;
     background-size: cover;
   }
@@ -50,9 +50,18 @@ const Tech_section = styled.section`
 `;
 
 const L_container = styled.div`
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 5rem;
+`
+
+const Info_container = styled.div`
     display: flex;
     flex-direction: column;
     width: fit-content;
+    margin-left: 5rem;
 `;
 
 const Terms = styled.p`
@@ -69,14 +78,8 @@ const Vehicle_container = styled.div`
 `;
 
 const Vehicle = LaunchVehicle;
-const VehicleImg = vehicle_img;
-const MobileVehicle = vehicle_mobile_img;
 const Port = Spaceport;
-const SpaceportImg = spaceport_img;
-const MobileSpaceport = spaceport_mobile_img;
 const Capsule = SpaceCapsule;
-const CapsuleImg = capsule_img;
-const MobileCapsule = capsule_mobile_img;
 
 function Technology() {
     const [displayedTech, setDisplayedTech] = useState('launch');
@@ -116,32 +119,34 @@ function Technology() {
                     </h1>
                 </div>
                 <Tech_section>
-                    <Tech_nav onTechChange={setDisplayedTech}/>
                     <L_container>
-                        <Terms>
-                            THE TERMINOLOGY...
-                        </Terms>
-                        <div>
-                            {displayedTech === 'launch' && 
-                                <Vehicle/>
-                            }
-                            {displayedTech === 'port' && 
-                                <Port/>
-                            }
-                            {displayedTech === 'capsule' && 
-                                <Capsule/>
-                            }
-                        </div>
+                        <Tech_nav onTechChange={setDisplayedTech}/>
+                        <Info_container>
+                            <Terms>
+                                THE TERMINOLOGY...
+                            </Terms>
+                            <div>
+                                {displayedTech === 'launch' && 
+                                    <Vehicle/>
+                                }
+                                {displayedTech === 'port' && 
+                                    <Port/>
+                                }
+                                {displayedTech === 'capsule' && 
+                                    <Capsule/>
+                                }
+                            </div>
+                        </Info_container>
                     </L_container>
                     <Vehicle_container>
                         {displayedTech === 'launch' && 
-                            <img id="tech_img" src={VehicleImg} alt="Launch Vehicle"/>
+                            <img id="tech_img" src={vehicle_img} alt="Launch Vehicle"/>
                         }
                         {displayedTech === 'port' && 
-                            <img id="tech_img" src={SpaceportImg} alt="Spaceport"/>
+                            <img id="tech_img" src={spaceport_img} alt="Spaceport"/>
                         }
                         {displayedTech === 'capsule' && 
-                            <img id="tech_img" src={CapsuleImg} alt="Space Capsule"/>
+                            <img id="tech_img" src={capsule_img} alt="Space Capsule"/>
                         }
                     </Vehicle_container>
                 </Tech_section>

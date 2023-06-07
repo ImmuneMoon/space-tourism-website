@@ -3,11 +3,11 @@ import React from 'react';
 function victor() {
     return(
         <>
-            <section name="crew-container">
-                <h2 name="crew-title">
+            <section id="crew-container">
+                <h2 id="crew-title">
                     PILOT
                 </h2>
-                <h3 name="crew-name">
+                <h3 id="crew-name">
                     VICTOR&nbsp;GLOVER
                 </h3>
                 <p id="information">

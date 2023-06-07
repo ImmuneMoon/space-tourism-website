@@ -3,11 +3,11 @@ import React from 'react';
 function mark() {
     return(
         <>
-            <section name="crew-container">
-                <h2 name="crew-title">
+            <section id="crew-container">
+                <h2 id="crew-title">
                     MISSION&nbsp;SPECIALIST
                 </h2>
-                <h3 name="crew-name">
+                <h3 id="crew-name">
                     MARK&nbsp;SHUTTLEWORTH
                 </h3>
                 <p id="information">

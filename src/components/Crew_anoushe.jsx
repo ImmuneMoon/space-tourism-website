@@ -4,11 +4,11 @@ import React from 'react';
 function anoushe() {
     return(
         <>
-            <section name="crew-container">
-                <h2 name="crew-title">
+            <section id="crew-container">
+                <h2 id="crew-title">
                     FLIGHT&nbsp;ENGINEER
                 </h2>
-                <h3 name="crew-name">
+                <h3 id="crew-name">
                     ANOUSHEH&nbsp;ANSARI
                 </h3>
                 <p id="information">

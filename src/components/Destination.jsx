@@ -151,11 +151,13 @@ const Info_container = styled.div`
 	width: fit-content;
 	@media (max-width: 1025px) {
 		margin: 0 auto;
+		width: 100%;
 	}
 `;
 
 
 function Destination() {
+
     const [displayedDestination, setDisplayedDestination] = useState('moon');
     const [theme, setTheme] = useState('desktop');
 

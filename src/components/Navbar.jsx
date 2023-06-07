@@ -17,24 +17,18 @@ const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-	margin: ${({ theme }) => {
-      switch (theme) {
-        case 'mobile':
-          return '0';
-        case 'tablet':
-          return '0 0 0 3.7rem';
-        case 'desktop':
-        default:
-          return '2.5rem 0 0 3.7rem';
-      }
-    }};
+	margin: 2.5rem 0 0 3.7rem;
 	position: relative;
+
+	@media (max-width: 1025px) {
+		margin: 0;
+	}
 `;
 
 const Logo_img = styled.img`
     width: 47px;
-	@media (max-width: 650px) {
-		margin-left: 3.7rem;
+	@media (max-width: 1025px) {
+		margin: 0 0 0 2rem;
 	}
 `;
 
@@ -172,7 +166,7 @@ const Nav_list = styled.ul`
 
 	@media (max-width: 1025px) {
 		margin: 0 auto;
-		width: fit-content;
+		width: 80%;
 	}
 
 	@media (max-width: 650px) {
@@ -332,7 +326,7 @@ function Navbar() {
 	return (
 		<>
 			<Global/>
-			<Container theme={theme}>
+			<Container>
 				<Logo_img src={logo} alt="Logo" />
 				<Line theme={theme}/>
 				<MenuBttn isOpen={isOpen} onClick={OpenNav}>
