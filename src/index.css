@@ -376,6 +376,14 @@ p[name="crew-info"] {
 	#crew-name {
 		margin: .75rem auto;
 	}
+
+	/* TECH STYLES */
+
+	#tech_img {
+		max-width: 100%;
+		height: auto;
+		margin: 0 auto;
+	}
 }
 
 /* Phone screens */

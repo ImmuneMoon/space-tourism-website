@@ -22,6 +22,7 @@ const Content = createGlobalStyle`
     }};
     background-repeat: no-repeat;
     height: 100%;
+    width: 100%;
     background-position: center;
     background-size: cover;
   }

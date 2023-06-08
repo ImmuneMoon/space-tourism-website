@@ -7,7 +7,7 @@ import mobile_bkgrnd from './assets/technology/background-technology-mobile.jpg'
 import Tech_nav from './Tech_nav';
 import LaunchVehicle from './Launch_vehicle';
 import vehicle_img from './assets/technology/image-launch-vehicle-portrait.jpg';
-import vehicle_mobile_img from './assets/technology/image-launch-vehicle-portrait.jpg';
+import vehicle_mobile_img from './assets/technology/image-launch-vehicle-landscape.jpg';
 import Spaceport from './Spaceport';
 import spaceport_img from './assets/technology/image-spaceport-portrait.jpg';
 import spaceport_mobile_img from './assets/technology/image-spaceport-landscape.jpg';
@@ -29,7 +29,8 @@ const Content = createGlobalStyle`
       }
     }};
     background-repeat: no-repeat;
-    height: fit-content;
+    height: 100%;
+    width: 100%;
     background-position: center;
     background-size: cover;
   }
@@ -47,6 +48,12 @@ const Tech_section = styled.section`
     margin-left: 10rem;
     align-items: center;
     height: 100%;
+
+    @media (max-width: 1025px) {
+        flex-direction: column-reverse;
+        margin: 0;
+        width: 100%;
+    }
 `;
 
 const L_container = styled.div`
@@ -55,12 +62,17 @@ const L_container = styled.div`
     flex-direction: row;
     justify-content: space-between;
     margin-right: 5rem;
+
+    @media (max-width: 1025px) {
+        width: 100%;
+        flex-direction: column;
+        margin: 0 auto;
+	}
 `
 
 const Info_container = styled.div`
     display: flex;
     flex-direction: column;
-    width: fit-content;
     margin-left: 5rem;
 `;
 
@@ -73,8 +85,13 @@ const Terms = styled.p`
 `;
 
 const Vehicle_container = styled.div`
-    width: fit-content;
     height: 100%;
+    width: 100%;
+
+    @media (max-width: 1025px) {
+        margin: 0 auto;
+        width: 100%;
+    }
 `;
 
 const Vehicle = LaunchVehicle;
@@ -84,17 +101,30 @@ const Capsule = SpaceCapsule;
 function Technology() {
     const [displayedTech, setDisplayedTech] = useState('launch');
     const [theme, setTheme] = useState('desktop');
+    const [vehicleImg, setVehicleImg] = useState(vehicle_img);
+    const [spaceportImg, setSpaceportImg] = useState(spaceport_img);
+    const [capsuleImg, setCapsuleImg] = useState(capsule_img);
+
 
     useEffect(() => {
       const handleResize = () => {
         if (window.innerWidth <= 650) {
         	setTheme('mobile');
+            setVehicleImg(vehicle_mobile_img);
+            setSpaceportImg(spaceport_mobile_img);
+            setCapsuleImg(capsule_mobile_img);
         } 
 		else if (window.innerWidth > 650 && window.innerWidth <= 1025) {
           	setTheme('tablet');
-        } 
+            setVehicleImg(vehicle_mobile_img);
+            setSpaceportImg(spaceport_mobile_img);
+            setCapsuleImg(capsule_mobile_img);
+    } 
         else {
           setTheme('desktop');
+          setVehicleImg(vehicle_img);
+          setSpaceportImg(spaceport_img);
+          setCapsuleImg(capsule_img);
         }
       };
   
@@ -140,13 +170,13 @@ function Technology() {
                     </L_container>
                     <Vehicle_container>
                         {displayedTech === 'launch' && 
-                            <img id="tech_img" src={vehicle_img} alt="Launch Vehicle"/>
+                            <img id="tech_img" src={vehicleImg} alt="Launch Vehicle"/>
                         }
                         {displayedTech === 'port' && 
-                            <img id="tech_img" src={spaceport_img} alt="Spaceport"/>
+                            <img id="tech_img" src={spaceportImg} alt="Spaceport"/>
                         }
                         {displayedTech === 'capsule' && 
-                            <img id="tech_img" src={capsule_img} alt="Space Capsule"/>
+                            <img id="tech_img" src={capsuleImg} alt="Space Capsule"/>
                         }
                     </Vehicle_container>
                 </Tech_section>

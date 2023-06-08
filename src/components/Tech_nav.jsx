@@ -8,6 +8,10 @@ const Nav_container = styled.section`
     align-items: center;
     width: fit-content;
     height: fit-content;
+
+    @media (max-width: 1025px) {
+        flex-direction: row;
+    }
 `
 
 // should probably add a style sheet for similar buttons to reduce redundant styles here.
@@ -25,6 +29,11 @@ const Button = styled.button`
     margin-bottom: 2rem;
     font-size: 32px;
     font-family: 'Bellefair', serif;
+
+    @media (max-width: 1025px) {
+        margin-bottom: 0;
+        margin: 3rem 1rem;
+    }
 `
 
 function Tech_nav({ onTechChange }) {    
