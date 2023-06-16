@@ -158,7 +158,7 @@ const Nav_list = styled.ul`
         default:
           	return 'row';
       }
-    }};;
+    }};
     justify-content: space-between;
 	align-items: center;
     list-style: none;

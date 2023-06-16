@@ -6,11 +6,6 @@ const Vehicle_sction = styled.div`
     display: flex;
 `
 
-const Info_container = styled.div`
-    display: flex;
-    flex-direction: column;
-`
-
 const Info = styled.p`
     color: #D0D6F9;
     font-size: 16px;
@@ -24,7 +19,7 @@ function Spaceport() {
     return(
         <>
             <Vehicle_sction>
-                <Info_container>
+                <div id="info-container">
                     <p id="vehicle-title">
                         SPACEPORT
                     </p>
@@ -34,7 +29,7 @@ function Spaceport() {
                         Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of 
                         the Earth’s rotation for launch.
                     </Info>
-                </Info_container>
+                </div>
             </Vehicle_sction>
         </>
     );

@@ -27,11 +27,6 @@ const Content = createGlobalStyle`
           return `url('${dsktop_bkgrnd}')`;
       }
     }};
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
   }
 `;
 
@@ -150,7 +145,7 @@ const R_container = styled.div`
 
 const Info_container = styled.div`
 	width: fit-content;
-	
+
 	@media (max-width: 1025px) {
 		margin: 0 auto;
 		width: 100%;

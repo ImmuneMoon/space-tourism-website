@@ -16,38 +16,34 @@ import capsule_img from './assets/technology/image-space-capsule-portrait.jpg';
 import capsule_mobile_img from './assets/technology/image-space-capsule-landscape.jpg';
 
 const Content = createGlobalStyle`
-  body {
-    background-image: ${({ bkgrnd }) => {
-      switch (bkgrnd) {
-        case 'mobile':
-          return `url('${mobile_bkgrnd}')`;
-        case 'tablet':
-          return `url('${tablet_bkgrnd}')`;
-        case 'desktop':
-        default:
-          return `url('${dsktop_bkgrnd}')`;
-      }
-    }};
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-  }
+    body {
+        background-image: ${({ theme }) => {
+            switch (theme) {
+            case 'mobile':
+                return `url('${mobile_bkgrnd}')`;
+            case 'tablet':
+                return `url('${tablet_bkgrnd}')`;
+            case 'desktop':
+            default:
+                return `url('${dsktop_bkgrnd}')`;
+            }
+        }};
+    }
 `;
 
 const Main = styled.main`
     height: 100%;
-    padding-bottom: 4rem;
+    width: 100%;
 `;
 
 const Tech_section = styled.section`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 10rem;
+    margin-left: auto;
     align-items: center;
     height: 100%;
+    width: 90%;
 
     @media (max-width: 1025px) {
         flex-direction: column-reverse;
@@ -61,7 +57,6 @@ const L_container = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-right: 5rem;
 
     @media (max-width: 1025px) {
         width: 100%;
@@ -70,10 +65,21 @@ const L_container = styled.div`
 	}
 `
 
+const Nav = styled.div`
+    @media (max-width: 1025px) {
+        display: flex;
+        justify-content: center;
+	}
+`
+
 const Info_container = styled.div`
     display: flex;
     flex-direction: column;
     margin-left: 5rem;
+    @media (max-width: 1025px) {
+        justify-content: center;
+        margin: 0 auto;
+	}
 `;
 
 const Terms = styled.p`
@@ -85,12 +91,15 @@ const Terms = styled.p`
 `;
 
 const Vehicle_container = styled.div`
+    display: flex;
+    align-items: center;
+    width: fit-content;
     height: 100%;
-    width: 100%;
 
     @media (max-width: 1025px) {
-        margin: 0 auto;
+        height: 100%;
         width: 100%;
+        justify-content: center;
     }
 `;
 
@@ -150,7 +159,9 @@ function Technology() {
                 </div>
                 <Tech_section>
                     <L_container>
-                        <Tech_nav onTechChange={setDisplayedTech}/>
+                        <Nav>
+                            <Tech_nav onTechChange={setDisplayedTech}/>
+                        </Nav>
                         <Info_container>
                             <Terms>
                                 THE TERMINOLOGY...

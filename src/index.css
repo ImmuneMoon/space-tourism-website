@@ -35,6 +35,7 @@ body {
 	background-size: cover;
 	background-color: black;
 	background-repeat: no-repeat;
+	background-position: center;
 }
 
 main {
@@ -254,6 +255,11 @@ p[name="crew-info"] {
 /*Tech page CSS*/
 
 
+#info-container {
+    display: flex;
+    flex-direction: column;
+}
+
 #vehicle-title {
     font-size: 56px;
     font-weight: 500;
@@ -263,11 +269,13 @@ p[name="crew-info"] {
 
 
 #tech_img {
-	height: 500px;
-	margin-bottom: auto;
+	max-height: 400px;
 }
 
+
 /* Footer */
+
+
 
 #footer {
 	height: fit-content;
@@ -379,6 +387,17 @@ p[name="crew-info"] {
 
 	/* TECH STYLES */
 
+
+	#info-container {
+		display: flex;
+		justify-content: center;
+		margin: 0 auto;
+	}
+
+	#vehicle-title {
+		margin: .5rem auto;
+	}
+
 	#tech_img {
 		max-width: 100%;
 		height: auto;
@@ -473,6 +492,13 @@ p[name="crew-info"] {
 
 	/* Crew Member's name */
 	#crew-name {
+		font-size: 32px;
+	}
+
+
+	/* TECH STYLES */
+
+	#vehicle-title {
 		font-size: 32px;
 	}
 }

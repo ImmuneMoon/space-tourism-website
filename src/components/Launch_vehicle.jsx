@@ -7,11 +7,6 @@ const Vehicle_sction = styled.div`
     display: flex;
 `
 
-const Info_container = styled.div`
-    display: flex;
-    flex-direction: column;
-`
-
 const Info = styled.p`
     color: #D0D6F9;
     font-size: 16px;
@@ -26,7 +21,7 @@ function Launch_vehicle() {
     return(
         <>
             <Vehicle_sction>
-                <Info_container>
+                <div id="info-container">
                     <p id="vehicle-title">
                         LAUNCH&nbsp;VEHICLE
                     </p>
@@ -36,7 +31,7 @@ function Launch_vehicle() {
                         powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch 
                         pad!
                     </Info>
-                </Info_container>
+                </div>
             </Vehicle_sction>
         </>
     );

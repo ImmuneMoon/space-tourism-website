@@ -4,11 +4,9 @@ import styled from 'styled-components';
 const Vehicle_sction = styled.div`
     width: 30rem;
     display: flex;
-`
-
-const Info_container = styled.div`
-    display: flex;
-    flex-direction: column;
+    @media (max-width: 1025px) {
+        justify-content: center;
+	}
 `
 
 const Info = styled.p`
@@ -25,7 +23,7 @@ function SpaceCapsule() {
     return(
         <>
             <Vehicle_sction>
-                <Info_container>
+                <div id="info-container">
                     <p id="vehicle-title">
                         SPACE&nbsp;CAPSULE
                     </p>
@@ -34,7 +32,7 @@ function SpaceCapsule() {
                         reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time 
                         during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.
                     </Info>
-                </Info_container>
+                </div>
             </Vehicle_sction>
         </>
     );
