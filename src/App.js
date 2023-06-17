@@ -18,7 +18,7 @@ function App() {
     		<Route path='/crew' element={<Crew/>} />
     		<Route path='/technology' element={<Technology/>} />
     	</Routes>
-		<Attribution style="position: sticky; bottom: 0;"/>
+		<Attribution/>
     	</Router>
     );
 }

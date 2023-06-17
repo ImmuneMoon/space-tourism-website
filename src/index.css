@@ -21,12 +21,18 @@ Check individual components for additional stylings relevant only to that compon
 }
 
 #root {
-	height: 100%;
+	min-height: 100vh;
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
 }
 
 body {
-	height: 100%;
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
 	width: 100%;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -39,7 +45,8 @@ body {
 }
 
 main {
-	height: 100%;
+	margin-top: auto;
+	flex-grow: 1;
 }
 
 .navButton:hover {
@@ -269,7 +276,7 @@ p[name="crew-info"] {
 
 
 #tech_img {
-	max-height: 400px;
+	max-height: 500px;
 }
 
 
@@ -280,7 +287,7 @@ p[name="crew-info"] {
 #footer {
 	height: fit-content;
 	position: sticky;
-	bottom: -10;
+	bottom: 0;
 
 }
 

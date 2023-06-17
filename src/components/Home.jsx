@@ -23,7 +23,7 @@ const Content = createGlobalStyle`
   }
 `;
 
-const Main_container = styled.main`
+const Main = styled.main`
     height: 100vh;
     width: 100%;
     display: flex;
@@ -338,7 +338,7 @@ function Home() {
     return (
         <>
             <Content theme={theme}/>
-            <Main_container theme={theme}>
+            <Main theme={theme}>
                 <Home_container theme={theme}>
                     <Left_container theme={theme}>
                         <Main_p theme={theme}>
@@ -364,7 +364,7 @@ function Home() {
                         </Link>
                     </Right_container>
                 </Home_container>
-            </Main_container>
+            </Main>
         </>
     );
 }

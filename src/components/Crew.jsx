@@ -32,7 +32,6 @@ const Content = createGlobalStyle`
 `;
 
 const Main = styled.main`
-    height: fit-content;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -60,7 +59,7 @@ const Heading = styled.div`
 `;
 
 const R_container = styled.div`
-    height: 83vh;
+    height: 100%;
     width: 100%;
     margin-top: 5rem;    
     @media (max-width: 1025px) {
