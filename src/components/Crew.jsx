@@ -5,13 +5,13 @@ import dsktop_bkgrnd from './assets/crew/background-crew-desktop.jpg';
 import tablet_bkgrnd from './assets/crew/background-crew-tablet.jpg';
 import mobile_bkgrnd from './assets/crew/background-crew-mobile.jpg';
 import Crew_nav from './Crew_nav';
-import doug from './Crew_douglas';
+import Doug from './Crew_douglas';
 import dougPortrait from './assets/crew/image-douglas-hurley.png';
-import mark from './Crew_mark';
+import Mark from './Crew_mark';
 import markPortrait from './assets/crew/image-mark-shuttleworth.png';
-import victor from './Crew_victor';
+import Victor from './Crew_victor';
 import vicportrait from './assets/crew/image-victor-glover.png';
-import anoushe from './Crew_anoushe';
+import Anoushe from './Crew_anoushe';
 import anPortrait from './assets/crew/image-anousheh-ansari.png';
 
 
@@ -119,7 +119,7 @@ const Crew_img_container = styled.div`
 `;
 
 const DougImg = styled.img`
-    height: ${({ theme }) => {
+    max-height: ${({ theme }) => {
         switch (theme) {
                 case 'mobile':
             return '400px';
@@ -133,7 +133,7 @@ const DougImg = styled.img`
 `
 
 const MarkImg = styled.img`
-    height: ${({ theme }) => {
+    max-height: ${({ theme }) => {
         switch (theme) {
             case 'mobile':
                 return '400px';
@@ -147,7 +147,7 @@ const MarkImg = styled.img`
 `
 
 const VictorImg = styled.img`
-    height: ${({ theme }) => {
+    max-height: ${({ theme }) => {
         switch (theme) {
             case 'mobile':
                 return '425px';
@@ -161,7 +161,7 @@ const VictorImg = styled.img`
 `
 
 const AnouImg = styled.img`
-    height: ${({ theme }) => {
+    max-height: ${({ theme }) => {
         switch (theme) {
             case 'mobile':
                 return '425px';
@@ -176,17 +176,11 @@ const AnouImg = styled.img`
 
 const Crew_nav_container = styled.div`
     margin: 3rem auto 3rem 0;
-    width: fit-content;
     @media (max-width: 1025px) {
 		margin: 3rem auto;
 		justify-content: center;
 	}
 `;
-
-const Doug = doug;
-const Mark = mark;
-const Victor = victor;
-const Anoushe = anoushe;
 
 function Crew() {
     const [displayedCrew, setDisplayedCrew] = useState('doug');

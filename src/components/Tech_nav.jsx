@@ -19,7 +19,7 @@ const Nav_container = styled.section`
 const Button = styled.button`
     background: ${({ isActive }) => (isActive ? '#FFFFFF' : 'none')};
     border: ${({ isActive, isHovered }) => (isActive || isHovered) ? '1px solid #FFFFFF' : (isActive ? '1.5px solid rgba(128, 128, 128, 0.35)' : '1.5px solid rgba(255, 255, 255, 0.5)')};
-    color: ${({ isActive, isHovered }) => (isActive ? 'black' : '#FFFFFF')};
+    color: ${({ isActive }) => (isActive ? 'black' : '#FFFFFF')};
     border-radius: 50%;
     width: 4.5rem;
     height: 4.5rem;

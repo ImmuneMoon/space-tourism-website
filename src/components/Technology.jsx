@@ -43,7 +43,7 @@ const Tech_section = styled.section`
     margin-left: auto;
     align-items: center;
     height: 100%;
-    width: 90%;
+    width: 100%;
 
     @media (max-width: 1025px) {
         flex-direction: column-reverse;
@@ -53,10 +53,11 @@ const Tech_section = styled.section`
 `;
 
 const L_container = styled.div`
-    width: 50%;
+    width: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: auto;
 
     @media (max-width: 1025px) {
         width: 100%;
@@ -93,12 +94,9 @@ const Terms = styled.p`
 const Vehicle_container = styled.div`
     display: flex;
     align-items: center;
-    width: fit-content;
-    height: 100%;
+    justify-self: flex-end;
 
     @media (max-width: 1025px) {
-        height: 100%;
-        width: 100%;
         justify-content: center;
     }
 `;

@@ -10,12 +10,8 @@ const Vehicle_sction = styled.div`
 `
 
 const Info = styled.p`
-    color: #D0D6F9;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.75;
-    width: 28rem;
     margin: 0;
+    width: 25.5rem;
 
 `
 

@@ -2,26 +2,26 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const Vehicle_sction = styled.div`
+const Vehicle_section = styled.div`
     width: 30rem;
     display: flex;
-`
+`;
+
+const Info_container = styled.div`
+    margin: auto 0;
+`;
 
 const Info = styled.p`
-    color: #D0D6F9;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.75;
-    width: 28rem;
     margin: 0;
+	width: 25.5rem;
 
-`
+`;
 
 function Launch_vehicle() {
     return(
         <>
-            <Vehicle_sction>
-                <div id="info-container">
+            <Vehicle_section>
+                <Info_container id="info-container">
                     <p id="vehicle-title">
                         LAUNCH&nbsp;VEHICLE
                     </p>
@@ -31,8 +31,8 @@ function Launch_vehicle() {
                         powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch 
                         pad!
                     </Info>
-                </div>
-            </Vehicle_sction>
+                </Info_container>
+            </Vehicle_section>
         </>
     );
 }

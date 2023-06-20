@@ -25,7 +25,6 @@ Check individual components for additional stylings relevant only to that compon
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	flex-grow: 1;
 }
 
 body {
@@ -45,7 +44,8 @@ body {
 }
 
 main {
-	margin-top: auto;
+	height: 100%;
+	width: 100%;
 	flex-grow: 1;
 }
 
@@ -255,6 +255,8 @@ p[name="crew-info"] {
 
 /* Crew image styles */
 #crew_img {
+	max-width: 100%;
+	height: auto;
 }
 
 
@@ -265,6 +267,7 @@ p[name="crew-info"] {
 #info-container {
     display: flex;
     flex-direction: column;
+	width: fit-content;
 }
 
 #vehicle-title {
@@ -276,7 +279,9 @@ p[name="crew-info"] {
 
 
 #tech_img {
-	max-height: 500px;
+	max-height: 450px;
+	max-width: 100%;
+	height: auto;
 }
 
 
