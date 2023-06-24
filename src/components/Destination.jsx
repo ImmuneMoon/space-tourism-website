@@ -30,6 +30,10 @@ const Content = createGlobalStyle`
   }
 `;
 
+const Main = styled.main`
+	padding-bottom: 4rem;
+`;
+
 const Location_container = styled.div`
 	width: 100%;
 	display: flex;
@@ -182,7 +186,7 @@ function Destination() {
     return (
         <>
             <Content theme={theme}/>
-            <main>
+            <Main>
                 <div>
                     <div className="pg-heading">
                         <p id="pg-num">
@@ -226,7 +230,7 @@ function Destination() {
                   </Info_container>
                 </R_container>
                 </Location_container>
-            </main>
+            </Main>
         </>
     );
 }

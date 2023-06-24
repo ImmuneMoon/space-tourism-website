@@ -32,8 +32,7 @@ const Content = createGlobalStyle`
 `;
 
 const Main = styled.main`
-    height: 100%;
-    width: 100%;
+    padding-bottom: 4.65rem;
 `;
 
 const Tech_section = styled.section`

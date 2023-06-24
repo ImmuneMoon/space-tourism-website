@@ -33,8 +33,7 @@ const Content = createGlobalStyle`
 
 const Main = styled.main`
     display: flex;
-    justify-content: center;
-    align-content: center;
+    justify-content: space-between;
 
     @media (max-width: 1025px) {
         flex-direction: column;
@@ -45,44 +44,29 @@ const Main = styled.main`
 `;
 
 const L_container = styled.div`
+    display: inline-block;
     height: fit-content;
+    width: auto;
 
+    @media (max-width: 1025px) {
+        margin: 0 auto;
+	}
     @media (max-width: 650px) {
         margin-bottom: 9rem;
     }
 `;
 
 const Heading = styled.div`
-    @media (max-width: 650px) {
+    @media (max-width: 1025px) {
         display: none;
     }
 `;
 
-const R_container = styled.div`
-    height: 100%;
-    width: 100%;
-    margin-top: 5rem;    
-    @media (max-width: 1025px) {
-        height: fit-content;
-        margin: 0;
-	}
-    @media (max-width: 650px) {
-    }
-
-`;
-
-const PhoneHeading = styled.div`
-    display: none;
-    @media (max-width: 650px) {
-        display: flex;
-    }
-`;
-
 const Crew_container = styled.div`
+    width: fit-content;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10.5rem;
+    flex-direction: column;
+    margin: 7rem 0 0 35%;
 
     @media (max-width: 1025px) {
 		width: 100%;
@@ -91,7 +75,7 @@ const Crew_container = styled.div`
 `;
 
 const Crew_info_container = styled.div`
-    width: 25rem;
+    width: auto;
 
     @media (max-width: 1025px) {
         display: flex;
@@ -112,10 +96,38 @@ const Crewmember = styled.div`
 	}
 `;
 
+const R_container = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: fit-content;
+    @media (max-width: 1025px) {
+        height: fit-content;
+        margin: 0 auto;
+	}
+    @media (max-width: 650px) {
+    }
+
+`;
+
+const PhoneHeading = styled.div`
+    display: none;
+
+    @media (max-width: 650px) {
+        display: flex;
+    }
+`;
+
 const Crew_img_container = styled.div`
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
+    margin-top: auto;
+    padding: 3rem 10rem 0 3rem;
+
+    @media (max-width: 1025px) {
+        padding: 0;
+	}
 `;
 
 const DougImg = styled.img`
@@ -127,9 +139,10 @@ const DougImg = styled.img`
             return '500px';
                 case 'desktop':
             default:
-                return '600px';
+                return '625px';
         }
     }};
+width: auto;
 `
 
 const MarkImg = styled.img`
@@ -144,6 +157,7 @@ const MarkImg = styled.img`
                 return '550px';
         }
     }};
+    width: auto;
 `
 
 const VictorImg = styled.img`
@@ -158,6 +172,7 @@ const VictorImg = styled.img`
                 return '550px';
         }
     }};
+    width: auto;
 `
 
 const AnouImg = styled.img`
@@ -172,6 +187,7 @@ const AnouImg = styled.img`
                 return '550px';
         }
     }};
+    width: auto;
 `
 
 const Crew_nav_container = styled.div`
