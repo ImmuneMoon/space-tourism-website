@@ -33,7 +33,6 @@ const Content = createGlobalStyle`
 
 const Main = styled.main`
     display: flex;
-    justify-content: space-between;
 
     @media (max-width: 1025px) {
         flex-direction: column;
@@ -44,9 +43,12 @@ const Main = styled.main`
 `;
 
 const L_container = styled.div`
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     height: fit-content;
     width: auto;
+    margin-left: auto;
 
     @media (max-width: 1025px) {
         margin: 0 auto;
@@ -57,25 +59,16 @@ const L_container = styled.div`
 `;
 
 const Heading = styled.div`
+    margin-left: 0;
+
     @media (max-width: 1025px) {
         display: none;
     }
 `;
 
-const Crew_container = styled.div`
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    margin: 7rem 0 0 35%;
-
-    @media (max-width: 1025px) {
-		width: 100%;
-		margin: 0;
-	}
-`;
-
 const Crew_info_container = styled.div`
     width: auto;
+    margin-top: 1rem;
 
     @media (max-width: 1025px) {
         display: flex;
@@ -100,7 +93,10 @@ const R_container = styled.div`
     display: flex;
     flex-direction: column;
     height: auto;
-    width: fit-content;
+    width: max-content;
+    margin-right: auto;
+    margin-left: 7%;
+
     @media (max-width: 1025px) {
         height: fit-content;
         margin: 0 auto;
@@ -123,7 +119,6 @@ const Crew_img_container = styled.div`
     justify-content: center;
     align-items: flex-end;
     margin-top: auto;
-    padding: 3rem 10rem 0 3rem;
 
     @media (max-width: 1025px) {
         padding: 0;
@@ -131,7 +126,7 @@ const Crew_img_container = styled.div`
 `;
 
 const DougImg = styled.img`
-    max-height: ${({ theme }) => {
+    height: ${({ theme }) => {
         switch (theme) {
                 case 'mobile':
             return '400px';
@@ -142,11 +137,31 @@ const DougImg = styled.img`
                 return '625px';
         }
     }};
-width: auto;
+    width: auto;
 `
 
 const MarkImg = styled.img`
-    max-height: ${({ theme }) => {
+    height: ${({ theme }) => {
+        switch (theme) {
+            case 'mobile':
+                return '400px';
+            case 'tablet':
+                return '500px';
+            case 'desktop':
+            default:
+                return '625px';
+        }
+    }};
+    width: auto;
+    padding-top: 75px;
+
+    @media (max-width: 1025px) {
+        padding: 0;
+	}
+`
+
+const VictorImg = styled.img`
+    height: ${({ theme }) => {
         switch (theme) {
             case 'mobile':
                 return '400px';
@@ -158,28 +173,18 @@ const MarkImg = styled.img`
         }
     }};
     width: auto;
-`
+    padding-top: 75px;
 
-const VictorImg = styled.img`
-    max-height: ${({ theme }) => {
-        switch (theme) {
-            case 'mobile':
-                return '425px';
-            case 'tablet':
-                return '500px';
-            case 'desktop':
-            default:
-                return '550px';
-        }
-    }};
-    width: auto;
+    @media (max-width: 1025px) {
+        padding: 0;
+	}
 `
 
 const AnouImg = styled.img`
-    max-height: ${({ theme }) => {
+    height: ${({ theme }) => {
         switch (theme) {
             case 'mobile':
-                return '425px';
+                return '400px';
             case 'tablet':
                 return '500px';
             case 'desktop':
@@ -188,6 +193,11 @@ const AnouImg = styled.img`
         }
     }};
     width: auto;
+    padding-top: 75px;
+
+    @media (max-width: 1025px) {
+        padding: 0;
+	}
 `
 
 const Crew_nav_container = styled.div`
@@ -236,32 +246,34 @@ function Crew() {
                             MEET&nbsp;YOUR&nbsp;CREW
                         </h1>
                     </Heading>
-                    <Crew_container>
-                        <Crew_info_container>
-                            <Crewmember>
-                                {displayedCrew === 'doug' && 
-                                    <Doug id="doug-cpnt"/>
-                                }
-                                {displayedCrew === 'mark' && 
-                                    <Mark id="mark-cpnt"/>
-                                }
-                                {displayedCrew === 'victor' && 
-                                    <Victor id="victor-cpnt"/>
-                                }
-                                {displayedCrew === 'anoushe' && 
-                                    <Anoushe id="anoushe-cpnt"/>
-                                }
-                            </Crewmember>
-                            <Crew_nav_container>
-                                <Crew_nav onCrewChange={setDisplayedCrew}/>
-                            </Crew_nav_container>
-                        </Crew_info_container>
-                    </Crew_container>
+                    <Crew_info_container>
+                        <Crewmember>
+                            {displayedCrew === 'doug' && 
+                                <Doug id="doug-cpnt"/>
+                            }
+                            {displayedCrew === 'mark' && 
+                                <Mark id="mark-cpnt"/>
+                            }
+                            {displayedCrew === 'victor' && 
+                                <Victor id="victor-cpnt"/>
+                            }
+                            {displayedCrew === 'anoushe' && 
+                                <Anoushe id="anoushe-cpnt"/>
+                            }
+                        </Crewmember>
+                        <Crew_nav_container>
+                            <Crew_nav onCrewChange={setDisplayedCrew}/>
+                        </Crew_nav_container>
+                    </Crew_info_container>
                 </L_container>
                 <R_container>
                     <PhoneHeading className="pg-heading">
-                        <p id="pg-num">02</p>
-                        <h1 id="pg-subject">MEET&nbsp;YOUR&nbsp;CREW</h1>
+                        <p id="pg-num">
+                            02
+                        </p>
+                        <h1 id="pg-subject">
+                            MEET&nbsp;YOUR&nbsp;CREW
+                        </h1>
                     </PhoneHeading>
                     <Crew_img_container>
                         {displayedCrew === 'doug' && 

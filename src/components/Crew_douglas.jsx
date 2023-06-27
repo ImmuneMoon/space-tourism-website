@@ -8,7 +8,7 @@ function doug() {
                     COMMANDER
                 </h2>
                 <h3 id="crew-name">
-                    DOUGLAS&nbsp;HURLEY
+                    DOUGLAS HURLEY
                 </h3>
                 <p id="information" className="crew-info">
                     Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA 

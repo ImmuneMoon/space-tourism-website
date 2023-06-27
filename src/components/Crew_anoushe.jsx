@@ -6,10 +6,10 @@ function anoushe() {
         <>
             <section id="crew-container">
                 <h2 id="crew-title">
-                    FLIGHT&nbsp;ENGINEER
+                    FLIGHT ENGINEER
                 </h2>
                 <h3 id="crew-name">
-                    ANOUSHEH&nbsp;ANSARI
+                    ANOUSHEH ANSARI
                 </h3>
                 <p id="information" className="crew-info">
                     Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the 

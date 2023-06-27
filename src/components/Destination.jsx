@@ -198,37 +198,37 @@ function Destination() {
                     </div>
                 </div>
                 <Location_container theme={theme}>
-                <Img_container theme={theme}>
-                  {displayedDestination === 'moon' && 
-                    <DestImg theme={theme} src={moon_img} alt="Moon" />
-                  }
-                  {displayedDestination === 'mars' && 
-                    <DestImg theme={theme} src={mars_img} alt="Mars" />
-                  }
-                  {displayedDestination === 'europa' && 
-                    <DestImg theme={theme} src={europa_img} alt="Europa" />
-                  }
-                  {displayedDestination === 'titan' && 
-                    <DestImg theme={theme} src={titan_img} alt="Titan" />
-                  }
-                </Img_container>
-                <R_container>
-                  <Dest_nav onDestinationChange={setDisplayedDestination}/>
-                  <Info_container>
-                    {displayedDestination === 'moon' && 
-                      <Moon id="moon-cpnt"/>
-                    }
-                    {displayedDestination === 'mars' && 
-                      <Mars id="mars-cpnt"/>
-                    }
-                    {displayedDestination === 'europa' && 
-                      <Europa id="europa-cpnt"/>
-                    }
-                    {displayedDestination === 'titan' && 
-                      <Titan id="titan-cpnt"/>
-                    }
-                  </Info_container>
-                </R_container>
+					<Img_container theme={theme}>
+					{displayedDestination === 'moon' && 
+						<DestImg theme={theme} src={moon_img} alt="Moon" />
+					}
+					{displayedDestination === 'mars' && 
+						<DestImg theme={theme} src={mars_img} alt="Mars" />
+					}
+					{displayedDestination === 'europa' && 
+						<DestImg theme={theme} src={europa_img} alt="Europa" />
+					}
+					{displayedDestination === 'titan' && 
+						<DestImg theme={theme} src={titan_img} alt="Titan" />
+					}
+					</Img_container>
+					<R_container>
+						<Dest_nav onDestinationChange={setDisplayedDestination}/>
+						<Info_container>
+							{displayedDestination === 'moon' && 
+							<Moon id="moon-cpnt"/>
+							}
+							{displayedDestination === 'mars' && 
+							<Mars id="mars-cpnt"/>
+							}
+							{displayedDestination === 'europa' && 
+							<Europa id="europa-cpnt"/>
+							}
+							{displayedDestination === 'titan' && 
+							<Titan id="titan-cpnt"/>
+							}
+						</Info_container>
+					</R_container>
                 </Location_container>
             </Main>
         </>

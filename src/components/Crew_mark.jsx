@@ -8,7 +8,7 @@ function mark() {
                     MISSION&nbsp;SPECIALIST
                 </h2>
                 <h3 id="crew-name">
-                    MARK&nbsp;SHUTTLEWORTH
+                    MARK SHUTTLEWORTH
                 </h3>
                 <p id="information" className="crew-info">
                     Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based 

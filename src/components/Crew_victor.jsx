@@ -8,7 +8,7 @@ function victor() {
                     PILOT
                 </h2>
                 <h3 id="crew-name">
-                    VICTOR&nbsp;GLOVER
+                    VICTOR GLOVER
                 </h3>
                 <p id="information" className="crew-info">
                     Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. 

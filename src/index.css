@@ -54,7 +54,7 @@ main {
 }
 
 .pg-heading {
-	margin: 3rem 0 5rem 35%;
+	margin: 3rem 0 5rem 10.5rem;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -227,20 +227,21 @@ Crew page CSS
 	font-size: 56px;
 	font-weight: 500;
 	margin: 0 0 1.5rem 0;
-	width: fit-content;
+	width: max-content;
 	font-family: 'Bellefair', serif;
 }
 
 /* Crew member's information*/
 .crew-info{
 	height: 10rem;
-	width: 25rem;
+	max-width: 25rem;
+	min-width: 15rem;
 }
 
 /* Crew image styles */
 #crew_img {
-	max-width: 100%;
-	height: auto;
+	width: 100%;
+	max-height: fit-content;
 }
 
 
