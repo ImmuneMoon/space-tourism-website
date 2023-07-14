@@ -198,7 +198,7 @@ const Item = styled.li`
 `;
 
 const Nav_link = styled.div`
-	height: 97%;
+	height: 96.2%;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
@@ -253,39 +253,52 @@ const Underline = styled.div`
 `;
 
 function Navbar() {
-	let [path, setPath] = useState(window.location.pathname);
+	const [path, setPath] = useState(window.location.pathname);
 	let activeHome = '';
 	let activeDest = '';
 	let activeCrew = '';
 	let activeTech = '';
-	window.addEventListener('click', () => {
+  
+	useEffect(() => {
+	  const handleWindowClick = () => {
 		setPath(window.location.pathname);
-	});
+	  };
+  
+	  window.addEventListener('click', handleWindowClick);
+  
+	  return () => {
+		window.removeEventListener('click', handleWindowClick);
+	  };
+	}, []);
 	
-	if (path === ('/') && !path.includes('dest') && !path.includes('crew') && !path.includes('tech')) {
-		activeHome = "active-nav-item";
-		activeDest = '';
-		activeCrew = '';
-		activeTech = '';
-	}
-	else if (path === '/destination') {
-		activeHome = '';
-		activeDest = "active-nav-item";
-		activeCrew = '';
-		activeTech = '';
-	}
-	else if (path === '/crew') {
-		activeHome = '';
-		activeDest = '';
-		activeCrew = "active-nav-item";
-		activeTech = '';
-	}
-	else if (path === '/technology') {
-		activeHome = '';
-		activeDest = '';
-		activeCrew = '';
-		activeTech = "active-nav-item";
-	}
+	switch (path) {
+		case '/':
+			activeHome = "active-nav-item";
+			activeDest = '';
+			activeCrew = '';	
+			activeTech = '';
+			break;
+		case '/destination':
+			activeHome = '';
+			activeDest = "active-nav-item";
+			activeCrew = '';
+			activeTech = '';
+			break;
+		case '/crew':
+			activeHome = '';
+			activeDest = '';
+			activeCrew = "active-nav-item";
+			activeTech = '';
+			break;
+		case '/technology':
+			activeHome = '';
+			activeDest = '';
+			activeCrew = '';
+			activeTech = "active-nav-item";
+			break;
+		default:
+		  	break;
+	  }
 
 	const [theme, setTheme] = useState('desktop');
 

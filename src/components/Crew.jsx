@@ -33,6 +33,12 @@ const Content = createGlobalStyle`
 
 const Main = styled.main`
     display: flex;
+    justify-content: center;
+`;
+
+const Container = styled.div`
+    width: 69rem;
+    justify-content: space-between;
 
     @media (max-width: 1025px) {
         flex-direction: column;
@@ -43,12 +49,13 @@ const Main = styled.main`
 `;
 
 const L_container = styled.div`
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: flex-start;
     height: fit-content;
     width: auto;
-    margin-left: auto;
 
     @media (max-width: 1025px) {
         margin: 0 auto;
@@ -59,7 +66,6 @@ const L_container = styled.div`
 `;
 
 const Heading = styled.div`
-    margin-left: 0;
 
     @media (max-width: 1025px) {
         display: none;
@@ -89,17 +95,23 @@ const Crewmember = styled.div`
 	}
 `;
 
+const Crew_nav_container = styled.div`
+    margin: 0 auto 3rem 0;
+    @media (max-width: 1025px) {
+		margin: 3rem auto;
+		justify-content: center;
+	}
+`;
+
 const R_container = styled.div`
     display: flex;
     flex-direction: column;
     height: auto;
     width: max-content;
-    margin-right: auto;
-    margin-left: 7%;
+    margin: 0 auto;
 
     @media (max-width: 1025px) {
         height: fit-content;
-        margin: 0 auto;
 	}
     @media (max-width: 650px) {
     }
@@ -122,6 +134,8 @@ const Crew_img_container = styled.div`
 
     @media (max-width: 1025px) {
         padding: 0;
+        height: auto;
+        width: auto;
 	}
 `;
 
@@ -131,13 +145,14 @@ const DougImg = styled.img`
                 case 'mobile':
             return '400px';
                 case 'tablet':
-            return '500px';
+            return 'auto';
                 case 'desktop':
             default:
-                return '625px';
+                return '100%';
         }
     }};
     width: auto;
+    padding-left: 7rem;
 `
 
 const MarkImg = styled.img`
@@ -149,11 +164,9 @@ const MarkImg = styled.img`
                 return '500px';
             case 'desktop':
             default:
-                return '625px';
+                return '100%';
         }
     }};
-    width: auto;
-    padding-top: 75px;
 
     @media (max-width: 1025px) {
         padding: 0;
@@ -169,11 +182,10 @@ const VictorImg = styled.img`
                 return '500px';
             case 'desktop':
             default:
-                return '550px';
+                return '100%';
         }
     }};
-    width: auto;
-    padding-top: 75px;
+    padding-left: 7rem;
 
     @media (max-width: 1025px) {
         padding: 0;
@@ -189,24 +201,15 @@ const AnouImg = styled.img`
                 return '500px';
             case 'desktop':
             default:
-                return '550px';
+                return '100%';
         }
     }};
-    width: auto;
-    padding-top: 75px;
+    padding-left: 3rem;
 
     @media (max-width: 1025px) {
         padding: 0;
 	}
 `
-
-const Crew_nav_container = styled.div`
-    margin: 3rem auto 3rem 0;
-    @media (max-width: 1025px) {
-		margin: 3rem auto;
-		justify-content: center;
-	}
-`;
 
 function Crew() {
     const [displayedCrew, setDisplayedCrew] = useState('doug');
@@ -237,59 +240,61 @@ function Crew() {
         <>
             <Content theme={theme}/>
             <Main>
-                <L_container>
-                    <Heading className="pg-heading">
-                        <p id="pg-num">
-                            02
-                        </p>
-                        <h1 id="pg-subject">
-                            MEET&nbsp;YOUR&nbsp;CREW
-                        </h1>
-                    </Heading>
-                    <Crew_info_container>
-                        <Crewmember>
+                <Container id="container">
+                    <L_container>
+                        <Heading className="pg-heading">
+                            <p id="pg-num">
+                                02
+                            </p>
+                            <h1 id="pg-subject">
+                                MEET&nbsp;YOUR&nbsp;CREW
+                            </h1>
+                        </Heading>
+                        <Crew_info_container>
+                            <Crewmember>
+                                {displayedCrew === 'doug' && 
+                                    <Doug id="doug-cpnt"/>
+                                }
+                                {displayedCrew === 'mark' && 
+                                    <Mark id="mark-cpnt"/>
+                                }
+                                {displayedCrew === 'victor' && 
+                                    <Victor id="victor-cpnt"/>
+                                }
+                                {displayedCrew === 'anoushe' && 
+                                    <Anoushe id="anoushe-cpnt"/>
+                                }
+                            </Crewmember>
+                            <Crew_nav_container>
+                                <Crew_nav onCrewChange={setDisplayedCrew}/>
+                            </Crew_nav_container>
+                        </Crew_info_container>
+                    </L_container>
+                    <R_container>
+                        <PhoneHeading className="pg-heading">
+                            <p id="pg-num">
+                                02
+                            </p>
+                            <h1 id="pg-subject">
+                                MEET&nbsp;YOUR&nbsp;CREW
+                            </h1>
+                        </PhoneHeading>
+                        <Crew_img_container>
                             {displayedCrew === 'doug' && 
-                                <Doug id="doug-cpnt"/>
+                                <DougImg theme={theme} id="crew_img" src={dougPortrait} alt="Douglas Hurley"/>
                             }
                             {displayedCrew === 'mark' && 
-                                <Mark id="mark-cpnt"/>
+                                <MarkImg theme={theme} id="crew_img" src={markPortrait} alt="Mark Shuttleworth"/>
                             }
                             {displayedCrew === 'victor' && 
-                                <Victor id="victor-cpnt"/>
+                                <VictorImg theme={theme} id="crew_img" src={vicportrait} alt="Victor Glover"/>
                             }
                             {displayedCrew === 'anoushe' && 
-                                <Anoushe id="anoushe-cpnt"/>
+                                <AnouImg theme={theme} id="crew_img" src={anPortrait} alt="Anousheh Ansari"/>
                             }
-                        </Crewmember>
-                        <Crew_nav_container>
-                            <Crew_nav onCrewChange={setDisplayedCrew}/>
-                        </Crew_nav_container>
-                    </Crew_info_container>
-                </L_container>
-                <R_container>
-                    <PhoneHeading className="pg-heading">
-                        <p id="pg-num">
-                            02
-                        </p>
-                        <h1 id="pg-subject">
-                            MEET&nbsp;YOUR&nbsp;CREW
-                        </h1>
-                    </PhoneHeading>
-                    <Crew_img_container>
-                        {displayedCrew === 'doug' && 
-                            <DougImg theme={theme} id="crew_img" src={dougPortrait} alt="Douglas Hurley"/>
-                        }
-                        {displayedCrew === 'mark' && 
-                            <MarkImg theme={theme} id="crew_img" src={markPortrait} alt="Mark Shuttleworth"/>
-                        }
-                        {displayedCrew === 'victor' && 
-                            <VictorImg theme={theme} id="crew_img" src={vicportrait} alt="Victor Glover"/>
-                        }
-                        {displayedCrew === 'anoushe' && 
-                            <AnouImg theme={theme} id="crew_img" src={anPortrait} alt="Anousheh Ansari"/>
-                        }
-                    </Crew_img_container>
-                </R_container>
+                        </Crew_img_container>
+                    </R_container>
+                </Container>
             </Main>
         </>
     );

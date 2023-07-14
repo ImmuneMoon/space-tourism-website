@@ -31,7 +31,22 @@ const Content = createGlobalStyle`
 `;
 
 const Main = styled.main`
+	display: flex;
+	justify-content: center;
 	padding-bottom: 4rem;
+`;
+
+const Container = styled.div`
+	width: 69rem;
+    flex-direction: column;
+`;
+
+const Heading = styled.div`
+	margin-right: auto;
+
+	@media (max-width: 1025px) {
+		margin: 0 auto 0 auto;	
+	}
 `;
 
 const Location_container = styled.div`
@@ -187,32 +202,33 @@ function Destination() {
         <>
             <Content theme={theme}/>
             <Main>
-                <div>
-                    <div className="pg-heading">
-                        <p id="pg-num">
-                          01
-                        </p>
-                        <h1 id="pg-subject">
-                          PICK&nbsp;YOUR&nbsp;DESTINATION
-                        </h1>
-                    </div>
-                </div>
-                <Location_container theme={theme}>
-					<Img_container theme={theme}>
-					{displayedDestination === 'moon' && 
+				<Container id="container">
+					<div>
+						<Heading className="pg-heading">
+							<p id="pg-num">
+								01
+							</p>
+							<h1 id="pg-subject">
+								PICK&nbsp;YOUR&nbsp;DESTINATION
+							</h1>
+						</Heading>
+					</div>
+					<Location_container theme={theme}>
+						<Img_container theme={theme}>
+						{displayedDestination === 'moon' && 
 						<DestImg theme={theme} src={moon_img} alt="Moon" />
-					}
-					{displayedDestination === 'mars' && 
+						}
+						{displayedDestination === 'mars' && 
 						<DestImg theme={theme} src={mars_img} alt="Mars" />
-					}
-					{displayedDestination === 'europa' && 
+						}
+						{displayedDestination === 'europa' && 
 						<DestImg theme={theme} src={europa_img} alt="Europa" />
-					}
-					{displayedDestination === 'titan' && 
+						}
+						{displayedDestination === 'titan' && 
 						<DestImg theme={theme} src={titan_img} alt="Titan" />
-					}
-					</Img_container>
-					<R_container>
+						}
+						</Img_container>
+						<R_container>
 						<Dest_nav onDestinationChange={setDisplayedDestination}/>
 						<Info_container>
 							{displayedDestination === 'moon' && 
@@ -228,8 +244,9 @@ function Destination() {
 							<Titan id="titan-cpnt"/>
 							}
 						</Info_container>
-					</R_container>
-                </Location_container>
+						</R_container>
+					</Location_container>
+				</Container>
             </Main>
         </>
     );

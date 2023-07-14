@@ -31,8 +31,14 @@ const Button = styled.button`
     font-family: 'Bellefair', serif;
 
     @media (max-width: 1025px) {
-        margin-bottom: 0;
         margin: 3rem 1rem;
+    }
+
+    @media (max-width: 650px) {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 16px;
+        margin: 2rem .5rem;
     }
 `
 

@@ -32,35 +32,56 @@ const Content = createGlobalStyle`
 `;
 
 const Main = styled.main`
-    padding-bottom: 4.65rem;
+    display: flex;
+    justify-content: end;
+    justify-self: center;
+    
+    @media (max-width: 650px) {
+        justify-content: center;
+    }
+`;
+
+const Container = styled.div`
+    width: 79.2rem;
+    display: flex;
+    flex-direction: column;
+`;
+
+const Heading = styled.div`
+    margin-left: 0;
+    margin-bottom: 2rem;
 `;
 
 const Tech_section = styled.section`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: auto;
     align-items: center;
-    height: 100%;
+    height: fit-content;
     width: 100%;
 
     @media (max-width: 1025px) {
         flex-direction: column-reverse;
         margin: 0;
+        height: 100%;
         width: 100%;
     }
 `;
 
 const L_container = styled.div`
     width: fit-content;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: auto;
+    align-items: center;
+    margin-right: auto;
 
     @media (max-width: 1025px) {
         width: 100%;
+        height: fit-content;
         flex-direction: column;
+        justify-content: center;
         margin: 0 auto;
 	}
 `
@@ -84,25 +105,16 @@ const Info_container = styled.div`
 
 const Terms = styled.p`
     width: fit-content;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem 0;
     font-size: 16px;
     letter-spacing: 2.7px;
     font-family: 'Barlow Condensed', sans-serif;
-`;
-
-const Vehicle_container = styled.div`
-    display: flex;
-    align-items: center;
-    justify-self: flex-end;
-
     @media (max-width: 1025px) {
-        justify-content: center;
+        margin: 0 auto 1rem auto;
     }
 `;
 
-const Vehicle = LaunchVehicle;
-const Port = Spaceport;
-const Capsule = SpaceCapsule;
+
 
 function Technology() {
     const [displayedTech, setDisplayedTech] = useState('launch');
@@ -146,37 +158,37 @@ function Technology() {
         <>
             <Content theme={theme}/>
             <Main>
-                <div className="pg-heading">
-                    <p id="pg-num">
-                        03
-                    </p>
-                    <h1 id="pg-subject">
-                        SPACE LAUNCH 101
-                    </h1>
-                </div>
-                <Tech_section>
-                    <L_container>
-                        <Nav>
-                            <Tech_nav onTechChange={setDisplayedTech}/>
-                        </Nav>
-                        <Info_container>
-                            <Terms>
-                                THE TERMINOLOGY...
-                            </Terms>
-                            <div>
-                                {displayedTech === 'launch' && 
-                                    <Vehicle/>
-                                }
-                                {displayedTech === 'port' && 
-                                    <Port/>
-                                }
-                                {displayedTech === 'capsule' && 
-                                    <Capsule/>
-                                }
-                            </div>
-                        </Info_container>
-                    </L_container>
-                    <Vehicle_container>
+                <Container id="container">
+                    <Heading className="pg-heading">
+                        <p id="pg-num">
+                            03
+                        </p>
+                        <h1 id="pg-subject">
+                            SPACE LAUNCH 101
+                        </h1>
+                    </Heading>
+                    <Tech_section>
+                        <L_container>
+                            <Nav>
+                                <Tech_nav onTechChange={setDisplayedTech}/>
+                            </Nav>
+                            <Info_container>
+                                <Terms>
+                                    THE TERMINOLOGY...
+                                </Terms>
+                                <div>
+                                    {displayedTech === 'launch' && 
+                                        <LaunchVehicle/>
+                                    }
+                                    {displayedTech === 'port' && 
+                                        <Spaceport/>
+                                    }
+                                    {displayedTech === 'capsule' && 
+                                        <SpaceCapsule/>
+                                    }
+                                </div>
+                            </Info_container>
+                        </L_container>
                         {displayedTech === 'launch' && 
                             <img id="tech_img" src={vehicleImg} alt="Launch Vehicle"/>
                         }
@@ -186,8 +198,8 @@ function Technology() {
                         {displayedTech === 'capsule' && 
                             <img id="tech_img" src={capsuleImg} alt="Space Capsule"/>
                         }
-                    </Vehicle_container>
-                </Tech_section>
+                    </Tech_section>
+                </Container>
             </Main>
         </>
     );

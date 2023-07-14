@@ -24,8 +24,6 @@ const Content = createGlobalStyle`
 `;
 
 const Main = styled.main`
-    height: 100vh;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,8 +40,8 @@ const Main = styled.main`
     }};
 
     @media (max-width: 1025px) {
-		width: 100%;
-		margin: auto;
+      width: 100%;
+      margin: auto;
 	}
 `;
 
@@ -62,12 +60,12 @@ const Home_container = styled.div`
     margin: ${({ theme }) => {
       switch (theme) {
         case 'mobile':
-          return '3rem 0';
+          return '7rem 0';
         case 'tablet':
           return '3rem 0';
         case 'desktop':
         default:
-          return '10rem 5rem 0 5rem';
+          return '0 5rem';
       }
     }};
     height: fit-content;
