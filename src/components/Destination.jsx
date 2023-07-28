@@ -43,33 +43,28 @@ const Container = styled.div`
 
 const Heading = styled.div`
 	margin-right: auto;
-
-	@media (max-width: 1025px) {
-		margin: 0 auto 0 auto;	
-	}
 `;
 
 const Location_container = styled.div`
-	width: 100%;
-	display: flex;
-	flex-direction: ${({ theme }) => {
-      switch (theme) {
-        case 'mobile':
-          return 'column';
-        case 'tablet':
-          return 'column';
-        case 'desktop':
-        default:
-          return 'row';
-      }
-    }};
-	justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: ${({ theme }) => {
+        switch (theme) {
+          case 'mobile':
+            return 'column';
+          case 'tablet':
+            return 'column';
+          case 'desktop':
+          default:
+            return 'row';
+        }
+      }};
+    justify-content: center;
 
 
-	@media (max-width: 1025px) {
-		width: 100%;
-		margin: auto auto 3rem auto;
-	}
+    @media (max-width: 1025px) {
+        width: 100%;
+    }
 `;
 
 const Img_container = styled.div`
@@ -138,7 +133,7 @@ const DestImg = styled.img`
 	margin: ${({ theme }) => {
       switch (theme) {
         case 'mobile':
-          return '5rem';
+          return '2rem';
         case 'tablet':
           return '5rem';
         case 'desktop':

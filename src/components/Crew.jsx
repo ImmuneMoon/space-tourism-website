@@ -61,7 +61,6 @@ const L_container = styled.div`
         margin: 0 auto;
 	}
     @media (max-width: 650px) {
-        margin-bottom: 9rem;
     }
 `;
 
@@ -97,10 +96,15 @@ const Crewmember = styled.div`
 
 const Crew_nav_container = styled.div`
     margin: 0 auto 3rem 0;
+
     @media (max-width: 1025px) {
 		margin: 3rem auto;
 		justify-content: center;
 	}
+
+    @media (max-width: 650px) {
+        margin: 2rem auto;
+    }
 `;
 
 const R_container = styled.div`
@@ -114,6 +118,7 @@ const R_container = styled.div`
         height: fit-content;
 	}
     @media (max-width: 650px) {
+        justify-content: center;
     }
 
 `;
@@ -135,31 +140,36 @@ const Crew_img_container = styled.div`
     @media (max-width: 1025px) {
         padding: 0;
         height: auto;
-        width: auto;
+        width: fit-content;
+        margin: 2rem auto 0 auto;
 	}
 `;
 
 const DougImg = styled.img`
     height: ${({ theme }) => {
         switch (theme) {
-                case 'mobile':
-            return '400px';
-                case 'tablet':
-            return 'auto';
-                case 'desktop':
+            case 'mobile':
+                return '300px';
+            case 'tablet':
+                return 'auto';
+            case 'desktop':
             default:
                 return '100%';
         }
     }};
     width: auto;
     padding-left: 7rem;
+
+    @media (max-width: 1025px) {
+        padding: 0;
+    }
 `
 
 const MarkImg = styled.img`
     height: ${({ theme }) => {
         switch (theme) {
             case 'mobile':
-                return '400px';
+                return '300px';
             case 'tablet':
                 return '500px';
             case 'desktop':
@@ -177,7 +187,7 @@ const VictorImg = styled.img`
     height: ${({ theme }) => {
         switch (theme) {
             case 'mobile':
-                return '400px';
+                return '300px';
             case 'tablet':
                 return '500px';
             case 'desktop':
@@ -196,7 +206,7 @@ const AnouImg = styled.img`
     height: ${({ theme }) => {
         switch (theme) {
             case 'mobile':
-                return '400px';
+                return '300px';
             case 'tablet':
                 return '500px';
             case 'desktop':

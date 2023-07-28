@@ -21,7 +21,7 @@ Check individual components for additional stylings relevant only to that compon
 }
 
 body {
-	height: 100vh;
+	min-height: 100vh;
 	width: 100%;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -456,7 +456,7 @@ Crew page CSS
 
 	/* Page heading/ title */
 	.pg-heading {
-		margin: 3rem auto 3.7rem auto;
+		margin: 0 auto;
 	}
 
 	/* DESTINATION STYLES */

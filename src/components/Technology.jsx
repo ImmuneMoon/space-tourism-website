@@ -37,7 +37,7 @@ const Main = styled.main`
     justify-self: center;
     
     @media (max-width: 650px) {
-        justify-content: center;
+        justify-content: normal;
     }
 `;
 
@@ -50,6 +50,11 @@ const Container = styled.div`
 const Heading = styled.div`
     margin-left: 0;
     margin-bottom: 2rem;
+    
+    @media (max-width: 650px) {
+        margin-right: auto;
+        margin-left: auto;
+    }
 `;
 
 const Tech_section = styled.section`
@@ -62,6 +67,7 @@ const Tech_section = styled.section`
 
     @media (max-width: 1025px) {
         flex-direction: column-reverse;
+        justify-content: start;
         margin: 0;
         height: 100%;
         width: 100%;

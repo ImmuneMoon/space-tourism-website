@@ -113,6 +113,7 @@ const Nav = styled.nav`
 		right: 0;
 		padding: 2rem;
 		z-index: 1;
+		min-height: 100vh;
 	}
 `;
 
