@@ -322,12 +322,12 @@ Crew page CSS
 
 	#container {
 		height: 100%;
-		width: fit-content;
+		width: 100%;
 	}
 
 	/* Page heading/ title */
 	.pg-heading {
-		margin: 3rem 0 5rem 3.7rem;
+        margin: 2rem 0;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -404,7 +404,7 @@ Crew page CSS
 	/* Container for crew components crewmember sections */
 	#crew-container {
 		height: 100%;
-		margin: 3rem auto 0 auto;
+		margin: 0 auto;
 	}
 
 	/* Crew member title */
@@ -415,6 +415,11 @@ Crew page CSS
 	/* Crew Member's name */
 	#crew-name {
 		margin: .75rem auto;
+	}
+
+	/* Crew member's information*/
+	.crew-info {
+		max-width: 34rem;
 	}
 
 	/* Crew image styles */
@@ -467,6 +472,10 @@ Crew page CSS
 		width: 100%;
 	}
 
+	.dest-info {
+		margin: 0;
+	}
+
 	#travel {
 		flex-direction: column;
 		justify-content: center;
@@ -502,8 +511,8 @@ Crew page CSS
 
 	/* Decorative overscore to time and distance area */
 	#dest-line {
-		width: 85%;
-		margin: 3rem auto;
+		width: 90vw;
+		margin: 2rem auto;
 	}
 	
 	/* Heading/ title for travel time */
@@ -535,6 +544,11 @@ Crew page CSS
 	/* Crew Member's name */
 	#crew-name {
 		font-size: 32px;
+	}
+
+	/* Crew member's information*/
+	.crew-info {
+		max-width: 55rem;
 	}
 
 

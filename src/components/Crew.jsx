@@ -43,6 +43,7 @@ const Container = styled.div`
     @media (max-width: 1025px) {
         flex-direction: column;
 	}
+
     @media (max-width: 650px) {
         flex-direction: column-reverse;
     }
@@ -59,7 +60,9 @@ const L_container = styled.div`
 
     @media (max-width: 1025px) {
         margin: 0 auto;
+        width: 90%;
 	}
+
     @media (max-width: 650px) {
     }
 `;
@@ -67,6 +70,10 @@ const L_container = styled.div`
 const Heading = styled.div`
 
     @media (max-width: 1025px) {
+        margin: 2rem 0;
+    }
+
+    @media (max-width: 650px) {
         display: none;
     }
 `;
@@ -117,6 +124,7 @@ const R_container = styled.div`
     @media (max-width: 1025px) {
         height: fit-content;
 	}
+    
     @media (max-width: 650px) {
         justify-content: center;
     }

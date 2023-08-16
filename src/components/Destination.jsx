@@ -39,6 +39,10 @@ const Main = styled.main`
 const Container = styled.div`
 	width: 69rem;
     flex-direction: column;
+
+	@media (max-width: 1025px) {
+
+	}
 `;
 
 const Heading = styled.div`
@@ -135,7 +139,7 @@ const DestImg = styled.img`
         case 'mobile':
           return '2rem';
         case 'tablet':
-          return '5rem';
+          return '0 0 2rem 0';
         case 'desktop':
         default:
           return '0';
