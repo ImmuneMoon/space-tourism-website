@@ -47,6 +47,18 @@ const Container = styled.div`
 
 const Heading = styled.div`
 	margin-right: auto;
+
+	@media (max-width: 1025px) {
+		margin: 2rem auto;
+		width: 90%;
+		justify-content: left;
+	}
+
+	@media (max-width: 650px) {
+		width: 100%;
+		margin: 0 auto 0 0;
+		justify-content: center;
+	}
 `;
 
 const Location_container = styled.div`

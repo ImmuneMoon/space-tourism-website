@@ -50,10 +50,17 @@ const Container = styled.div`
 const Heading = styled.div`
     margin-left: 0;
     margin-bottom: 2rem;
-    
+
+    @media (max-width: 1025px) {
+		margin: 2rem auto;
+		width: 90%;
+		justify-content: left;
+	}
+
     @media (max-width: 650px) {
         margin-right: auto;
         margin-left: auto;
+        justify-content: center;
     }
 `;
 
