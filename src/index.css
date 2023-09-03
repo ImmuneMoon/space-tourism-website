@@ -457,7 +457,9 @@ Crew page CSS
 
 
 	/* GLOBAL STYLES */
-
+	#information {
+		width: 90%;
+	}
 
 	/* Page heading/ title */
 	.pg-heading {
@@ -533,7 +535,7 @@ Crew page CSS
 
 	/* Container for crew components crewmember sections */
 	#crew-container {
-		margin: 0 auto 3rem auto;
+		margin: 0;
 	}
 
 	/* Crew member title */
@@ -548,7 +550,7 @@ Crew page CSS
 
 	/* Crew member's information*/
 	.crew-info {
-		max-width: 55rem;
+		max-width: 100%;
 	}
 
 

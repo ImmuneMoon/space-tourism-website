@@ -64,6 +64,9 @@ const L_container = styled.div`
 	}
 
     @media (max-width: 650px) {
+        margin: 0;
+        width: 100%;
+        justify-content: center;
     }
 `;
 
@@ -91,6 +94,7 @@ const Crew_info_container = styled.div`
 	}
 
     @media (max-width: 650px) {
+        margin: 0;
         flex-direction: column-reverse;
     }
 `;
@@ -99,6 +103,10 @@ const Crewmember = styled.div`
     @media (max-width: 1025px) {
 		margin: 0 auto;
 	}
+    @media (max-width: 650px) {
+        margin: 0;
+        width: 100%;
+    }
 `;
 
 const Crew_nav_container = styled.div`
@@ -124,7 +132,7 @@ const R_container = styled.div`
     @media (max-width: 1025px) {
         height: fit-content;
 	}
-    
+
     @media (max-width: 650px) {
         justify-content: center;
     }
