@@ -26,7 +26,7 @@ const Nav_dot = styled.div`
     height: 11px;
 `
 
-function crewNav({ onCrewChange }) {
+function CrewNav({ onCrewChange }) {
 
     const [activeCrew, setActiveCrew] = useState('doug');
     const [hoveredCrew, setHoveredCrew] = useState(null);
@@ -88,4 +88,4 @@ function crewNav({ onCrewChange }) {
     );
 }
 
-export default crewNav;
+export default CrewNav;
