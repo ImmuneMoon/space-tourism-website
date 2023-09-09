@@ -1,0 +1,566 @@
+/*
+Colors:
+Black: #0B0D17
+lavender: #D0D6F9
+Warm White: #FFFFFF
+*/
+
+/* 
+This CSS file is for multi component spanning stylings 
+Check individual components for additional stylings relevant only to that component
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500&family=Bellefair&display=swap');
+
+/* Global styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: black;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#root {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+main {
+	align-items: flex-start;
+	max-width: 1440px;
+    height: 759px;
+	flex-grow: 1;
+}
+
+#container {
+    display: flex;
+    height: 759px;
+	max-width: 1200px;
+}
+
+.navButton:hover {
+	cursor: pointer;
+}
+
+.pg-heading {
+	margin: 5rem 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+}
+
+
+
+#pg-num {
+	font-size: 28px;
+	font-weight: 600;
+	color: #4b5560;
+	letter-spacing: 4.75px;
+	margin-right: 1.25rem;
+	font-family: 'Barlow Condensed', sans-serif;
+}
+
+#pg-subject {
+	font-size: 28px;
+	font-weight: 400;
+	color: #FFFFFF;
+	letter-spacing: 4.75px;
+	font-family: 'Barlow Condensed', sans-serif;
+}
+
+#title {
+	font-family: 'Bellefair', serif;
+}
+
+/* Information displayed for homepage, each planet, crewmember and tech */
+#information {
+	font-weight: 400px;
+	height: max-content;
+	color: #D0D6F9;
+	font-size: 16px;
+	line-height: 1.75;
+	margin: .15rem 0 3.5rem 0;
+}
+
+/* 
+NavBar CSS
+*/
+
+.link {
+	height: 100%;
+}
+
+#active-nav-item {
+	display: block;
+	border-bottom: 3px solid #FFFFFF;
+}
+
+/* 
+Destination page CSS 
+*/
+
+
+/* Constainer for destination section */
+#dest-container {
+	display: flex;
+	flex-direction: row;
+}
+
+
+/* Planet information container */
+#info {
+	width: 27rem;
+	margin-top: 3rem;
+}
+
+
+/* Planet name */
+#planet-title {
+	font-size: 100px;
+	font-weight: 500;
+	font-family: 'Bellefair', serif;
+}
+
+/* Container for travel time and distance container/ decorative underscore */
+#travel-container {
+	width: 25rem;
+}
+
+/* Decorative underscore to time and distance area */
+#dest-line {
+	border: .5px solid rgba(128, 128, 128, 0.548);
+	margin: 3rem 0;
+}
+
+/* Travel time and distance container */
+#travel {
+	display: flex;
+	justify-content: space-between;
+	margin: 1.5rem 0 0 0;
+}
+
+#dist-container {
+	margin-right: 4rem;
+	width: fit-content;
+}
+
+/* Heading/ title for distance */
+#dist-title {
+	letter-spacing: 2.35px;
+	font-weight: 400;
+	font-size: 14px;
+	color: #D0D6F9;
+	font-family: 'Barlow Condensed', sans-serif;
+}
+
+/* Value for distance */
+#avg-dist {
+	font-size: 28px;
+	margin: .75rem 0 0 0;
+	font-weight: 500;
+	font-family: 'Bellefair', serif;
+}
+
+/* Container for travel time */
+#time-container {
+	margin: 0 5rem 0 0;
+	width: fit-content;
+}
+
+/* Heading/ title for travel time */
+#time-title {
+	letter-spacing: 2.35px;
+	font-weight: 400;
+	font-size: 14px;
+	color: #D0D6F9;
+	font-family: 'Barlow Condensed', sans-serif;
+}
+
+/* Value for travel time */
+#est-time {
+	font-size: 28px;
+	margin: .75rem 0 0 0;
+	font-weight: 400;
+	font-family: 'Bellefair', serif;
+}
+
+
+
+/* 
+Crew page CSS
+*/
+
+
+/* Container for crew components crewmember sections */
+#crew-container {
+	display: flex;
+	height: 23rem;
+	flex-direction: column;
+	margin-top: 3rem;
+}
+
+/* Crew member title */
+#crew-title {
+	font-size: 28px;
+	font-weight: 500;
+	letter-spacing: 4.75px;
+	color: rgba(255, 255, 255, 0.5);
+	margin: 0 0 1.5rem 0;
+	font-family: 'Bellefair', serif;
+}
+
+/* Crew Member's name */
+#crew-name {
+	font-size: 56px;
+	font-weight: 500;
+	margin: 0 0 1.5rem 0;
+	width: max-content;
+	font-family: 'Bellefair', serif;
+}
+
+/* Crew member's information*/
+.crew-info {
+	max-width: 25rem;
+	min-width: 15rem;
+}
+
+/* Crew image styles */
+#crew_img {
+	width: 100%;
+	max-height: fit-content;
+}
+
+
+
+/*Tech page CSS*/
+
+
+
+#vehicle-section {
+	width: 30rem;
+	display: flex;
+}
+
+#info-container {
+    display: flex;
+    flex-direction: column;
+	width: fit-content;
+}
+
+#vehicle-title {
+    font-size: 56px;
+    font-weight: 500;
+    margin: 0 0 1.5rem 0;
+	font-family: 'Bellefair', serif;
+}
+
+.tech-info {
+	margin: 0;
+	width: 25.5rem;
+	height: 100%;
+}
+
+#tech_img {
+	max-height: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+
+/* Footer */
+
+
+
+#footer {
+	height: fit-content;
+	position: sticky;
+	bottom: 0;
+
+}
+
+
+/* Media resizing */
+
+
+/* Screens wider than 1440px */
+@media (min-width: 1441px) {
+
+	main {
+		margin: 0 auto;
+	}
+}
+
+/* Tablet Screens */
+@media (max-width: 1025px) {
+
+
+	/* GLOBAL STYLES */
+
+
+	main {
+		width: 100%;
+		height: 100%;
+	}
+
+	#container {
+		height: 100%;
+		width: 100%;
+	}
+
+	/* Page heading/ title */
+	.pg-heading {
+        margin: 2rem 0;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+	}
+
+	/* Information displayed for homepage, each planet, crewmember and tech */
+	#information {
+		margin: .15rem auto 0 auto;
+		text-align: center;
+		width: 75vw;
+		height: 100%;
+		font-size: 18px;
+	}
+
+
+	/* DESTINATION STYLES */
+
+
+	/* Planet information container */
+	#info {
+		display: flex;
+		width: 100%;
+		margin: 3rem 0 0 0;
+		justify-content: center;
+		flex-direction: column;
+	}
+	
+	/* Planet name */
+	#planet-title {
+		font-size: 100px;
+		margin: 0 auto
+	}
+
+	/* Container for travel time and distance container/ decorative underscore */
+	#travel-container {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	/* Container for travel time */
+	#time-container {
+		margin: 0;
+		width: fit-content;
+	}
+
+	/* Decorative underscore to time and distance area */
+	#dest-line {
+		width: 75%;
+		margin: 3rem auto;
+	}
+
+	/* Travel time and distance container */
+	#travel {
+		justify-content: center;
+		margin: 0 20%;
+	}
+
+	#dist-container {
+		margin: 0 auto;
+		width: fit-content;
+	}
+
+	/* Container for travel time */
+	#time-container {
+		margin: 0 auto;
+		width: fit-content;
+	}
+
+
+	/* CREW STYLES */
+
+	/* Container for crew components crewmember sections */
+	#crew-container {
+		height: 100%;
+		margin: 0 auto;
+	}
+
+	/* Crew member title */
+	#crew-title {
+		margin: 0 auto .75rem auto;
+	}
+
+	/* Crew Member's name */
+	#crew-name {
+		margin: .75rem auto;
+	}
+
+	/* Crew member's information*/
+	.crew-info {
+		max-width: 34rem;
+	}
+
+	/* Crew image styles */
+
+	/* TECH STYLES */
+
+
+	#vehicle-section {
+		width: fit-content;
+	}
+
+	#info-container {
+		display: flex;
+		justify-content: center;
+		margin: 0 auto;
+	}
+
+	#vehicle-title {
+		margin: .5rem auto;
+	}
+
+	.tech-info {
+		height: 190px;
+	}
+
+	#tech_img {
+		width: 100vw;
+		height: auto;
+		margin: 0 auto;
+	}
+}
+
+/* Phone screens */
+@media (max-width: 650px) {
+
+
+	/* GLOBAL STYLES */
+	#information {
+		width: 90%;
+	}
+
+	/* Page heading/ title */
+	.pg-heading {
+		margin: 0 auto;
+	}
+
+	/* DESTINATION STYLES */
+
+
+	/* Constainer for destination section */
+	#dest-container {
+		width: 100%;
+	}
+
+	.dest-info {
+		margin: 0;
+	}
+
+	#travel {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	/* Distance information container */
+	#dist-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 0 auto 1.5rem auto;
+	}
+	
+	/* Heading/ title for distance */
+	#dist-title {
+		font-size: 14px;
+		margin: 0 auto 1rem auto;
+	}
+	
+	/* Value for distance */
+	#avg-dist {
+		font-size: 28px;
+		margin: auto;
+	}
+	
+	/* Container for travel time */
+	#time-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 0 auto;
+	}
+
+	/* Decorative overscore to time and distance area */
+	#dest-line {
+		width: 90vw;
+		margin: 2rem auto;
+	}
+	
+	/* Heading/ title for travel time */
+	#time-title {
+		font-size: 14px;
+		margin: 0 auto 1rem auto;
+	}
+	
+	/* Value for travel time */
+	#est-time {
+		font-size: 28px;
+		margin: auto;
+	}
+
+
+	/* CREW STYLES */
+
+
+	/* Container for crew components crewmember sections */
+	#crew-container {
+		margin: 0;
+	}
+
+	/* Crew member title */
+	#crew-title {
+		font-size: 18px;
+	}
+
+	/* Crew Member's name */
+	#crew-name {
+		font-size: 32px;
+	}
+
+	/* Crew member's information*/
+	.crew-info {
+		max-width: 100%;
+	}
+
+
+	/* TECH STYLES */
+
+	#vehicle-title {
+		font-size: 32px;
+	}
+
+	.tech-info {
+		height: 255px;
+	}
+}
