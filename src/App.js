@@ -10,7 +10,7 @@ import Attribution from './components/Attribution';
 
 function App() {
   return (
-    	<Router>
+    	<Router basename="/space-tourism-website">
     	<Navbar/>
     	<Routes>
     		<Route exact path='/' extact element={<Home/>} />
@@ -19,7 +19,8 @@ function App() {
     		<Route path='/technology' element={<Technology/>} />
     	</Routes>
 		<Attribution/>
-    	</Router>
+    	</Router>,
+  		document.getElementById('root')
     );
 }
 
