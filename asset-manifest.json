@@ -1,7 +1,7 @@
 {
   "main.css": "/space-tourism-website/static/css/main.cab713d0.chunk.css",
-  "main.js": "/space-tourism-website/static/js/main.e2e5e731.chunk.js",
-  "main.js.map": "/space-tourism-website/static/js/main.e2e5e731.chunk.js.map",
+  "main.js": "/space-tourism-website/static/js/main.ce5935e9.chunk.js",
+  "main.js.map": "/space-tourism-website/static/js/main.ce5935e9.chunk.js.map",
   "static/js/1.a179ce69.chunk.js": "/space-tourism-website/static/js/1.a179ce69.chunk.js",
   "static/js/1.a179ce69.chunk.js.map": "/space-tourism-website/static/js/1.a179ce69.chunk.js.map",
   "static/js/2.5e3d6279.chunk.js": "/space-tourism-website/static/js/2.5e3d6279.chunk.js",
@@ -37,6 +37,6 @@
   "static/media/background-technology-tablet.jpg": "/space-tourism-website/static/media/background-technology-tablet.c5469ec5.jpg",
   "static/css/main.cab713d0.chunk.css.map": "/space-tourism-website/static/css/main.cab713d0.chunk.css.map",
   "index.html": "/space-tourism-website/index.html",
-  "precache-manifest.3f60754c7bd9f9c4b591c5fb1ba5f15f.js": "/space-tourism-website/precache-manifest.3f60754c7bd9f9c4b591c5fb1ba5f15f.js",
+  "precache-manifest.32b1c7f034427130f1f768e60cf165d9.js": "/space-tourism-website/precache-manifest.32b1c7f034427130f1f768e60cf165d9.js",
   "service-worker.js": "/space-tourism-website/service-worker.js"
 }
