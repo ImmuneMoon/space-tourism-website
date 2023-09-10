@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "59ef99b29e6291ff5fb1",
+    "revision": "6046734b415f3d637bed",
     "url": "/space-tourism-website/static/css/main.cab713d0.chunk.css"
   },
   {
-    "revision": "59ef99b29e6291ff5fb1",
-    "url": "/space-tourism-website/static/js/main.59ef99b2.chunk.js"
+    "revision": "6046734b415f3d637bed",
+    "url": "/space-tourism-website/static/js/main.6046734b.chunk.js"
   },
   {
     "revision": "a179ce69968765155251",
@@ -128,7 +128,7 @@ self.__precacheManifest = [
     "url": "/space-tourism-website/static/media/background-technology-tablet.c5469ec5.jpg"
   },
   {
-    "revision": "b7706644f4cfec303ae0a151413c3708",
+    "revision": "348c8b413d25b4dbf956bef051b16e6f",
     "url": "/space-tourism-website/index.html"
   }
 ];
