@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responsive-multipage-space-tourism-site-wreact-tpsOReMBvy)
-- Live Site URL: [Add live site URL here](https://immunemoon.github.io/space-tourism-website/)
+- Solution URL: [Frontendmentor Challenge](https://www.frontendmentor.io/solutions/responsive-multipage-space-tourism-site-wreact-tpsOReMBvy)
+- Live Site URL: [Live site URL](https://immunemoon.github.io/space-tourism-website/)
 
 ## My process
 
