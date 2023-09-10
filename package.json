@@ -20,7 +20,7 @@
   "scripts": {
     "start": "./node_modules/react-scripts/bin/react-scripts.js start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -b main",
+    "deploy": "gh-pages -d build",
     "build": "./node_modules/react-scripts/bin/react-scripts.js build",
     "test": "./node_modules/react-scripts/bin/react-scripts.js test --env=jsdom",
     "eject": "./node_modules/react-scripts/bin/react-scripts.js eject"
