@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import logo from './assets/logo.svg'
@@ -254,23 +254,12 @@ const Underline = styled.div`
 `;
 
 function Navbar() {
-	const [path, setPath] = useState(window.location.pathname);
+	const { pathname: path } = useLocation();
 	let activeHome = '';
 	let activeDest = '';
 	let activeCrew = '';
 	let activeTech = '';
   
-	useEffect(() => {
-	  const handleWindowClick = () => {
-		setPath(window.location.pathname);
-	  };
-  
-	  window.addEventListener('click', handleWindowClick);
-  
-	  return () => {
-		window.removeEventListener('click', handleWindowClick);
-	  };
-	}, []);
 	
 	switch (path) {
 		case '/':
