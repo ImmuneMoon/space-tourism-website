@@ -1,5 +1,12 @@
 # Frontend Mentor - Space tourism website solution
 
+[![Live site](https://img.shields.io/website?url=https%3A%2F%2Fimmunemoon.github.io%2Fspace-tourism-website%2F&label=live%20site&up_message=online&down_message=offline)](https://immunemoon.github.io/space-tourism-website/)
+![Frontend Mentor challenge](https://img.shields.io/badge/Frontend%20Mentor-challenge-3F54A3?logo=frontendmentor&logoColor=white)
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![React Router](https://img.shields.io/badge/React%20Router-6-CA4245?logo=reactrouter&logoColor=white)
+![styled-components](https://img.shields.io/badge/styled--components-5-DB7093?logo=styledcomponents&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+
 This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
